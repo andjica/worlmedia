@@ -142,6 +142,10 @@
                                             <label for="inputUsername">Biography</label>
                                             <textarea rows="2" class="form-control" id="inputBio" placeholder="Tell something about yourself"></textarea>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="inputUsername">More about Biography</label>
+                                            <textarea rows="2" class="form-control" id="bio2" placeholder="Tell something about yourself"></textarea>
+                                        </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="text-center">
@@ -179,27 +183,34 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="card-title mb-0">Private info</h5>
+                            <h5 class="card-title mb-0">Your information</h5>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputFirstName">First name</label>
-                                        <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                                    <div class="form-group col-md-12">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <textarea rows="2" class="form-control" id="skills" placeholder="Type something about your sklills, Like programmer - CSS, HTML, JS"></textarea>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputLastName">Last name</label>
-                                        <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
-                                    </div>
+                                    
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                <label for="inputCategory">Choose category</label>
+                                    <select class="form-control" name="categorysearch">
+                                       <option value="">Category</option>
+											@foreach($categories as $category)
+											<option value="{{$category->id}}">{{$category->name}}</option>
+										@endforeach
+									</select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                <label for="inputCategory">Choose city</label>
+                                <select class="form-control" name="categorysearch">
+										<option value="">City</option>
+											@foreach($cities as $city)
+											<option value="{{$city->id}}">{{$city->name}}</option>
+										@endforeach
+									</select>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress2">Address 2</label>

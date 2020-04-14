@@ -3,9 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\City;
 
 class FrontController extends Controller
 {
+    private $data = [];
+
+    public function __construct()
+    {
+        $this->data['categories'] = Category::all();
+        $this->data['cities'] =  City::all();
+        
+        
+        return $this->data;
+    }
     public function index(){
         return view('pages.index');
     }
@@ -31,7 +43,8 @@ class FrontController extends Controller
     }
 
     public function editprofile(){
-        return view('pages.editprofile');
+
+        return view('pages.editprofile', $this->data);
     }
 }
 
