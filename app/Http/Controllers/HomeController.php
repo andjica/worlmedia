@@ -37,6 +37,8 @@ class HomeController extends Controller
     
     public function editprofile(){
 
-        return view('pages.editprofile', $this->data);
+        $user = auth()->user();
+        
+        return view('pages.editprofile', compact('user'), $this->data);
     }
 }
