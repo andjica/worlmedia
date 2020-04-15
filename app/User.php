@@ -5,6 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Account;
+use App\Purchase;
+use App\Role;
+use App\Category;
+use App\City;
 
 class User extends Authenticatable
 {
@@ -42,8 +47,6 @@ class User extends Authenticatable
         return $this->hasMany(Purchase::class, 'user_id');
     }
 
-    
-
     public function account()
     {
         return $this->hasOne(Account::class, 'user_id');
@@ -53,4 +56,16 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    
 }
