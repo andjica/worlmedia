@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
+use App\User;
 
 class UserController extends Controller
 {
@@ -55,30 +58,52 @@ class UserController extends Controller
             'image.mimes' => 'Image must be in jpeg, jpg, png, gif or svg format'
         ]);
 
-        if(request()->image)
-        {
-            $image = request()->file('image');
-            $name = $image->getClientOriginalName();
-        
-            $destinationPath = public_path('/image-users');
-            $image->move($destinationPath, $name);
+            
+            $userId = auth()->user()->id;
 
-            $user = new User();
-
+            $user = User::where('id', $userId)->first();
+            
+            $user->name = request()->username;
             $user->desc_one = request()->desc1;
             $user->desc_two = request()->desc2;
-            $user->url = $name;
 
-            try{
-                $user->save();
+    
+           
+            if(request()->image){
 
-                return redirect()->back()->with('success', 'You saved changes successfully');
+                $image = request()->file('image');
+                $name = $image->getClientOriginalName();
+            
+                $destinationPath = public_path('/image-users');
+                $image->move($destinationPath, $name);
+              
+                try{
+                   
+                    //delete current image
+                    $image_path = public_path('image-users/'.$user->url);
+                    if(File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
+                    //save new one 
+
+                    $user->url = $name;
+                    $user->save();
+    
+                    return redirect()->back()->with('success', 'You saved changes successfully');
+                }
+                    
+                catch(\Throwable $e)
+                {
+                    return redirect()->back()->with('error', 'Error Message: There is a Problem Uploading Your Image, try latter');
+                }
             }
-            catch(\Throwable $e)
-            {
-                return abort(500);
+            else{
+                    $user->save();
+    
+                    return redirect()->back()->with('success', 'You saved changes successfully');
             }
-        }
+            
+        
 
     }
 

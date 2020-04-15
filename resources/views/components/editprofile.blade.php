@@ -131,7 +131,9 @@
                             <h5 class="card-title mb-0">Public info</h5>
                         </div>
                 <div class="card-body">
-                  
+                    @if(session('error'))
+                        <div class="alert- alert-danger p-2">{{session('error')}}</div>
+                    @endif
                     <form action="{{route('upgrade-user')}}" method="post" enctype="multipart/form-data">
                     @csrf
                         <div class="row">
@@ -156,7 +158,9 @@
                                     @if($user->url == null)
                                         <img alt="Andrew Jones" src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle img-responsive mt-2" width="128" height="128">
                                         @else
-                                        andjica
+                                        
+                                        <div class="rounded-circle mt-2 image-background"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
+                                        </div>
                                         @endif
                                         <div class="mt-2">
                                          <input type="file" class="form-controll" name="image">
@@ -315,6 +319,7 @@
 </div>
 
 <style>
+
 body{
     margin-top:20px;
     background:#F0F8FF;
@@ -354,6 +359,14 @@ body{
     background: black !important;
     top: 0;
     position: fixed; width:100%;
+}
+
+.image-background
+{
+  height:160px;
+  width:160px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 </style>
