@@ -35,6 +35,7 @@
                
                 <li>
                   <a href="{{ asset ('/services')}}" class="nav-link text-left">Services</a>
+                 
                 </li>
 
                 <li>
@@ -84,7 +85,9 @@
                 <div class="list-group list-group-flush" role="tablist">
                     <a class="list-group-item list-group-item-action active" data-toggle="list" href="#biography" role="tab">
                       Biography
+                      
                     </a>
+                  
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#information" role="tab">
                      Your profile information
                     </a>
@@ -107,6 +110,7 @@
         @isset($user)
         <div class="col-md-7 col-xl-8">
             <div class="tab-content">
+
                 <div class="tab-pane fade show active" id="biography" role="tabpanel">
 
                     <div class="card">
@@ -207,13 +211,13 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputFirstName">Write your skills</label>
-                                        <textarea rows="2" class="form-control" id="skills" placeholder="Type something about your sklills, Like programmer - CSS, HTML, JS"></textarea>
+                                        <textarea rows="2" class="form-control" name="skills" id="skills" placeholder="Type something about your sklills, Like programmer - CSS, HTML, JS">{{$user->skills}}</textarea>
                                     </div>
                                     
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose category</label>
-                                    <select class="form-control" name="categorysearch">
+                                    <select class="form-control" name="categoryid">
                                        <option value="">Category</option>
 											@foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
@@ -222,10 +226,10 @@
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose city</label>
-                                <select class="form-control" name="categorysearch">
-										<option value="">City</option>
+                                <select class="form-control" name="cityid">
+										<option value="">Your current city: <b>{{$user->city->name}}</b></option>
 											@foreach($cities as $city)
-											<option value="{{$city->id}}">{{$city->name}}</option>
+											<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>
 										@endforeach
 									</select>
                                 </div>

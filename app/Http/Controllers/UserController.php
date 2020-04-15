@@ -44,17 +44,18 @@ class UserController extends Controller
      */
     public function store()
     {
+        
         request()->validate([
             'name' => 'min:3|max:30',
-            'desc1' => 'max:300',
-            'desc2' => 'max:300',
+            'desc1' => 'max:450',
+            'desc2' => 'max:450',
             'image' => 'mimes:jpeg,png,jpg,gif,svg'
         ],
         [
             'name.min' => 'Min characters for name is 3',
             'name.max' => 'Max characters for name is 30',
-            'desc1.max' => 'Your description for biography is too long, max characters is 300',
-            'desc2.max' => 'Your description biography two is too long, max characters is 300',
+            'desc1.max' => 'Your description for biography is too long, max characters is 450',
+            'desc2.max' => 'Your description biography two is too long, max characters is 450',
             'image.mimes' => 'Image must be in jpeg, jpg, png, gif or svg format'
         ]);
 

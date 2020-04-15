@@ -11,6 +11,6 @@ class Country extends Model
 
     public function cities()
     {
-        return $this->hasMany(City::class, 'country_id');
+        return $this->hasMany(City::class, 'country_id')->order_by('country_name', 'ASC');
     }
 }

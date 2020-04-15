@@ -12,8 +12,8 @@ class FrontController extends Controller
 
     public function __construct()
     {
-        $this->data['categories'] = Category::all();
-        $this->data['cities'] =  City::all();
+        $this->data['categories'] = Category::orderBy('name', 'desc')->get();
+        $this->data['cities'] =  City::orderBy('name', 'asc')->get();
         
         
         return $this->data;
