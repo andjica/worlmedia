@@ -136,7 +136,7 @@
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label for="inputUsername">Username</label>
-                                            <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                                            <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputUsername">Biography</label>

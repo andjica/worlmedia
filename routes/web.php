@@ -20,8 +20,7 @@ Route::get('/profile', 'FrontController@profile');
 
 Auth::routes();
 
-Route::get('/editprofile', 'FrontController@editprofile')->name('editprofile');
-
+Route::get('/editprofile', 'HomeController@editprofile')->name('editprofile');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/active-pro', 'PaymentController@activepro')->name('active-pro');

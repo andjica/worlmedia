@@ -42,9 +42,5 @@ class FrontController extends Controller
         return view('pages.profile');
     }
 
-    public function editprofile(){
-
-        return view('pages.editprofile', $this->data);
-    }
 }
 
