@@ -82,11 +82,11 @@
                 </div>
 
                 <div class="list-group list-group-flush" role="tablist">
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">
-                      Account
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#biography" role="tab">
+                      Biography
                     </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
-                      Password
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#information" role="tab">
+                     Your profile information
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#email" role="tab">
                       Email notifications
@@ -107,7 +107,7 @@
 
         <div class="col-md-7 col-xl-8">
             <div class="tab-content">
-                <div class="tab-pane fade show active" id="account" role="tabpanel">
+                <div class="tab-pane fade show active" id="biography" role="tabpanel">
 
                     <div class="card">
                         <div class="card-header">
@@ -164,7 +164,11 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                 
+
+                </div>
+                <div class="tab-pane fade" id="information" role="tabpanel">
+                <div class="card">
                         <div class="card-header">
                             <div class="card-actions float-right">
                                 <div class="dropdown show">
@@ -238,32 +242,6 @@
 
                         </div>
                     </div>
-
-                </div>
-                <div class="tab-pane fade" id="password" role="tabpanel">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Password</h5>
-
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputPasswordCurrent">Current password</label>
-                                    <input type="password" class="form-control" id="inputPasswordCurrent">
-                                    <small><a href="#">Forgot your password?</a></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew">New password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew2">Verify password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew2">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                            </form>
-
-                        </div>
-                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="email" role="tabpanel">
@@ -317,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                y
+                
 
 
             </div>
