@@ -50,6 +50,7 @@ class UserController extends Controller
             'desc1' => 'max:450',
             'desc2' => 'max:450',
             'image' => 'mimes:jpeg,png,jpg,gif,svg'
+           
         ],
         [
             'name.min' => 'Min characters for name is 3',
@@ -57,6 +58,7 @@ class UserController extends Controller
             'desc1.max' => 'Your description for biography is too long, max characters is 450',
             'desc2.max' => 'Your description biography two is too long, max characters is 450',
             'image.mimes' => 'Image must be in jpeg, jpg, png, gif or svg format'
+            
         ]);
 
             
@@ -67,7 +69,7 @@ class UserController extends Controller
             $user->name = request()->username;
             $user->desc_one = request()->desc1;
             $user->desc_two = request()->desc2;
-
+            
     
            
             if(request()->image){
@@ -106,6 +108,36 @@ class UserController extends Controller
             
         
 
+    }
+
+    public function storeinfo()
+    {
+        request()->validate([
+            'skills' => 'max:160'
+        ],
+        [
+            'skills.max' => 'Max characters for skills is 160'
+        ]);
+
+        $userId = auth()->user()->id;
+
+        $user = User::where('id', $userId)->first();
+
+        $user->skills = request()->skills;
+        $user->category_id = request()->categoryid;
+        $user->city_id = request()->cityid;   
+       
+        try{
+            $user->save();
+            return redirect()->back()->with('success', 'You saved changes successfully');
+
+        }
+        catch(\Throwable $e)
+        {
+            return redirect()->back()->with('error', 'Oops, something went wrong, try latter');
+        }
+        
+        
     }
 
     /**

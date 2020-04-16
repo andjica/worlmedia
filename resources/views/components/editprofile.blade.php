@@ -141,31 +141,46 @@
                             <h5 class="card-title mb-0">Your information</h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                        <form action="{{route('upgrade-info')}}" method="post">
+                        @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="inputFirstName">Write your skills</label>
                                         <textarea rows="2" class="form-control" name="skills" id="skills" placeholder="Type something about your sklills, Like programmer - CSS, HTML, JS">{{$user->skills}}</textarea>
+                                        @if ($errors->has('skills'))  <p style="color:red;">{{$errors->first('skills')}}</p> @endif
                                     </div>
                                     
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose category</label>
                                     <select class="form-control" name="categoryid">
-                                       <option value="">Category</option>
-											@foreach($categories as $category)
+                                    @if($user->category_id == null)
+                                        @foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
-										@endforeach
+                                         @endforeach
+                                    @else
+                                       <option value="">Your current Category: {{$user->category->name}}</option>
+										@foreach($categories as $category)
+											<option value="{{$category->id}}">{{$category->name}}</option>
+                                         @endforeach
+                                    @endif
 									</select>
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose city</label>
                                 <select class="form-control" name="cityid">
-										<option value="">Your current city: <b>{{$user->city->name}}</option>
+                                    @if($user->city_id == null)
 											@foreach($cities as $city)
 											<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>
 										@endforeach
 									</select>
+                                    @else
+										<option value="">Your current city: <b>{{$user->city->name}}</option>
+											@foreach($cities as $city)
+											<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>
+										@endforeach
+                                    </select>
+                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress2">Address 2</label>
@@ -173,22 +188,16 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputCity">City</label>
+                                        <label for="inputCity">Your mobile telephone</label>
                                         <input type="text" class="form-control" id="inputCity">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="inputState">State</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected="">Choose...</option>
-                                            <option>...</option>
-                                        </select>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">Your website link</label>
+                                        <input type="text" class="form-control" id="inputCity">
                                     </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="inputZip">Zip</label>
-                                        <input type="text" class="form-control" id="inputZip">
-                                    </div>
+                                  
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <input type="submit" class="btn btn-primary" value="Save changes">
                             </form>
 
                         </div>

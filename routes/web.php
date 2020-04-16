@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin-home', 'AdminController@index')->name('admin-home');
 //user
 Route::post('/upgrade-user', 'UserController@store')->name('upgrade-user');
+Route::post('/upgrade-info', 'UserController@storeinfo')->name('upgrade-info');
 
 Route::post('/active-pro', 'PaymentController@activepro')->name('active-pro');
 Route::get('/status-pro', 'PaymentController@statuspro')->name('status-pro'); 
