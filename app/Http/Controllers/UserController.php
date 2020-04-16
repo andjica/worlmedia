@@ -113,7 +113,8 @@ class UserController extends Controller
     public function storeinfo()
     {
         request()->validate([
-            'skills' => 'max:160'
+            'skills' => 'max:160',
+            'link' => 'url'
         ],
         [
             'skills.max' => 'Max characters for skills is 160'
@@ -125,7 +126,9 @@ class UserController extends Controller
 
         $user->skills = request()->skills;
         $user->category_id = request()->categoryid;
-        $user->city_id = request()->cityid;   
+        $user->city_id = request()->cityid;
+        $user->link = request()->link;
+        $user->mobile = request()->mobile;   
        
         try{
             $user->save();
