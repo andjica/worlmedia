@@ -7,6 +7,7 @@ use App\Category;
 use App\City;
 use App\Country;
 use App\User;
+use App\Account;
 
 class HomeController extends Controller
 {
@@ -33,6 +34,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $userId = auth()->user()->id;
+        
+        $useraccount = Account::where('acc_type_id', 2)->where('user_id', $userId)->first();
+        
+        if($useraccount)
+        {
+            return redirect('/editprofile');
+        }
         return view('home');
     }
 
