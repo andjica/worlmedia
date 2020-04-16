@@ -141,7 +141,7 @@
                             <h5 class="card-title mb-0">Your information</h5>
                         </div>
                         <div class="card-body">
-                        <form action="{{route('upgrade-info')}}" method="post">
+                        <form action="{{route('upgrade-info')}}" method="post" id="adding-info">
                         @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
@@ -153,47 +153,50 @@
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose category</label>
+                                   @if($user->category_id == null)
                                     <select class="form-control" name="categoryid">
-                                    @if($user->category_id == null)
                                         @foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
                                          @endforeach
+                                    </select>
                                     @else
+                                    <select class="form-control" name="categoryid">
                                        <option value="">Your current Category: {{$user->category->name}}</option>
 										@foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
                                          @endforeach
-                                    @endif
-									</select>
-                                </div>
-                                <div class="form-group">
-                                <label for="inputCategory">Choose city</label>
-                                <select class="form-control" name="cityid">
-                                    @if($user->city_id == null)
-											@foreach($cities as $city)
-											<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>
-										@endforeach
-									</select>
-                                    @else
-										<option value="">Your current city: <b>{{$user->city->name}}</option>
-											@foreach($cities as $city)
-											<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>
-										@endforeach
                                     </select>
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputAddress2">Address 2</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                <label for="inputCategory">Choose city</label>
+                                    @if($user->city_id == null)
+                                    <select class="form-control" name="cityid">
+                                        @foreach($cities as $city)
+											<option value="{{$category->id}}">{{$city->name}}</option>
+                                         @endforeach
+                                    </select>
+                                    @else
+                                    <select class="form-control" name="cityid">
+                                       <option value="">Your current City: {{$user->city->name}}</option>
+										@foreach($cities as $city)
+											<option value="{{$city->id}}">{{$city->name}}</option>
+                                         @endforeach
+                                    </select>
+                                    @endif
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputCity">Your mobile telephone</label>
-                                        <input type="text" class="form-control" id="inputCity">
+                                        <label for="Mobile">Your mobile telephone</label>
+                                        <input type="text" class="form-control" id="mobile" name="mobile" value="{{$user->mobile}}">
+                                        <p id="er-mobile" class="text-danger"></p> 
+                                        <p id="su-mobile" class="text-info"></p> 
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="inputCity">Your website link</label>
-                                        <input type="text" class="form-control" id="inputCity">
+                                        <label for="Link">Your website link</label>
+                                        <input type="text" class="form-control" id="link" name="link" value="{{$user->link}}">
+                                         <p id="er-url" class="text-danger"></p> 
+                                         <p id="su-url" class="text-info"></p> 
                                     </div>
                                   
                                 </div>
