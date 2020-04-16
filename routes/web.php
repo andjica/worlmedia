@@ -23,9 +23,12 @@ Auth::routes();
 Route::get('/editprofile', 'HomeController@editprofile')->name('editprofile');
 Route::get('/home', 'HomeController@index')->name('home');
 
+//admin
+Route::get('/admin-home', 'AdminController@index')->name('admin-home');
 //user
 Route::post('/upgrade-user', 'UserController@store')->name('upgrade-user');
 
 Route::post('/active-pro', 'PaymentController@activepro')->name('active-pro');
 Route::get('/status-pro', 'PaymentController@statuspro')->name('status-pro'); 
 
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

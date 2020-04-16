@@ -101,11 +101,10 @@
                 <li>
                     <a href="{{ asset ('/contact')}}" class="nav-link text-left">Contact</a>
                   </li>
+                  
                   <li>
-                    <a href="{{ asset ('/login')}}" class="nav-link text-left">Login</a>
-                    @auth
-                    <a href="{{ asset ('/editprofile')}}" class="nav-link text-left">Edit profile</a>
-			            @endauth
+                  <a href="{{ asset ('/login')}}" class="nav-link text-left">Login</a>
+                 
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>

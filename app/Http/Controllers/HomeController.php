@@ -37,11 +37,19 @@ class HomeController extends Controller
         $userId = auth()->user()->id;
         
         $useraccount = Account::where('acc_type_id', 2)->where('user_id', $userId)->first();
-        
+
+        $useradmin = User::where('id', $userId)->where('role_id', 1)->first();
+
+        if($useradmin)
+        {
+            return redirect('/admin-home');
+        }
+
         if($useraccount)
         {
             return redirect('/editprofile');
         }
+        
         return view('home');
     }
 
