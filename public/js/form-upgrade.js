@@ -47,3 +47,22 @@ $(document).ready(function(){
       }
     });
   });
+
+  $(document).ready(function(){
+    $('#form-password').submit(function(e){
+       
+        let pass1 = $('#pass1').val();
+        let pass2 = $('#pass2').val();
+
+        let erpass = document.getElementById('er-pass');
+
+        if(pass1 != pass2)
+        {
+            e.preventDefault();
+            $('#pass2').css('border-color','red');
+            erpass.innerHTML ='Password must be the same';
+        } 
+
+        return true;
+    });
+});
