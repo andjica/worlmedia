@@ -7,7 +7,7 @@
                     {{session('success')}}
                 </div>
                 @endif<Br>
-    <div class="row" style="margin-top:10px;">
+    <div class="row main-row">
   
         <div class="col-md-5 col-xl-4">
 
@@ -25,11 +25,11 @@
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#information" role="tab">
                      Your profile information
                     </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#email" role="tab">
-                      Email notifications
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
+                      Change password
                     </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#web" role="tab">
-                      Web notifications
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
+                      Contact Support
                     </a>
                    
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#data" role="tab">
@@ -207,54 +207,33 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="email" role="tabpanel">
+                <div class="tab-pane fade" id="password" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Password</h5>
-
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputPasswordCurrent">Current password</label>
-                                    <input type="password" class="form-control" id="inputPasswordCurrent">
-                                    <small><a href="#">Forgot your password?</a></small>
-                                </div>
+                            <form action="{{route('edit-user')}}" method="post" id="form-password">
+                                @csrf
                                 <div class="form-group">
                                     <label for="inputPasswordNew">New password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew">
+                                    <input type="password" class="form-control" id="pass1" name="password">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPasswordNew2">Verify password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew2">
+                                    <input type="password" class="form-control" id="pass2">
+                                    <p id="er-pass" class="text-danger"></p>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <input type="submit" class="btn btn-primary" value="Save changes">
                             </form>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="web" role="tabpanel">
+                <div class="tab-pane fade" id="contact" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Password</h5>
-
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputPasswordCurrent">Current password</label>
-                                    <input type="password" class="form-control" id="inputPasswordCurrent">
-                                    <small><a href="#">Forgot your password?</a></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew">New password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPasswordNew2">Verify password</label>
-                                    <input type="password" class="form-control" id="inputPasswordNew2">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                            </form>
-
+                            @include('components.contact-form')
                         </div>
                     </div>
                 </div>
@@ -271,7 +250,7 @@
 <style>
 
 body{
-    margin-top:20px;
+    
     background:#F0F8FF;
 }
 .card {
@@ -308,7 +287,7 @@ body{
 .jbt{
     background: black !important;
     top: 0;
-    position: fixed; width:100%;
+    width:100%;
 }
 
 .image-background
@@ -318,5 +297,9 @@ body{
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.main-row
+{
+    margin-top:100px;
+    margin-bottom:100px;
+}
 </style>
