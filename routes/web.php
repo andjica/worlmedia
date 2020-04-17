@@ -34,3 +34,6 @@ Route::post('/active-pro', 'PaymentController@activepro')->name('active-pro');
 Route::get('/status-pro', 'PaymentController@statuspro')->name('status-pro'); 
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+Route::post('/contact', 'EmailController@send')->name('contact');
