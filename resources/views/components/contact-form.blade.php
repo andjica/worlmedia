@@ -10,8 +10,8 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
+            <form id="contact-form-an" name="contact-form" action="{{route('contact')}}" method="POST">
+            @csrf
                 <!--Grid row-->
                 <div class="row">
 
@@ -52,6 +52,7 @@
                         <div class="md-form mb-0">
                             <input type="text" id="subject" name="subject" class="form-control">
                             <label for="subject" class="">Subject</label>
+                            <p class="text-danger" id="er-subject"></p>
                         </div>
                     </div>
                 </div>
@@ -66,17 +67,18 @@
                         <div class="md-form">
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
+                            <p class="text-danger" id="er-message"></p>
                         </div>
 
                     </div>
                 </div>
                 <!--Grid row-->
-
+                <div class="text-center text-md-left">
+                <input type="submit" class="btn btn-primary text-white" value="Send">
+            </div>
             </form>
 
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary text-white">Send</a>
-            </div>
+            
             <div class="status"></div>
         </div>
         <!--Grid column-->
@@ -84,15 +86,15 @@
         <!--Grid column-->
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                <li><i class="fa fa-map-marker-alt fa-2x text-orange"></i>
                     <p>San Francisco, CA 94126, USA</p>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                <li><i class="fa fa-phone mt-4 fa-2x text-orange"></i>
                     <p>+ 01 234 567 89</p>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                <li><i class="fa fa-envelope mt-4 fa-2x text-orange"></i>
                     <p>contact@mdbootstrap.com</p>
                 </li>
             </ul>

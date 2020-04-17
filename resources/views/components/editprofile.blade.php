@@ -33,11 +33,9 @@
                     </a>
                    
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#data" role="tab">
-                      Your Skills
+                      Your Purchases
                     </a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">
-                      Delete account
-                    </a>
+                    
                 </div>
             </div>
         </div>
@@ -211,6 +209,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Password</h5>
+                            <hr>
                             <form action="{{route('edit-user')}}" method="post" id="form-password">
                                 @csrf
                                 <div class="form-group">
@@ -232,12 +231,20 @@
                 <div class="tab-pane fade" id="contact" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Password</h5>
+                            <h5 class="card-title">Contact Us</h5>
+                            <hr>
                             @include('components.contact-form')
                         </div>
                     </div>
                 </div>
-                
+                <div class="tab-pane fade" id="data" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                           
+                            
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -253,53 +260,5 @@ body{
     
     background:#F0F8FF;
 }
-.card {
-    margin-bottom: 1.5rem;
-    box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
-}
-.card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid #e5e9f2;
-    border-radius: .2rem;
-}
-.card-header:first-child {
-    border-radius: calc(.2rem - 1px) calc(.2rem - 1px) 0 0;
-}
-.card-header {
-    border-bottom-width: 1px;
-}
-.card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    color: inherit;
-    background-color: #fff;
-    border-bottom: 1px solid #e5e9f2;
-}
 
-.jbt{
-    background: black !important;
-    top: 0;
-    width:100%;
-}
-
-.image-background
-{
-  height:160px;
-  width:160px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.main-row
-{
-    margin-top:100px;
-    margin-bottom:100px;
-}
 </style>
