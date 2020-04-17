@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-
+use Illuminate\Support\Facades\Hash;
 use App\User;
 
 class UserController extends Controller
@@ -172,9 +172,21 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
-        //
+        $userId = auth()->user()->id;
+        $user = User::find($userId);
+        
+        $user->password = Hash::make(request()->password);
+        try{
+            $user->save();
+            return redirect()->back()->with('success', 'You changed password successfully');
+
+        }
+        catch(\Throwable $e)
+        {
+            return redirect()->back()->with('error', 'Oops, something went wrong, try latter');
+        }
     }
 
     /**
