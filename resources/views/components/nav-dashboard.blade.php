@@ -44,13 +44,14 @@
                
                  <li><a href="{{ asset ('/blog')}}" class="nav-link text-left">Blog</a></li>
               
-                 @if(auth()->user()->role_id == 2)
+                  @if(auth()->user() && auth()->user()->role_id == 2)
                   <li><a href="{{ asset ('/editprofile')}}" class="nav-link text-left">Edit profile</a></li>
                   <li><a href="{{ url('/logout') }}" class="collapse-item"> <i class="fas fa-sign-out-alt"></i>Logout </a></li>
-                  @else
+                  @elseif(auth()->user()  && auth()->user()->role_id == 1)
                   <li><a href="{{ asset ('/admin-home')}}" class="nav-link text-left">Admin panel</a></li>
                   <li><a href="{{ url('/logout') }}" class="collapse-item"> <i class="fas fa-sign-out-alt"></i>Logout </a></li>
-                  
+                  @else
+                    <li><a href="{{route('login')}}">Login</a></li>
                   @endif
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>

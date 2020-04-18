@@ -2,15 +2,19 @@
 <div class="container p-0">
 
     <h1 class="h3 mb-3" style="color: transparent;">Settings</h1>
+    <div class="row main-row">
+    <div class="col-lg-12">
     @if(session('success'))
-                <div class="alert alert-success mt-5">
+                <div class="alert alert-success">
                     {{session('success')}}
                 </div>
-                @endif<Br>
-    <div class="row main-row">
+                @endif
+    </div>
+    </div>
+    <div class="row">
   
         <div class="col-md-5 col-xl-4">
-
+       
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title mb-0">Profile Settings</h5>
@@ -41,6 +45,7 @@
         </div>
         @isset($user)
         <div class="col-md-7 col-xl-8">
+       
             <div class="tab-content">
 
                 <div class="tab-pane fade show active" id="biography" role="tabpanel">
