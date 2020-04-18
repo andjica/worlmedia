@@ -1785,5 +1785,10 @@ background-repeat: no-repeat;
 .main-row
 {
   margin-top:100px;
-  margin-bottom:100px;
+ 
+}
+
+.alert-s
+{
+  margin-top: 70px;
 }
