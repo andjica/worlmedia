@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-9 col-xl-9">
                 <div class="row">
-                    @include('components.admin.users')
+                    @include('components.admin.cities')
                     <ul class="list-group">
                         <li class="list-group">  {{$users->links()}}</li>
                     </ul>
