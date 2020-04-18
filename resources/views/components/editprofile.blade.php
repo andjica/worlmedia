@@ -240,9 +240,10 @@
                 <div class="tab-pane fade" id="data" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
-                           
+                     
+                            @include('components.invoice')
                             
-                        </div>
+                            </div>
                     </div>
                 </div>
 
