@@ -8,6 +8,7 @@ use App\City;
 use App\Country;
 use App\User;
 use App\Account;
+use App\Purchase;
 
 class HomeController extends Controller
 {
@@ -56,10 +57,12 @@ class HomeController extends Controller
     
     public function editprofile(){
 
-        $user = auth()->user();
+        
         $userId = auth()->user()->id;
         $user = User::where('id', $userId)->first();
         
-        return view('pages.editprofile', compact('user'), $this->data);
+        $purchases = Purchase::where('user_id', $userId)->get();
+       
+        return view('pages.editprofile', compact('user', 'purchases'), $this->data);
     }
 }
