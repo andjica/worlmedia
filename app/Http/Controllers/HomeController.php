@@ -63,6 +63,14 @@ class HomeController extends Controller
         
         $purchases = Purchase::where('user_id', $userId)->get();
        
+        $checkingaccount = Account::where('user_id', $userId)->first();
+
+        $type = $checkingaccount->acc_type_id;
+        
+        if($type == 1)
+        {
+            return redirect('/home');
+        }
         return view('pages.editprofile', compact('user', 'purchases'), $this->data);
     }
 }
