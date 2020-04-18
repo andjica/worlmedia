@@ -13,6 +13,9 @@
     </div>
     </div>
     <div class="row">
+      @include('components.admin-manager')
+    </div>
+    <div class="row">
   
         <div class="col-md-5 col-xl-4">
        
@@ -24,21 +27,23 @@
                 <div class="list-group list-group-flush" role="tablist">
                     <a class="list-group-item list-group-item-action active" data-toggle="list" href="#biography" role="tab">
                         Users administration
-                      
+                        <i class="fa fa-users text-orange"></i>
                     </a>
                   
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#information" role="tab">
                         Purchases administration
+                        
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
-                        Manage City
+                        Manage City <i class="fa fa-building text-orange"></i>
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
-                       Manage Country 
+                       Manage Country <i class="fa fa-globe text-orange"></i>
                     </a>
                    
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#data" role="tab">
                       Manage Category
+                      <i class="fa fa-sort text-orange"></i>
                     </a>
                     
                 </div>
