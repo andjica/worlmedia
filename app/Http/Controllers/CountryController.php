@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
+
+    protected $data = [];
+
+    public function __construct()
+    {
+       $this->data['countpurchases'] = Purchase::count();
+       $this->data['totalearn'] = Purchase::sum('price');
+       $this->data['countuser'] = User::count();
+
+       return $this->data;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +24,7 @@ class CountryController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.county.admin-countries');
     }
 
     /**
