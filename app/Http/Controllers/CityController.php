@@ -10,24 +10,31 @@ use App\Account;
 
 class CityController extends Controller
 {
+
+    protected $data = [];
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     
+     public function __construct()
+     {
+        $this->data['countpurchases'] = Purchase::count();
+        $this->data['totalearn'] = Purchase::sum('price');
+        $this->data['countuser'] = User::count();
+
+        return $this->data;
+     }
     
     public function index()
     {
-        $countpurchases = Purchase::count();
-        $totalearn = Purchase::sum('price');
-        $countuser = User::count();
-
+        
         $users = User::paginate(6);
         $cities = City::paginate(6);
 
         
-        return view('pages.admin-cities',compact('countpurchases', 'totalearn', 'countuser', 'users', 'cities'));
+        return view('pages.admin-cities',compact( 'users', 'cities'), $this->data);
     }
 
     /**
@@ -37,7 +44,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.add-city');
     }
 
     /**
