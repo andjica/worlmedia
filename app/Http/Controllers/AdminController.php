@@ -18,7 +18,7 @@ class AdminController extends Controller
         $totalearn = Purchase::sum('price');
         $countuser = User::count();
 
-        $users = User::paginate(6);
+        $users = User::orderBy('id', 'desc')->paginate(6);
         $cities = City::paginate(6);
 
         return view('pages.admin-home', compact('countpurchases', 'totalearn', 'countuser', 'users', 'cities'));
