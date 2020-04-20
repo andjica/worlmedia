@@ -7,6 +7,7 @@ use App\User;
 use App\City;
 use App\Purchase;
 use App\Account;
+use App\Country;
 
 class CityController extends Controller
 {
@@ -44,7 +45,9 @@ class CityController extends Controller
      */
     public function create()
     {
-        return view('pages.add-city');
+        $countries = Country::all();
+        
+        return view('pages.add-city', compact('countries'),$this->data);
     }
 
     /**
@@ -53,9 +56,25 @@ class CityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        
+        request()->validate([
+            'name' => 'required|min:3|unique:cities',
+            'countries' => 'required'
+        ],
+        [
+            'name.required' => 'City is required',
+            'name.unique' => 'Name alredy exists',
+            'countries.required' => 'Country is required field'
+        ]);
+
+        $city = new City();
+        $city->name = request()->name;
+        $city->country_id = request()->countries;
+
+        $city->save();
+        return redirect()->back()->with('success', 'You created city successfully');
     }
 
     /**
