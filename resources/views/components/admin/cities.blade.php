@@ -1,4 +1,4 @@
-<a href="" class="btn btn-md btn-warning text-white mt-2 mb-2"><i class="fa text-white fa-plus"></i>Add new City</a>
+<a href="{{route('add-city')}}" class="btn btn-md btn-warning text-white mt-2 mb-2"><i class="fa text-white fa-plus"></i>Add new City</a>
 <table class="table" id="#cities">
   <thead>
     <tr>
