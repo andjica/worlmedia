@@ -1779,7 +1779,7 @@ h1, h2, h3, h4, h5,
 {
 height:160px;
 width:160px;
-background-position: center;
+background-size: cover;
 background-repeat: no-repeat;
 }
 .main-row
