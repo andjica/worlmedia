@@ -11,16 +11,17 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->data['countpurchases'] = Purchase::count();
+        $this->data['totalearn'] = Purchase::sum('price');
+        $this->data['countuser'] = User::count();
+
+        return $this->data;
     }
     public function index()
     {
-        $countpurchases = Purchase::count();
-        $totalearn = Purchase::sum('price');
-        $countuser = User::count();
-
         $users = User::orderBy('id', 'desc')->paginate(6);
         $cities = City::paginate(6);
 
-        return view('pages.admin-home', compact('countpurchases', 'totalearn', 'countuser', 'users', 'cities'));
+        return view('pages.admin-home', compact('users', 'cities'), $this->data);
     }
 }
