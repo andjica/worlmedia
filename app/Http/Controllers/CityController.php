@@ -47,7 +47,7 @@ class CityController extends Controller
     {
         $countries = Country::all();
         
-        return view('pages.city.add-city', compact('countries'),$this->data);
+        return view('pages.city.create-city', compact('countries'),$this->data);
     }
 
     /**
