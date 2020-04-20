@@ -34,7 +34,12 @@
                         <input type="text" class="form-control" id="" name="name" value="{{$city->name}}">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         @if ($errors->has('name'))  <p style="color:red;">{{$errors->first('name')}}</p> @endif
-
+                      
+                        @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{session('error')}}
+                        </div>
+                        @endif
                     </div>
                     <div class="form-group">
                        <select name="countries" class="form-control">

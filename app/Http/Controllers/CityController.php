@@ -73,8 +73,15 @@ class CityController extends Controller
         $city->name = request()->name;
         $city->country_id = request()->countries;
 
-        $city->save();
-        return redirect()->back()->with('success', 'You created city successfully');
+        try{
+            $city->save();
+            return redirect()->back()->with('success', 'You created city successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
+        
     }
 
     /**
@@ -85,7 +92,7 @@ class CityController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -96,7 +103,9 @@ class CityController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        $city = City::find($id);
+        $countries = Country::all();
+        return view('pages.add-city', compact('countries', 'city'),$this->data);
     }
 
     /**
@@ -106,9 +115,31 @@ class CityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        
+        $city = City::find($id);
+
+        $city->country_id = request()->countries;
+        $city->name = request()->name;
+
+        
+        try{
+            $city->save();
+            return redirect()->back()->with('success', 'You update city successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
+        
+        
+           
+       
+       
+       
+       
+        
     }
 
     /**
