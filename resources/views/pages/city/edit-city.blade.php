@@ -55,31 +55,7 @@
                     <i class="fa fa-arrow-left"></i> Back
                     </button>
                     </form>
-                @else
-                <form action="{{route('create-city')}}" method="post">
-                <h2>Create a new City</h2>
-                @csrf
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Name of city</label>
-                        <input type="text" class="form-control" id="" name="name" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        @if ($errors->has('name'))  <p style="color:red;">{{$errors->first('name')}}</p> @endif
-
-                    </div>
-                    <div class="form-group">
-                       <select name="countries" class="form-control">
-                            <option value="">Choose country</option>
-                            @foreach($countries as $cs)
-                                <option value="{{$cs->id}}">{{$cs->name_country}}</option>
-                            @endforeach
-                       </select>
-                       @if ($errors->has('countries'))  <p style="color:red;">{{$errors->first('countries')}}</p> @endif
-                    </div>
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit"><br>
-                    <button type="button" class="btn btn-warning text-white mt-2" onclick="goBack()">
-                    <i class="fa fa-arrow-left"></i> Back
-                    </button>
-                    </form>
+               
                     @endif
                 </div>
            </div>

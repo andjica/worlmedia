@@ -35,7 +35,7 @@ class CityController extends Controller
         $cities = City::paginate(6);
 
         
-        return view('pages.admin-cities',compact( 'users', 'cities'), $this->data);
+        return view('pages.city.admin-cities',compact( 'users', 'cities'), $this->data);
     }
 
     /**
@@ -47,7 +47,7 @@ class CityController extends Controller
     {
         $countries = Country::all();
         
-        return view('pages.add-city', compact('countries'),$this->data);
+        return view('pages.city.add-city', compact('countries'),$this->data);
     }
 
     /**
@@ -103,9 +103,9 @@ class CityController extends Controller
      */
     public function edit($id)
     {
-        $city = City::find($id);
+        $city = City::find($id) ?? abort(404);
         $countries = Country::all();
-        return view('pages.add-city', compact('countries', 'city'),$this->data);
+        return view('pages.city.edit-city', compact('countries', 'city'),$this->data);
     }
 
     /**
@@ -118,7 +118,7 @@ class CityController extends Controller
     public function update($id)
     {
         
-        $city = City::find($id);
+        $city = City::find($id) ?? abort(404);
 
         $city->country_id = request()->countries;
         $city->name = request()->name;
