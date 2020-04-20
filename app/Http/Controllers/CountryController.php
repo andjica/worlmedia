@@ -41,7 +41,7 @@ class CountryController extends Controller
     public function create()
     {
 
-        return view('pages.country.crete-country', $this->data);
+        return view('pages.country.create-country', $this->data);
     }
 
     /**
