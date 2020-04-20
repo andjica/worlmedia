@@ -25,7 +25,7 @@
         <div class="col-md-9 col-xl-9">
                 <div class="row p-3">
                 <form action="{{route('create-country')}}" method="post">
-                <h2>Create a new City</h2>
+                <h2>Create a new Country</h2>
                 @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name of country</label>
