@@ -50,9 +50,30 @@ class CountryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        request()->validate([
+            'name_country' => 'required|min:3|unique:countries',
+
+        ],
+        [
+            'name_country.required' => 'Country name is required',
+            'name_country.unique' => 'Name alredy exists',
+           
+        ]);
+
+        $country = new Country();
+        $country->name_country = request()->name;
+        
+
+        try{
+            $country->save();
+            return redirect()->back()->with('success', 'You created country successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
     }
 
     /**
