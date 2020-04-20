@@ -61,13 +61,13 @@
                 Featured
             </div>
             <div class="card-body text-center">
-                <h5 class="card-title">Special purchases</h5>
+                <h5 class="card-title">Rates</h5>
                 <div class="counter col_fourth end">
                 <i class="fa fa-trophy fa-3x text-orange"></i>
                 @if($totalearn == null)
                     0
                 @else
-                <h2 class="timer count-title count-number" data-to="{{$totalearn}}" data-speed="1500"></h2>
+                <a href=""> <h2 class="">View more</h2></a>
                 @endif
                 <p class="count-text ">Best ranked users</p>
              </div>

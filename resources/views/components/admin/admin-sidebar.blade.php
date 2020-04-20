@@ -4,7 +4,7 @@
                 </div>
 
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action active bg-dark text-white">
+                    <a href="{{route('admin-home')}}" class="list-group-item list-group-item-action active bg-dark text-white">
                         Users administration
                         <i class="fa fa-users text-orange"></i>
                     </a>
