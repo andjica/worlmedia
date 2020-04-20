@@ -41,6 +41,14 @@ Route::group(['middleware' => ['checkaccount']], function ()
     Route::get('/edit-city/{id}', 'CityController@edit')->name('edit-city');
     Route::post('/update-city/{id}', 'CityController@update')->name('update-city/{id}');
     Route::get('/delete-city/{id}', 'CityController@destroy')->name('delete-city');
+
+    //country
+    Route::get('/admin-countires', 'CountryController@index')->name('admin-countires');
+    Route::get('/add-country', 'CountryController@create')->name('add-country');
+    Route::post('/create-country', 'CountryController@store')->name('create-country');
+    Route::get('/edit-country/{id}', 'CountryController@edit')->name('edit-country');
+    Route::post('/update-country/{id}', 'CountryController@update')->name('update-country/{id}');
+    Route::get('/delete-country/{id}', 'CountryController@destroy')->name('delete-country');
    
 });
 
