@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\City;
+use App\Purchase;
+use App\Account;
+use App\Country;
 
 class CountryController extends Controller
 {
@@ -24,7 +29,8 @@ class CountryController extends Controller
      */
     public function index()
     {
-        return view('pages.county.admin-countries');
+        $countries = Country::paginate(6);
+        return view('pages.country.admin-countries', compact('countries'), $this->data);
     }
 
     /**

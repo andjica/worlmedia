@@ -24,9 +24,9 @@
         </div>
         <div class="col-md-9 col-xl-9">
                 <div class="row">
-                    @include('components.admin.cities')
+                    @include('components.admin.countries')
                     <ul class="list-group">
-                        <li class="list-group">  {{$cities->links()}}</li>
+                        <li class="list-group">  {{$countries->links()}}</li>
                     </ul>
                 </div>
            </div>
