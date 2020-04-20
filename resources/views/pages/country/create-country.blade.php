@@ -29,9 +29,9 @@
                 @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name of country</label>
-                        <input type="text" class="form-control" id="" name="name" placeholder="Enter name of country">
+                        <input type="text" class="form-control" id="" name="name_country" placeholder="Enter name of country">
                         <small id="emailHelp" class="form-text text-muted">Enter a new Country</small>
-                        @if ($errors->has('name'))  <p style="color:red;">{{$errors->first('name')}}</p> @endif
+                        @if ($errors->has('name_country'))  <p style="color:red;">{{$errors->first('name_country')}}</p> @endif
 
                     </div>
                   
