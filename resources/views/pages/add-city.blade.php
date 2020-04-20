@@ -44,9 +44,11 @@
                        </select>
                        @if ($errors->has('countries'))  <p style="color:red;">{{$errors->first('countries')}}</p> @endif
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit"><br>
+                    <button type="button" class="btn btn-warning text-white mt-2" onclick="goBack()">
+                    <i class="fa fa-arrow-left"></i> Back
+                    </button>
                     </form>
-                    
                 </div>
            </div>
         </div>
