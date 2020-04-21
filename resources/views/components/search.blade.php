@@ -1,6 +1,4 @@
-@include('components.head')
-@include('components.nav')
-<div class="s01 tt">
+<div class="s01">
       <form>
         <fieldset>
           <legend>Discover here the right Crew Member</legend>
@@ -19,23 +17,3 @@
       </form>
     </div>
   
-<section id="freelancers">
-  <div class="container" style="  margin-top: 20px;">
-        <div class="row" style="display:flex; margin-top:60px;">
-   
-        <div class="col-lg-9">
-            <div class="row">
-                @include('components.freelancers')
-                @include('components.filter')
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<style>
-    .tw34{
-        font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
-    }
-</style>
-@include('components.footer')

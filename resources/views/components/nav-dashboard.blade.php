@@ -22,12 +22,9 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
               <li>
-
-                <a href="index.html">
-                    <img src="images/logo2.png" alt="Image" class="img-fluid" style="     max-width: 100%;
-                    height: 50px;
-                    margin-top: -20px;">
-                </a>
+              <a href="{{asset ('/')}}">
+                <img src="images/logo2.png" alt="Image" class="img-fluid new-rep img-logo">
+              </a>
                 </li>
               <li class="active">
                   <a href="{{ asset ('/')}}" class="nav-link text-left">Home</a>

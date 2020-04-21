@@ -81,39 +81,13 @@
         </div>
       </div>
     </div>
-
+    
     <div class="site-section bg-image overlay" style="background-image: url('images/5.jpg');">
       <div class="container">
         <div class="row res" >
           <div class="col">
-            <div class="counter-39392 dab">
-              <h3>46</h3>
-              <span>Countries</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392 dab">
-              <h3>7000+</h3>
-              <span>Job oppertunites</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392 dab">
-              <h3>120.345</h3>
-              <span>Active users</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392 dab">
-              <h3>9.8</h3>
-              <span>Client Review</span>
-            </div>
-          </div>
-          <div class="col">
-            <div class="counter-39392 dab">
-              <h3>18</h3>
-              <span>New members each hour</span>
-            </div>
+          @include('components.search')
+
           </div>
         </div>
       </div>
