@@ -457,6 +457,19 @@ legend {
 }
 
 .s01 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  background-position: center center;
+  padding: 15px;
+}
+
+.tt {
   min-height: 600px;
   display: -ms-flexbox;
   display: flex;
@@ -465,7 +478,8 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../images/ttest.jpg");
+  background: url("../images/564.jpg");
+
   background-size: cover;
   background-position: center center;
   padding: 15px;
