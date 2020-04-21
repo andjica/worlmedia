@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\City;
-
+use App\User;
 class FrontController extends Controller
 {
     private $data = [];
@@ -35,7 +35,9 @@ class FrontController extends Controller
     }
 
     public function freelancers(){
-        return view('pages.freelancers');
+
+        $users = User::paginate(6);
+        return view('pages.freelancers', compact('users'));
     }
 
     public function profile(){
