@@ -89,28 +89,6 @@
   <script src="{{asset('/')}}js/contact-form.js"></script>
 
   <script src="{{asset('/')}}js/speed-counter.js"></script>
-  <script>
-    function goBack() {
-    window.history.back();
-  }
-  </script>
-  <script>
-     // select2 
- $('.js-example-basic-single').select2({
-    placeholder: "Category",
-    allowClear: true,
-    
-  });
-  // select2
-  $('.js-example-basic-single2').select2({
-    placeholder: "City",
-    allowClear: true
-  });
-
-  $('.js-example-basic-single3').select2({
-    placeholder: "Salary",
-    allowClear: true
-  });
- 
-    </script>
+  <script src="{{asset('/')}}js/go-back.js"></script>
+  <script src="{{asset('/')}}js/select2.js"></script>
 </body>
