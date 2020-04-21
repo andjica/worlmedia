@@ -86,7 +86,7 @@
   <script src="{{asset('/')}}js/main.js"></script>
 
   <script src="{{asset('/')}}js/form-upgrade.js"></script>
-  <script src="{{aset('/')}}js/contact-form.js"></script>
+  <script src="{{asset('/')}}js/contact-form.js"></script>
 
   <script>
   (function($) {
