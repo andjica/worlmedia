@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{{asset('/')}}css/owl.carousel.min.css">
   <link rel="stylesheet" href="{{asset('/')}}css/owl.theme.default.min.css">
   <link rel="stylesheet" href="{{asset('/')}}css/owl.theme.default.min.css">
-
+  <link rel="stylesheet" href="{{asset('/')}}css/select2.css">
   <link rel="stylesheet" href="{{asset('/')}}css/jquery.fancybox.min.css">
 
   <link rel="stylesheet" href="{{asset('/')}}css/bootstrap-datepicker.css">
@@ -32,7 +32,7 @@
   <link href="{{asset('/')}}css/main.css" rel="stylesheet">
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet"/>
 <!-- Default Theme -->
 <link rel="stylesheet" href="{{asset('/')}}owl-carousel/owl.theme.css">
  

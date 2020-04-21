@@ -13,7 +13,7 @@
     </div>
     <div class="row">
   
-        <div class="col-md-5 col-xl-4">
+        <div class="col-md-4 col-xl-3">
        
             <div class="card">
                 <div class="card-header">
@@ -44,11 +44,11 @@
             </div>
         </div>
         @isset($user)
-        <div class="col-md-7 col-xl-8">
+        <div class="col-md-8 col-xl-8">
        
             <div class="tab-content">
 
-                <div class="tab-pane fade show active" id="biography" role="tabpanel">
+                <div class="tab-pane  show active" id="biography" role="tabpanel">
 
                     <div class="card">
                         <div class="card-header">
@@ -121,7 +121,7 @@
                  
 
                 </div>
-                <div class="tab-pane fade" id="information" role="tabpanel">
+                <div class="tab-pane " id="information" role="tabpanel">
                 <div class="card">
                         <div class="card-header">
                             <div class="card-actions float-right">
@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="password" role="tabpanel">
+                <div class="tab-pane " id="password" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Password</h5>
@@ -233,7 +233,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="contact" role="tabpanel">
+                <div class="tab-pane " id="contact" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Contact Us</h5>
@@ -242,7 +242,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="data" role="tabpanel">
+                <div class="tab-pane " id="data" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                      

@@ -1,5 +1,5 @@
 @foreach($purchases as $pu)
-<div class="container">
+
   <div class="card">
 <div class="card-header">
 Invoice: 
@@ -90,5 +90,5 @@ Invoice:
 
 </div>
 </div>
-</div>
+
 @endforeach
