@@ -1806,3 +1806,14 @@ background-repeat: no-repeat;
   height: 50px;
   margin-top: -20px;
 }
+
+.new-cs{
+  height: 52px !important;
+}
+
+@media screen and (max-width:468px){
+  .new-res{
+    padding-left:20px;
+    padding-right: 20px;
+  }
+}
