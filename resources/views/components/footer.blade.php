@@ -58,7 +58,6 @@
 
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
   <!-- loader -->
   <div id="loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"></circle></svg></div>
   <script src="{{asset('/')}}jquery-1.9.1.min.js"></script>
@@ -81,46 +80,14 @@
   <script src="{{asset('/')}}js/jquery.mb.YTPlayer.min.js"></script>
 
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
 
   <script src="{{asset('/')}}js/main.js"></script>
 
   <script src="{{asset('/')}}js/form-upgrade.js"></script>
-  <script>
-    $(document).ready(function(){
-        $('#contact-form-an').submit(function(e){
-            
-            let subject = $('#subject').val();
-            let ersubject = document.getElementById('er-subject');
+  <script src="{{aset('/')}}js/contact-form.js"></script>
 
-            
-            let message = $('#message').val();
-            let ermessage = document.getElementById('er-message');
-
-            let errors = [];
-
-            if(subject == "")
-            {
-              e.preventDefault();
-              ersubject.innerHTML = "Please enter a subject";
-              errors.push = "Mistake";
-            }
-
-            if(message == "")
-            {
-                e.preventDefault();
-                ermessage.innerHTML = "Please enter a message";
-                errors.push = "Mistake";
-            }
-
-            if(errors.length == 0)
-            {
-               return true;
-            }
-
-        });
-    });
-  </script>
   <script>
   (function($) {
     $.fn.countTo = function(options) {
@@ -233,5 +200,23 @@
     window.history.back();
   }
   </script>
+  <script>
+     // select2 
+ $('.js-example-basic-single').select2({
+    placeholder: "Category",
+    allowClear: true,
+    
+  });
+  // select2
+  $('.js-example-basic-single2').select2({
+    placeholder: "City",
+    allowClear: true
+  });
 
+  $('.js-example-basic-single3').select2({
+    placeholder: "Salary",
+    allowClear: true
+  });
+ 
+    </script>
 </body>

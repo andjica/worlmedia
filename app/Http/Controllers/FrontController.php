@@ -19,7 +19,8 @@ class FrontController extends Controller
         return $this->data;
     }
     public function index(){
-        return view('pages.index');
+
+        return view('pages.index', $this->data);
     }
 
     public function services(){
