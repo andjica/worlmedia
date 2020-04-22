@@ -50,6 +50,15 @@ Route::group(['middleware' => ['checkaccount']], function ()
     Route::get('/edit-country/{id}', 'CountryController@edit')->name('edit-country');
     Route::post('/update-country/{id}', 'CountryController@update')->name('update-country/{id}');
     Route::get('/delete-country/{id}', 'CountryController@destroy')->name('delete-country');
+
+    //category
+    Route::get('/admin-categories', 'CountryController@index')->name('admin-categories');
+    Route::get('/add-category', 'CountryController@create')->name('add-category');
+    Route::post('/create-category', 'CountryController@store')->name('create-category');
+    Route::get('/edit-category/{id}', 'CountryController@edit')->name('edit-category');
+    Route::post('/update-category/{id}', 'CountryController@update')->name('update-category/{id}');
+    Route::get('/delete-category/{id}', 'CountryController@destroy')->name('delete-category');
+
    
 });
 
