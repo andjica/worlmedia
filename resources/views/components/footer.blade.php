@@ -3,33 +3,33 @@
       <div class="container" style="text-align: center">
         <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="images/logo1.png" alt="Image" class="img-fluid"></p>
+            <p class="mb-4"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
             <p>The number #1 place to hire and find your right media crew member in the world!</p>  
             <p><a href="#">Learn More</a></p>
           </div>
           <div class="col-lg-3">
             <h3 class="footer-heading"><span>World media crew</span></h3>
             <ul class="list-unstyled">
-                <li><a href="{{asset ('/')}}">Home</a></li>
-                <li><a href="{{asset ('/services')}}">Services</a></li>
-                <li><a href="{{asset ('/freelancers')}}">Crew-Members</a></li>
-                <li><a href="{{asset ('/aboutus')}}">About US</a></li>
-                <li><a href="{{asset ('/blog')}}">Blog</a></li>
-                <li><a href="{{asset ('/contact')}}">Contact</a></li>
+                <li><a href="{{asset('/')}}">Home</a></li>
+                <li><a href="{{asset('/services')}}">Services</a></li>
+                <li><a href="{{asset('/freelancers')}}">Crew-Members</a></li>
+                <li><a href="{{asset('/aboutus')}}">About US</a></li>
+                <li><a href="{{asset('/blog')}}">Blog</a></li>
+                <li><a href="{{asset('/contact')}}">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Our Services</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset ('/register')}}">Make an account</a></li>
-                  <li><a href="{{asset ('/login')}}">Login with account</a></li>
-                  <li><a href="{{asset ('/services')}}">Services</a></li>
+                  <li><a href="{{asset('/register')}}">Make an account</a></li>
+                  <li><a href="{{asset('/login')}}">Login with account</a></li>
+                  <li><a href="{{asset('/services')}}">Services</a></li>
               </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset ('/contact')}}">Contact</a></li>
+                  <li><a href="{{asset('/contact')}}">Contact</a></li>
                   <li><a href="#">Support Community</a></li>
                   <li><a href="#">Press</a></li>
                   <li><a href="#">FAQ</a></li>

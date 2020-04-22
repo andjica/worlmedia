@@ -79,20 +79,20 @@
 
                                 <center>
                                 <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
-            </div>
+                                </div>
                                 <h1 class="media-heading">{{$user->name}}</h1>
                                 <small>{{$user->city->name}}, {{$user->city->country->name_country}}</small><br>
                                 </center>
                         </div>
                     <div class="col-lg-4 xvb">
-                <hr />
+                <hr/>
             </div>
         </div>
     </section>
     <div class="container" >
       <div class="row" style="margin-top:60px;">
             <div class="col-lg-9 mb-5">
-                        <p class="text-left" style="font-size: 20px;  font-weight: 600;"><strong>Bio: </strong><br>
+                        <p class="text-left" style="font-size: 20px;  font-weight: 600;"><strong>Posted at: {{$user->created_at->format('d-m-Y')}} </strong><br>
                           <h3>User id:{{$user->id}},&nbsp;{{$user->category->name}}</h3>
                             {{$user->desc_one}}<br>
                             {{$user->desc_two}}

@@ -1,22 +1,7 @@
 @include('components.head')
 @include('components.nav')
 <div class="s01 tt">
-      <form>
-        <fieldset>
-          <legend>Discover here the right Crew Member</legend>
-        </fieldset>
-        <div class="inner-form">
-          <div class="input-field first-wrap">
-            <input id="search" type="text" placeholder="What are you looking for?">
-          </div>
-          <div class="input-field second-wrap">
-            <input id="location" type="text" placeholder="location">
-          </div>
-          <div class="input-field third-wrap">
-            <button class="btn-search" type="button">Search</button>
-          </div>
-        </div>
-      </form>
+@include('components.search')
     </div>
   
 <section id="freelancers">
@@ -31,9 +16,11 @@
         <div class="row">  
         @foreach($users as $user)
         <div class="col-md-6 col-lg-4 mb-4">
+
             <div class="service-39381">
             <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
             </div>
+         
               <div class="bruv bg-info">
               <i class="fa fa-star text-white"></i>
               <i class="fa fa-star text-white"></i>
@@ -45,6 +32,7 @@
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->category->name}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->city->name}}, {{$user->city->country->name_country}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->email}}</p>
+                <small class="mr-1">Posted by: {{$user->created_at->format('d-m-Y')}}</small><br>
                 <div class="d-flex">
                   
                   <div class="ml-auto price">

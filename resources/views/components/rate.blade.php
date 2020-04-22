@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#andjica">
+<button type="button" class="btn btn-primary m-5" data-toggle="modal" data-target="#andjica">
                           Give rate to this user
                         </button>
 
@@ -42,18 +42,16 @@
                           </div>
                         </div>
                       @isset($rate)
-                      @if($rate == 0)
-
-                      @else
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Special purchases</h5>
+                     
+                      <div class="card-body text-center bg-dark text-white m-5 rounded">
+                        <h5 class="card-title">Clients gave a rateing for user</h5>
                         <div class="counter col_fourth end">
                         <i class="fa fa-trophy fa-3x text-orange"></i>
                       
                         <h2 class="timer count-title count-number" data-to="{{$rate}}" data-speed="1500"></h2>
                       
-                        <p class="count-text ">Total number of Purchase</p>
+                        <p class="count-text ">Avarage rateing of user {{$user->name}}</p>
                       </div>
                     </div>
-                    @endif
+                   
                     @endisset

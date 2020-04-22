@@ -16,7 +16,7 @@
                     <a class="list-group-item list-group-item-action"  href="{{route('admin-cities')}}">
                         Manage City <i class="fa fa-building text-orange"></i>
                     </a>
-                    <a class="list-group-item list-group-item-action"  href="#contact">
+                    <a class="list-group-item list-group-item-action"  href="{{route('admin-countries')}}">
                        Manage Country <i class="fa fa-globe text-orange"></i>
                     </a>
                    
