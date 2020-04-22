@@ -49,7 +49,7 @@ Route::group(['middleware' => ['checkaccount']], function ()
     Route::post('/create-country', 'CountryController@store')->name('create-country');
     Route::get('/edit-country/{id}', 'CountryController@edit')->name('edit-country');
     Route::post('/update-country/{id}', 'CountryController@update')->name('update-country/{id}');
-    Route::get('/delete-country/{id}', 'CountryController@destroy')->name('delete-country');
+    //Route::get('/delete-country/{id}', 'CountryController@destroy')->name('delete-country');
 
     //category
     Route::get('/admin-categories', 'CategoryController@index')->name('admin-categories');
@@ -57,7 +57,7 @@ Route::group(['middleware' => ['checkaccount']], function ()
     Route::post('/create-category', 'CategoryController@store')->name('create-category');
     Route::get('/edit-category/{id}', 'CategoryController@edit')->name('edit-category');
     Route::post('/update-category/{id}', 'CategoryController@update')->name('update-category/{id}');
-    Route::get('/delete-category/{id}', 'CategoryController@destroy')->name('delete-category');
+    //Route::get('/delete-category/{id}', 'CategoryController@destroy')->name('delete-category');
 
    
 });

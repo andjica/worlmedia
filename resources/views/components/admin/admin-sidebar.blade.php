@@ -20,7 +20,7 @@
                        Manage Country <i class="fa fa-globe text-orange"></i>
                     </a>
                    
-                    <a class="list-group-item list-group-item-action"  href="#data">
+                    <a class="list-group-item list-group-item-action"  href="{{route('admin-categories')}}">
                       Manage Category
                       <i class="fa fa-sort text-orange"></i>
                     </a>

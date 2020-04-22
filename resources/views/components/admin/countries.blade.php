@@ -5,7 +5,6 @@
       <th scope="col">#</th>
       <th scope="col">Name of country</th>
       <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -14,7 +13,6 @@
       <th scope="row">{{$country->id}}</th>
       <td>{{$country->name_country}}</td>
       <td><a href="{{asset('/edit-country/'.$country->id)}}">Edit &nbsp;<i class="fa fa-edit text-info"></i></a></td>
-      <td><a href="{{asset('/delete-country/'.$country->id)}}">Delete  &nbsp;<i class="fa fa-minus-square text-danger"></i></a></td>
    </tr>
     @endforeach
   </tbody>

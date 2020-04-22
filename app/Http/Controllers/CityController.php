@@ -150,6 +150,15 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $city = City::find($id) ?? abort(404);
+        
+        try{
+            $city->delete();
+            return redirect()->back()->with('success', 'You delete city successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
     }
 }

@@ -3,9 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\City;
+use App\Purchase;
+use App\Account;
+use App\Country;
+use App\Category;
 
 class CategoryController extends Controller
 {
+    protected $data = [];
+
+    public function __construct()
+    {
+       $this->data['countpurchases'] = Purchase::count();
+       $this->data['totalearn'] = Purchase::sum('price');
+       $this->data['countuser'] = User::count();
+
+       return $this->data;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +29,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::paginate(6);
+        return view('pages.category.admin-categories',compact('categories'), $this->data);
     }
 
     /**
@@ -23,7 +40,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.category.create-category', $this->data);
     }
 
     /**
@@ -32,9 +49,29 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        request()->validate([
+            'name' => 'required|min:3|unique:categories',
+        ],
+        [
+            'name.required' => 'Category is required',
+            'name.unique' => 'Name alredy exists',
+        ]);
+
+        $category = new Category();
+        $category ->name = request()->name;
+       
+
+        try{
+            $category->save();
+            return redirect()->back()->with('success', 'You created category successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
+        
     }
 
     /**
@@ -45,7 +82,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
@@ -56,7 +93,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id) ?? abort(404);
+        
+        return view('pages.category.edit-category', compact('category'),$this->data);
     }
 
     /**
@@ -66,9 +105,21 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        $category = Category::find($id) ?? abort(404);
+
+        $category->name = request()->name;
+
+        
+        try{
+            $category->save();
+            return redirect()->back()->with('success', 'You update category successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
     }
 
     /**
@@ -79,6 +130,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+       
+        
     }
 }
