@@ -22,7 +22,8 @@
                                   <span aria-hidden="true">&times;</span>
                                 </button>
                               </div>
-                              <form action="" id="form-rate" method="post">
+                              <form action="{{route('give-rate')}}" id="form-rate" method="post">
+                                @csrf
                               <div class="modal-body text-center">
                                 <select name="rate" class="form-control">
                                   <option value="7">7</option>
@@ -30,6 +31,7 @@
                                   <option value="9">9</option>
                                   <option value="10">10</option>
                                 </select>
+                                <input type="hidden" value="{{$user->id}}" name="userid">
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,3 +41,19 @@
                             </div>
                           </div>
                         </div>
+                      @isset($rate)
+                      @if($rate == 0)
+
+                      @else
+                      <div class="card-body text-center">
+                        <h5 class="card-title">Special purchases</h5>
+                        <div class="counter col_fourth end">
+                        <i class="fa fa-trophy fa-3x text-orange"></i>
+                      
+                        <h2 class="timer count-title count-number" data-to="{{$rate}}" data-speed="1500"></h2>
+                      
+                        <p class="count-text ">Total number of Purchase</p>
+                      </div>
+                    </div>
+                    @endif
+                    @endisset

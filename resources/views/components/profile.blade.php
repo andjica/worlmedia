@@ -113,6 +113,16 @@
                                 <button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
                       </div>
                       <div class="col-lg-3">
+                      @if(session('success'))
+                        <div class="alert alert-success">
+                            {{session('success')}}
+                        </div>
+                        @endif
+                        @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{session('error')}}
+                        </div>
+                        @endif
                          @include('components.rate')
                     </div>                     
         </div>

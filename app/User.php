@@ -10,6 +10,7 @@ use App\Purchase;
 use App\Role;
 use App\Category;
 use App\City;
+use App\Review;
 
 class User extends Authenticatable
 {
@@ -64,5 +65,10 @@ class User extends Authenticatable
     public function city()
     {
         return $this->belongsTo(City::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'user_id');
     }
 }
