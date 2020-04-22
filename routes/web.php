@@ -15,8 +15,9 @@ Route::get('/', 'FrontController@index');
 Route::get('/services', 'FrontController@services');
 Route::get('/about', 'FrontController@about');
 Route::get('/blog', 'FrontController@blog');
-Route::get('/freelancers', 'FrontController@freelancers');
-Route::get('/profile', 'FrontController@profile');
+Route::get('/freelancers', 'FrontController@freelancers')->name('freelancers');
+Route::get('/freelancer/{id}', 'FrontController@profile')->name('freelancer/{id}');
+/*Route::get('/profile', 'FrontController@profile');*/
 
 Auth::routes();
 
@@ -62,3 +63,6 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::post('/contact', 'EmailController@send')->name('contact');
+
+//review
+Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
