@@ -22,17 +22,14 @@
 <section id="freelancers">
   <div class="container" style="  margin-top: 20px;">
         <div class="row" style="display:flex; margin-top:60px;">
-
+   
         <div class="col-lg-9">
-         @if($andjela == 0)
-          <div class="alert alert-danger"><h3>Sorry, there is no users from this filter: @isset($categoryname){{$categoryname->name}} &nbsp;> @endisset @isset($cityname) {{$cityname->name}}@endisset</h3>
-           </div>
-         @else
+         
               <h5>@isset($categoryname){{$categoryname->name}} &nbsp;> @endisset @isset($cityname) {{$cityname->name}}@endisset</h5> 
              <br>
                
         <div class="row">  
-        @foreach($usersfilter as $user)
+        @foreach($users as $user)
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="service-39381">
             <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
@@ -61,7 +58,7 @@
           @endforeach
             </div>
             <ul class="list-group">
-            <li class="list-group">  {{$usersfilter->links()}}</li>
+            <li class="list-group">  {{$users->links()}}</li>
         </ul>
         </div>
  
@@ -70,7 +67,7 @@
         </div>
     </div>
    
-@endif
+
                 
                
                 

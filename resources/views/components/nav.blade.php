@@ -14,7 +14,7 @@
 <div class="row align-items-center">
 <div class="col-6 col-lg-3">
 <a href="{{asset ('/')}}">
-<img src="images/logo1.png" alt="Image" class="img-fluid">
+<img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid">
 
 </a>
 </div>
@@ -75,29 +75,29 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
               <li>
 
-          <a href="{{asset ('/')}}">
-                <img src="images/logo2.png" alt="Image" class="img-fluid new-rep img-logo">
+          <a href="{{asset('/')}}">
+                <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep img-logo">
           </a>
           </li>
               <li class="active">
-                  <a href="{{ asset ('/')}}" class="nav-link text-left">Home</a>
+                  <a href="{{ asset('/')}}" class="nav-link text-left">Home</a>
                 </li>
                
                 <li>
-                  <a href="{{ asset ('/services')}}" class="nav-link text-left">Services</a>
+                  <a href="{{ asset('/services')}}" class="nav-link text-left">Services</a>
                 </li>
 
                 <li>
-                    <a href="{{ asset ('/freelancers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/freelancers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                 <li>
-                  <a href="{{ asset ('/aboutus')}}" class="nav-link text-left">About Us</a>
+                  <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
                 </li>
                 
                 
-                <li><a href="{{ asset ('/blog')}}" class="nav-link text-left">Blog</a></li>
+                <li><a href="{{ asset('/blog')}}" class="nav-link text-left">Blog</a></li>
                 <li>
-                    <a href="{{ asset ('/contact')}}" class="nav-link text-left">Contact</a>
+                    <a href="{{ asset('/contact')}}" class="nav-link text-left">Contact</a>
                   </li>
                   
                   @if(auth()->user() && auth()->user()->role_id == 2)
