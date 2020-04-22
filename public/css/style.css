@@ -1771,7 +1771,7 @@ h1, h2, h3, h4, h5,
 }
 
 .jbt{
-  background: black !important;
+ 
   top: 0;
   width:100%;
 }
@@ -1789,6 +1789,14 @@ height:200px;
 width:200px;
 background-size: cover;
 background-repeat: no-repeat;
+}
+.image-background3
+{
+height:70px;
+width:70px;
+background-size: cover;
+background-repeat: no-repeat;
+float:left;
 }
 .main-row
 {
@@ -1816,4 +1824,13 @@ background-repeat: no-repeat;
     padding-left:20px;
     padding-right: 20px;
   }
+}
+.modal-backdrop.show
+{
+  opacity: 0 !important;
+}
+
+.modal-backdrop
+{
+  z-index: 0 !important;
 }
