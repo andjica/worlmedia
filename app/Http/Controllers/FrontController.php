@@ -39,7 +39,9 @@ class FrontController extends Controller
 
     public function freelancers(){
 
-        $users = User::paginate(6);
+        $users = User::where('city_id', '!=', 'null')
+        ->where('category_id', '!=', 'null')
+        ->paginate(6);
         
         $category = request()->categorysearch;
         $city = request()->citysearch;
