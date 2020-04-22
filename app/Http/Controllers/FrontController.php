@@ -38,11 +38,41 @@ class FrontController extends Controller
     public function freelancers(){
 
         $users = User::paginate(6);
-        return view('pages.freelancers', compact('users'));
+        
+        $category = request()->categorysearch;
+        $city = request()->citysearch;
+        
+        $usersfilter = User::where('category_id', $category)
+                ->where('city_id', $city)
+                ->paginate(6);
+
+        $categoryname = Category::where('id', $category)->first();
+        $cityname = City::where('id', $city)->first();
+        
+        $andjela = User::where('category_id', $category)
+                    ->where('city_id', $city)
+                    ->count();
+
+        
+        if($category && $city)
+        {
+            return view('pages.freelancers', compact('users','usersfilter', 'andjela', 'categoryname', 'cityname'), $this->data);
+        }
+        else
+        {
+            return view('pages.freeall', compact('users','usersfilter', 'andjela', 'categoryname', 'cityname'), $this->data);
+        }
+        
     }
 
-    public function profile(){
-        return view('pages.profile');
+
+
+    public function profile($id){
+        
+        $user = User::find($id);
+       
+        
+        return view('pages.profile', compact('user'));
     }
 
 }
