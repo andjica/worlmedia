@@ -56,14 +56,14 @@ class PaymentController extends Controller
         $item_1->setName('Upgraded account to Pro WorldMediaCrew')
             ->setCurrency('EUR')
             ->setQuantity(1)
-            ->setPrice('600.00'); 
+            ->setPrice('72.00'); 
 
         $item_list = new ItemList();
         $item_list->setItems(array($item_1));
 
         $amount = new Amount();
         $amount->setCurrency('EUR')
-            ->setTotal('600.00');
+            ->setTotal('72.00');
 
         $transaction = new Transaction();
         $transaction->setAmount($amount)
@@ -161,7 +161,7 @@ class PaymentController extends Controller
             $purchase = new  Purchase();
             $purchase->user_id = $userId;
             $purchase->acc_type_id = 2;
-            $purchase->price = 600;
+            $purchase->price = 72;
             $purchase->date_of_purcase = \Carbon\Carbon::now();
             $purchase->valid_until = \Carbon\Carbon::now()->addMonth(12);
             $purchase->save();

@@ -46,7 +46,8 @@
           @endforeach
             </div>
             <ul class="list-group">
-            <li class="list-group">  {{$users->links()}}</li>
+              
+            <li class="list-group">  {{$users->appends($_GET)->links()}}</li>
         </ul>
         </div>
  

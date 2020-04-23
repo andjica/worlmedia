@@ -1,8 +1,9 @@
 
 <form action="{{route('freelancers')}}" method="get" id="form-search"> 
-	  <div class="row no-gutters new-res">
+	<div class="container sickness">
+	  <div class="row h6h no-gutters new-res">
 	
-				        <div class="col-md mr-md-6">
+				        <div class="col-md mr-md-2">
 				            <div class="form-group">
 				              	<div class="form-field">
 					              	<div class="select-wrap">
@@ -18,7 +19,7 @@
 									        </div>
 								      </div>
 				          </div>
-									  <div class="col-md mr-md-6">
+									  <div class="col-md mr-md-2">
 				              				<div class="form-group">
 				              					<div class="form-field">
 					              				<div class="select-wrap">
@@ -37,11 +38,12 @@
 				              	<div class="col-md">
 				              		<div class="form-group">
 				              			<div class="form-field">
-								    <input type="submit" class="form-control btn btn-primary new-cs " value="Search">
+								    <input type="submit" class="form-control btn btn-warning new-cs " value="Search">
 								</div>
 							</div>
 						</div>
 				
 		</div>
+</div>
 </form>
   

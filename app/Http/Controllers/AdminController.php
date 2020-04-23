@@ -19,7 +19,11 @@ class AdminController extends Controller
     }
     public function index()
     {
-        $users = User::orderBy('id', 'desc')->paginate(6);
+   
+        $users = User::where('city_id', '!=', 'null')
+        ->where('category_id', '!=', 'null')
+        ->orderBy('id', 'desc')
+        ->paginate(6);
         $cities = City::paginate(6);
 
         return view('pages.admin-home', compact('users', 'cities'), $this->data);

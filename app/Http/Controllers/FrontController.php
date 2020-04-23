@@ -39,10 +39,7 @@ class FrontController extends Controller
 
     public function freelancers(){
 
-        $users = User::where('city_id', '!=', 'null')
-        ->where('category_id', '!=', 'null')
-        ->paginate(6);
-        
+       
         $category = request()->categorysearch;
         $city = request()->citysearch;
         
@@ -60,13 +57,22 @@ class FrontController extends Controller
         
         if($category && $city)
         {
-            return view('pages.freelancers', compact('users','usersfilter', 'andjela', 'categoryname', 'cityname'), $this->data);
+            return view('pages.freelancers', compact('usersfilter', 'andjela', 'categoryname', 'cityname'), $this->data);
         }
         else
         {
-            return view('pages.freeall', compact('users','usersfilter', 'andjela', 'categoryname', 'cityname'), $this->data);
+            return abort(404);
         }
         
+    }
+
+    public function all()
+    {
+        $users = User::where('city_id', '!=', 'null')
+        ->where('category_id', '!=', 'null')
+        ->paginate(6);
+        
+        return view('pages.freeall', compact('users'), $this->data);
     }
 
 
@@ -91,6 +97,11 @@ class FrontController extends Controller
        
        
         
+    }
+
+    public function contact()
+    {
+        return view('pages.contact-us');
     }
 
 }

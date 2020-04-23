@@ -82,7 +82,7 @@
       </div>
     </div>
     
-    <div class="site-section bg-image overlay" style="background-image: url('images/5.jpg');">
+    <div class="site-section bg-image overlay h76" style="background-image: url('images/5.jpg');">
       <div class="container">
         <div class="row res" >
           <div class="col">

@@ -9,23 +9,24 @@
                 <h5 class="card-title">Name: null</h5>
                 <div class="rounded-circle mt-2 image-background"  style="">
                 </div>
-                <small></small>
+                
             @else
                 <h5 class="card-title">Name: {{$user->name}}</h5>
                 <div class="rounded-circle mt-2 image-background"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
                 </div>
             @endif
-                <small>Email: {{$user->email}}<br>
+                <small>Email: {{$user->email}}<br></small>
                 @if($user->city_id == null && $user->category_id == null)
 
                 @else
+                <small>
                 Category:&nbsp;{{$user->category->name}}<br>
                 Place: &nbsp;{{$user->city->name}}, {{$user->city->country->name_country}}</small>
                @endif
                <br>
-               <a href="" class="btn btn-sm btn-info"><small>View more</small></a>
+               <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-sm btn-info"><small>View more</small></a>
              </div>
             </div>
-            </div>
-            
+</div>
+
        @endforeach

@@ -3,7 +3,7 @@
      
      <section>
      <div class="intro-section" style="background-image: url('images/ser.jpg');">
-     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="margin-top:-150px;  width: 100%;   position: absolute;">
+     <video playsinline="playsinline" class="dajboze bezi naopako" autoplay="autoplay" muted="muted" loop="loop" >
       <source src="videos/testt.mp4" type="video/mp4">
      </video>
         <div class="container">
@@ -20,7 +20,7 @@
 
     
 
-    <div class="py-5" style="margin-top: 320px;">
+    <div class="py-5 sta" style="">
       <div class="container" >
         <div class="row" style="    text-align: center;">
           <div class="col-md-6 col-lg-4 mb-5">

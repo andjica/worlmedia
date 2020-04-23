@@ -12,47 +12,18 @@
 <div class="header-top bg-light ">
 <div class="container tw24 ">
 <div class="row align-items-center">
-<div class="col-6 col-lg-3">
+<div class="col-5 col-lg-3 strava">
 <a href="{{asset ('/')}}">
-<img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid">
+<img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid jebemga">
 
 </a>
 </div>
-<div class="col-lg-3 d-none d-lg-block">
-<div class="quick-contact-icons d-flex">
-<div class="icon align-self-start">
-<span class="icon-location-arrow text-primary"></span>
-</div>
-<div class="text">
-<span class="h4 d-block">San Francisco</span>
-<span class="caption-text">Mountain View, Fake st., CA</span>
-</div>
-</div>
-</div>
-<div class="col-lg-3 d-none d-lg-block">
-<div class="quick-contact-icons d-flex">
-<div class="icon align-self-start">
-<span class="icon-phone text-primary"></span>
-</div>
-<div class="text">
-<span class="h4 d-block">000 209 392 312</span>
-<span class="caption-text">Toll free</span>
-</div>
-</div>
-</div>
-<div class="col-lg-3 d-none d-lg-block">
-<div class="quick-contact-icons d-flex">
-<div class="icon align-self-start">
-<span class="icon-envelope text-primary"></span>
-</div>
-<div class="text">
-<span class="h4 d-block"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="264f48404966414b474f4a0845494b">[email&#160;protected]</a></span>
-<span class="caption-text">Gournadi, 1230 Bariasl</span>
-</div>
-</div>
-</div>
+
+
+
 <div class="col-6 d-block d-lg-none text-right">
-<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+  <span class="icon-menu h3 usta"></span></a>
 </div>
 </div>
 </div>
@@ -75,8 +46,8 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
               <li>
 
-          <a href="{{asset('/')}}">
-                <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep img-logo">
+         <a href="{{asset('/')}}">
+                <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep druga-clasa img-logo">
           </a>
           </li>
               <li class="active">
@@ -88,7 +59,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ asset('/freelancers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                 <li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
@@ -97,7 +68,7 @@
                 
                 <li><a href="{{ asset('/blog')}}" class="nav-link text-left">Blog</a></li>
                 <li>
-                    <a href="{{ asset('/contact')}}" class="nav-link text-left">Contact</a>
+                    <a href="{{ asset('/contact-us')}}" class="nav-link text-left">Contact</a>
                   </li>
                   
                   @if(auth()->user() && auth()->user()->role_id == 2)

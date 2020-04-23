@@ -29,8 +29,8 @@
                         <li class="list-group">  {{$users->links()}}</li>
                     </ul>
                 </div>
-           </div>
         </div>
+    </div>
     
 </div>
       

@@ -16,9 +16,11 @@ Route::get('/services', 'FrontController@services');
 Route::get('/about', 'FrontController@about');
 Route::get('/blog', 'FrontController@blog');
 Route::get('/freelancers', 'FrontController@freelancers')->name('freelancers');
+Route::get('/allmembers', 'FrontController@all')->name('allmembers');
 Route::get('/freelancer/{id}', 'FrontController@profile')->name('freelancer/{id}');
-/*Route::get('/profile', 'FrontController@profile');*/
 
+/*Route::get('/profile', 'FrontController@profile');*/
+Route::get('/contact-us', 'FrontController@contact')->name('contact-us');
 Auth::routes();
 
 Route::get('/editprofile', 'HomeController@editprofile')->name('editprofile');
