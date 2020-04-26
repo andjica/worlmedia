@@ -1660,6 +1660,7 @@ h1, h2, h3, h4, h5,
       height: 30px;
       width: 120px;
       position: absolute;
+      text-align: center;
       right: 15px;
       top: 0;
       color:white;
@@ -1879,21 +1880,157 @@ background:none;
 
 @media screen and (min-width:768px){
 .sickness{
-  width:1040px !important;
-  height: 200px !important;
+  text-align: center;
   padding-top: 60px;
 }
-
+.mt-12{
+  margin-top:0px !important;
+}
 .sta{
   margin-top: 320px;
 }
+
+
 .naopako{
   margin-top:-150px;  width: 100%;   position: absolute;
+ height: auto;
+}
+
+.nova{
+  margin-top:180px;
 }
 
 }
 
-.row{
-  margin-left:0px !important;
-  margin-right:0px !important;
+.new-img{
+  background-image: url(../images/ad.jpg);
+  height: 100%;
+  width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px;
 }
+
+.new-img2{
+  background-image: url(../images/ad.jpg);
+  height: 100%;
+  width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.text-align-center{
+  text-align: center;
+  margin-top: 25px;
+}
+
+.widthinh{
+  width:100%;
+}
+
+.shaper{
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 275px 0 275px 500px;
+border-color: transparent transparent transparent deepskyblue;
+
+
+}
+
+.rg12{
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: -300px;
+  top: -191px;
+}
+
+.pt-12{
+  padding-top:60px;
+}
+
+.custom{
+  background: purple !important;
+    color: white;
+    height: 50px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+.sticker-win{
+  position: absolute;
+    left: -445px;
+    background: grey;
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    border-radius: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+.f98{
+  font-size: 38px;
+  padding-top: 29px;
+}
+.hh67{
+  font-size: 70px !important;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.newb{
+  font-weight: 900;
+    padding: 40px;
+}
+
+.custom2{
+  position: absolute;
+  text-align: center;
+  left: 301px;
+  top: 1326px;
+  height: 64px;
+  width: 200px;
+  font-size: 34px;
+  
+}
+
+.a23{
+  font-size: 34px;
+}
+
+@media screen and (max-width:18010px){
+.h768{
+  position: fixed;
+  right: 0;
+  top: 651px;
+  background: blue;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px
+}
+.fa-4x {
+  color: white;
+  font-size: 4em;
+}
+}
+
+@media screen and (max-width:520px){
+  .h768{
+    position: fixed;
+    right: 0;
+    height: 86px;
+    top: 242px;
+    bottom: 0;
+    background: blue;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .fa-4x {
+    color: white;
+    font-size: 4em;
+}
+  }

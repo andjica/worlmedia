@@ -50,26 +50,24 @@
                 <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep druga-clasa img-logo">
           </a>
           </li>
-              <li class="active">
+             <!-- <li class="active">
                   <a href="{{ asset('/')}}" class="nav-link text-left">Home</a>
-                </li>
+                </li>-->
                
                 <li>
-                  <a href="{{ asset('/services')}}" class="nav-link text-left">Services</a>
+                  <a href="{{ asset('/services')}}" class="nav-link text-left">Challenges</a>
                 </li>
 
                 <li>
                     <a href="{{ asset('/allmembers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
-                <li>
+                <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
-                </li>
+                </li>-->
                 
                 
-                <li><a href="{{ asset('/blog')}}" class="nav-link text-left">Blog</a></li>
-                <li>
-                    <a href="{{ asset('/contact-us')}}" class="nav-link text-left">Contact</a>
-                  </li>
+                <li><a href="{{ asset('/register')}}" class="nav-link text-left">Join Us</a></li>
+               
                   
                   @if(auth()->user() && auth()->user()->role_id == 2)
                   <li><a href="{{ asset ('/editprofile')}}" class="nav-link text-left">Edit profile</a></li>
@@ -80,6 +78,9 @@
                   @else
                     <li><a href="{{route('login')}}">Login</a></li>
                   @endif
+                  </li>
+                  <li>
+                    <a href="{{ asset('/contact-us')}}" class="nav-link text-left">Contact</a>
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
@@ -92,3 +93,4 @@
     </div>
     
     </div>
+  

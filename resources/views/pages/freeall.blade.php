@@ -1,13 +1,19 @@
 @include('components.head')
 @include('components.nav')
-<div class="s01 tt">
-@include('components.search')
-    </div>
+<video class="dajboze bezi naopako mt-12" autoplay="autoplay" muted="muted" loop="loop" >
+          <source src="videos/test3.mp4" type="video/mp4">
+        </video>
+<div class="s01 tt ">
   
-<section id="freelancers">
+
+</div>
+  
+<section id="freelancers" class="nova">
+    
   <div class="container" style="  margin-top: 20px;">
-        <div class="row" style="display:flex; margin-top:60px;">
-   
+        <div class="row " style=" margin-top:160px !important;">
+        @include('components.search')
+
         <div class="col-lg-9">
          
               <h5>@isset($categoryname){{$categoryname->name}} &nbsp;> @endisset @isset($cityname) {{$cityname->name}}@endisset</h5> 
@@ -52,7 +58,16 @@
         </div>
  
         <div class="col-lg-3">
+        
+          <h3 class="text-align-center">Sponsored partners</h3>
+            <div class="new-img">
+                
+            </div>
+            
+            
             @include('components.sidebar')
+            
+            
         </div>
     </div>
    

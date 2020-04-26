@@ -36,7 +36,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ asset ('/freelancers')}}" class="nav-link text-left" style="background: orange;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset ('/allmembers')}}" class="nav-link text-left" style="background: orange;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                
                  <li><a href="{{ asset ('/blog')}}" class="nav-link text-left">Blog</a></li>

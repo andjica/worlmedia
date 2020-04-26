@@ -9,9 +9,8 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" style="margin-top:320px;" data-aos="fade-up">
-              <h1>Our Services</h1>
-              <p>We offer a big variaty of media crew member jobs and job-seekers</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5" style="background:orange;">Contact</a></p>
+              <h1>Our Challenges</h1>
+              <h4 class="text-white">Here you can win the biggest prices there are on the market! Only for our media crew members!</h4>
             </div>
           </div>
         </div>
@@ -21,63 +20,17 @@
     
 
     <div class="py-5 sta" style="">
-      <div class="container" >
-        <div class="row" style="    text-align: center;">
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-yacht" style="color:orange;"></span>
-              </span>
-              <h3>Luxuries & Speed</h3>
-              <p>World media crew members platform covers all the right needs for the media industrie, we provide for everyone the right needs to get in touch with the right crew member.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-shield"></span>
-              </span>
-              <h3>20 Years of Experience</h3>
-              <p>With over 20 years of experience in the media, we know exactly what the needs and demands are to succeed for the media crew members.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain" style="color:orange;"></span>
-              </span>
-              <h3>User friendly</h3>
-              <p>World Media Crew, is very user friendly and very easy to use. All you have to do is register and that is it.</p>
-            </div>
-          </div>
+      <div class="container " style="background-image:url('./images/nova.jpeg'); width:100%; height:861px; background-repeat:no-repeat;     background-size: contain;">
+        <div class="row" style="text-align: center;">
+        <a href="{{asset ('/register')}}" class="a23">
+          <div class="btn btn-primary custom2">   
+            <p class="a23" style="    padding-top: 16px; font-size:20px !important;">Join now</p>      
 
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-devices" style="color:orange;"></span>
-              </span>
-              <h3>On all platform available</h3>
-              <p>We developed and designed the world media crew member platform for all the right devices and desktop users. The platform is very easy and cheap to use, and all the right needs are there for you.</p>
-            </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-badge"></span>
-              </span>
-              <h3>True Star platform</h3>
-              <p>We have the only and best platform there is for the right media crew members needed, all you need to do is register and make an account, after that you will your profile and succeed in business.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5">
-            <div class="service-29283">
-              <span class="wrap-icon-39293">
-                <span class="flaticon-captain-1" style="color:orange;"></span>
-              </span>
-              <h3>Leadership & 24/7 support</h3>
-              <p>We offer all the right needs for the support that is needed for our users. We have a true and perfect leadership that fits everyone's requirements.</p>
-            </div>
-          </div>
+          </a>
+
+         
+        
         </div>
       </div>
     </div>

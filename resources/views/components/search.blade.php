@@ -1,14 +1,14 @@
 
 <form action="{{route('freelancers')}}" method="get" id="form-search"> 
-	<div class="container sickness">
-	  <div class="row h6h no-gutters new-res">
+	<div class="container sickness deskic">
+	  <div class="row no-gutters new-res">
 	
 				        <div class="col-md mr-md-2">
 				            <div class="form-group">
 				              	<div class="form-field">
 					              	<div class="select-wrap">
 							            <div class="icon"><span class="ion-ios-arrow-down "></span></div>
-												  <select class="js-example-basic-single form-control new-block search-slt border-warning bg-light sm-select2" name="categorysearch" id="categorys">
+												  <select class="sizing js-example-basic-single form-control new-block search-slt border-warning bg-light sm-select2" name="categorysearch" id="categorys">
 													<option value="">Category</option>
 														@foreach($categories as $category)
 															<option value="{{$category->id}}">{{$category->name}}</option>
@@ -24,7 +24,7 @@
 				              					<div class="form-field">
 					              				<div class="select-wrap">
 							                      <div class="icon"><span class="ion-ios-arrow-down "></span></div>
-												  <select class="js-example-basic-single2 form-control search-slt border-warning bg-light new-block sm-select2 profi" name="citysearch" id="citys">
+												  <select class=" sizing js-example-basic-single2 form-control search-slt border-warning bg-light new-block sm-select2 profi" name="citysearch" id="citys">
 													<option value="">City</option>
 														@foreach($cities as $city)
 															<option value="{{$city->id}}">{{$city->name}}, {{$city->country->name_country}}</option>

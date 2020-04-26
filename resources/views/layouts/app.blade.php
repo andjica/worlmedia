@@ -62,10 +62,13 @@
                                         <a class="nav-link" href="{{ asset('/') }}">Home</a>
                                      </li>
                                      <li class="nav-item ">
-                                        <a class="nav-link xdb" href="{{ asset('./freelancers') }}">Crew-Members</a>
+                                        <a class="nav-link xdb" href="{{ asset('./allmembers') }}">Crew-Members</a>
                                     </li>
                                      <li class="nav-item">
                                         <a class="nav-link" href="{{ asset('./editprofile') }}">User-Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#invite">Invite-friends</a>
                                     </li>
 
                                     
@@ -82,6 +85,8 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+
+                                    
                                    
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -99,38 +104,58 @@
         </main>
 
     </div>
-    
-    <div class="footer bg-light" style=" margin-top: 405px;  padding-top: 40px; padding-bottom:40px; ">
+
+
+    <div class="wrapper" id="invite">
+        <div class="content u-flexCenter u-sizeViewHeightMin100">
+            <div class="shareUrl u-verticalGrid u-marginAuto u-size1040">
+            <header class="shareUrl-header">
+            <h3 class="">Copy the link and win huge prices!</h3>
+
+            </header>
+            <div class="shareUrl-body">
+                <div class="container">
+                <!-- COPY INPUT -->
+                <input class="shareUrl-input js-shareUrl" type="text" readonly="readonly" />
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer bg-light" style=" margin-top: autopx;  padding-top: 40px; padding-bottom:40px; ">
       <div class="container" style="text-align: center;">
-        <div class="row">
+      <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="images/logo1.png" alt="Image" class="img-fluid"></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
+            <p class="mb-4"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
+            <p>The number #1 place to hire and find your right media crew member in the world!</p>  
             <p><a href="#">Learn More</a></p>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading"><span>Our Company</span></h3>
+            <h3 class="footer-heading"><span>World media crew</span></h3>
             <ul class="list-unstyled">
-                <li><a href="#">About</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="{{asset('/')}}">Home</a></li>
+                <li><a href="{{asset('/services')}}">Services</a></li>
+                <li><a href="{{asset('/freelancers')}}">Crew-Members</a></li>
+                <li><a href="{{asset('/aboutus')}}">About US</a></li>
+                <li><a href="{{asset('/blog')}}">Blog</a></li>
+                <li><a href="{{asset('/contact')}}">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Our Services</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="#">Industrial</a></li>
-                  <li><a href="#">Construction</a></li>
-                  <li><a href="#">Remodeling</a></li>
+                  <li><a href="{{asset('/register')}}">Make an account</a></li>
+                  <li><a href="{{asset('/login')}}">Login with account</a></li>
+                  <li><a href="{{asset('/services')}}">Services</a></li>
               </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="#">Help Center</a></li>
+                  <li><a href="{{asset('/contact')}}">Contact</a></li>
                   <li><a href="#">Support Community</a></li>
                   <li><a href="#">Press</a></li>
                   <li><a href="#">FAQ</a></li>
@@ -174,11 +199,35 @@
   <script src="./js/jquery.fancybox.min.js"></script>
   <script src="./js/jquery.sticky.js"></script>
   <script src="./js/jquery.mb.YTPlayer.min.js"></script>
-
-
-
-
   <script src="js/main.js"></script>
+<script>
+(function() {
+    
+    // Create reusable copy fn
+    function copy(element) {
+        
+        return function() {
+          document.execCommand('copy', false, element.select());
+        }
+    }
+    
+    // Grab shareUrl element
+    var shareUrl = document.querySelector('.js-shareUrl');
+
+    // Create new instance of copy, passing in shareUrl element
+    var copyShareUrl = copy(shareUrl);
+    
+    // Set value via markup or JS
+    shareUrl.value = "http://dfambusiness.com/world/public/";
+  
+    // Click listener with copyShareUrl handler
+    shareUrl.addEventListener('click', copyShareUrl, false);
+  
+}());
+</script>
+
+
+ 
 
 
 
@@ -221,4 +270,82 @@
         height: 70px;
     background: black;
      }
+
+     .wrapper {
+  background: white;
+}
+p {
+  line-height: 1.3;
+}
+
+.shareUrl {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+.shareUrl-header {
+  margin-bottom: 40px;
+}
+.shareUrl-headerText {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.shareUrl-subtext {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.shareUrl-body {
+  margin-bottom: 70px;
+}
+.shareUrl-input {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid rgba(0,0,0,.09);
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  background: $transparent;
+  border-radius: 3px;
+  transition: all 300ms ease;
+
+}
+
+@media screen and (min-width: 568px) {
+  .shareUrl {
+    padding: 70px 20px;
+  }
+  .shareUrl-input {
+    max-width: 100%;
+    font-size: 56px;
+  }
+  .shareUrl-headerText {
+    font-size: 32px;
+  }
+}
+
+.u-verticalGrid {
+  display: flex;
+  flex-flow: column wrap;
+}
+.u-flexCenter {
+  display: flex;
+  align-items: center !important;
+}
+.u-flexCenterHorizontal {
+  display: flex;
+  justify-content: center !important;
+}
+.u-sizeViewHeightMin100 {
+  min-height: auto;
+}
+.u-size1040 {
+  max-width: 1040px;
+}
+.u-marginAuto {
+  margin: 0 auto;
+}
+
+
 </style>
