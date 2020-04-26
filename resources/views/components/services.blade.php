@@ -4,7 +4,7 @@
      <section>
      <div class="intro-section" style="background-image: url('images/ser.jpg');">
      <video playsinline="playsinline" class="dajboze bezi naopako" autoplay="autoplay" muted="muted" loop="loop" >
-      <source src="videos/testt.mp4" type="video/mp4">
+      <source src="{{asset('/')}}videos/testt.mp4" type="video/mp4">
      </video>
         <div class="container">
           <div class="row align-items-center">
