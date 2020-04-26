@@ -93,6 +93,11 @@
                                     <textarea rows="2" class="form-control" id="bio2" name="desc2" placeholder="Tell something about yourself">{{$user->desc_two}}</textarea>
                                     @if ($errors->has('desc2'))  <p style="color:red;">{{$errors->first('desc2')}}</p> @endif
                                 </div>
+                                <div class="form-group">
+                                    <label for="inputUsername">Enter here your Equipment</label>
+                                    <textarea rows="2" class="form-control" id="bio3" name="desc3" placeholder="Tell something about yourself">{{$user->desc_three}}</textarea>
+                                    @if ($errors->has('desc3'))  <p style="color:red;">{{$errors->first('desc3')}}</p> @endif
+                                </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="text-center">
@@ -147,12 +152,41 @@
                         <form action="{{route('upgrade-info')}}" method="post" id="adding-info">
                         @csrf
                                 <div class="form-row">
-                                    <div class="form-group col-md-12">
+                                    <div class="form-group col-md-3">
                                         <label for="inputFirstName">Write your skills</label>
-                                        <textarea rows="2" class="form-control" name="skills" id="skills" placeholder="Type something about your sklills, Like programmer - CSS, HTML, JS">{{$user->skills}}</textarea>
-                                        @if ($errors->has('skills'))  <p style="color:red;">{{$errors->first('skills')}}</p> @endif
+                                        <input rows="2" class="form-control" name="sk1" id="skills" placeholder="Type something about your skill" value="{{$user->skill_one}}">
+                                        @if ($errors->has('sk1'))  <p style="color:red;">{{$errors->first('sk1')}}</p> @endif
                                     </div>
-                                    
+                                    <div class="form-group col-md-3">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <input rows="2" class="form-control" name="sk2" id="skills" placeholder="Type something about your skill" value="{{$user->skill_two}}">
+                                        @if ($errors->has('sk2'))  <p style="color:red;">{{$errors->first('sk2')}}</p> @endif
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <input rows="2" class="form-control" name="sk3" id="skills" placeholder="Type something about your skill" value="{{$user->skill_tree}}">
+                                        @if ($errors->has('sk3'))  <p style="color:red;">{{$errors->first('sk3')}}</p> @endif
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <input rows="2" class="form-control" name="sk4" id="skills" placeholder="Type something about your skill" value="{{$user->skill_four}}">
+                                        @if ($errors->has('sk4'))  <p style="color:red;">{{$errors->first('sk4')}}</p> @endif
+                                    </div>    
+
+                                                                    
+                                </div>
+                                <div class="form-row">
+                                <div class="form-group col-md-3">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <input rows="2" class="form-control" name="sk5" id="skills" placeholder="Type something about your skill" value="{{$user->skill_five}}">
+                                        @if ($errors->has('sk5'))  <p style="color:red;">{{$errors->first('sk5')}}</p> @endif
+                                    </div>   
+                                    <div class="form-group col-md-3">
+                                        <label for="inputFirstName">Write your skills</label>
+                                        <input rows="2" class="form-control" name="sk6" id="skills" placeholder="Type something about your skill" value="{{$user->skill_six}}">
+                                        @if ($errors->has('sk6'))  <p style="color:red;">{{$errors->first('sk6')}}</p> @endif
+                                    </div>   
                                 </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose category</label>

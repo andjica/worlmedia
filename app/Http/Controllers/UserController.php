@@ -49,6 +49,7 @@ class UserController extends Controller
             'name' => 'min:3|max:30',
             'desc1' => 'max:450',
             'desc2' => 'max:450',
+            'desc3' => 'max:450',
             'image' => 'mimes:jpeg,png,jpg,gif,svg'
            
         ],
@@ -56,7 +57,8 @@ class UserController extends Controller
             'name.min' => 'Min characters for name is 3',
             'name.max' => 'Max characters for name is 30',
             'desc1.max' => 'Your description for biography is too long, max characters is 450',
-            'desc2.max' => 'Your description biography two is too long, max characters is 450',
+            'desc2.max' => 'Your description biography is too long, max characters is 450',
+            'desc3.max' => 'Your description equipment to is too long, max characters is 450',
             'image.mimes' => 'Image must be in jpeg, jpg, png, gif or svg format'
             
         ]);
@@ -69,6 +71,8 @@ class UserController extends Controller
             $user->name = request()->username;
             $user->desc_one = request()->desc1;
             $user->desc_two = request()->desc2;
+            $user->desc_three = request()->desc3;
+
             
     
            
@@ -113,18 +117,33 @@ class UserController extends Controller
     public function storeinfo()
     {
         request()->validate([
-            'skills' => 'max:160',
+            'sk1' => 'max:60',
+            'sk2' => 'max:60',
+            'sk3' => 'max:60',
+            'sk4' => 'max:60',
+            'sk5' => 'max:60',
+            'sk6' => 'max:60',
             'link' => 'url'
         ],
         [
-            'skills.max' => 'Max characters for skills is 160'
+            'sk1.max' => 'Max characters for skills is 60',
+            'sk2.max' => 'Max characters for skills is 60',
+            'sk3.max' => 'Max characters for skills is 60',
+            'sk4.max' => 'Max characters for skills is 60',
+            'sk5.max' => 'Max characters for skills is 60',
+            'sk6.max' => 'Max characters for skills is 60'
         ]);
 
         $userId = auth()->user()->id;
 
         $user = User::where('id', $userId)->first();
 
-        $user->skills = request()->skills;
+        $user->skill_one = request()->sk1;
+        $user->skill_two = request()->sk2;
+        $user->skill_tree = request()->sk3;
+        $user->skill_four = request()->sk4;
+        $user->skill_five = request()->sk5;
+        $user->skill_six = request()->sk6;
         $user->category_id = request()->categoryid;
         $user->city_id = request()->cityid;
         $user->link = request()->link;

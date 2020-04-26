@@ -40,6 +40,7 @@
 <link rel="stylesheet" href="{{asset('/')}}css/owl-carousel/owl.theme.css">
  
 <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Comfortaa' type='text/css'/>
+<link rel="stylesheet" href="{{asset('/')}}css/style-profile.css" type="text/css"/>
 
 
 </head>
