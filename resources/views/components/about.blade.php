@@ -3,9 +3,9 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
-              <h1>About WaterBoat</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in distinctio nostrum laborum sed quisquam voluptate facilis non.</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5">Contact</a></p>
+              <h1>About World media crew members</h1>
+              <p>This is the best way to get your media business going and developing a perfect carreer!</p>
+              <p><a href="#" class="btn btn-primary py-3 px-5">Read more</a></p>
             </div>
           </div>
         </div>
@@ -75,95 +75,22 @@
 
     <div class="site-section">
       <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Team</span>
-            <h3 class="heading-92913 text-black text-center">Our Team</h3>
-          </div>
-        </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
+          <div class="col-md-6">
+            <img src="images/4.jpg" alt="Image" class="img-fluid" style="border-top-left-radius: 120px;
+    border-bottom-right-radius: 120px;">
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
+          <div class="col-md-6">
+          <h2 class="heading-92913 text-black">About World Media Crew Members </h2>
+<p>Not only that we offer the best platform for media crew members, you also get to win huge prices if you enter the challenges game, which is totaly free! All you have to do is simply register and activate your account so we could pick our new winner!
+</p>            
+<p> The reason why we are giving such huge prices is that we want to offer our clients something unique, it is not only a perfect place to find jobs, it is also perfect in any way to get real prices each month!   </p>       
+          
+            <p><a href="{{asset ('/freelancers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-lg-0">
-            <div class="person">
-              <figure>
-                <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
-
     
 
-    <div class="site-section bg-image overlay" style="background-image: url('images/43.jpg');">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
+  

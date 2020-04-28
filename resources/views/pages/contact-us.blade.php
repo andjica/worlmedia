@@ -8,7 +8,7 @@
             <div class="col-lg-12 ml-auto text-center" data-aos="fade-up">
               <h1>World Media Crew Member - Contact </h1>
               <p>On our platform you will find the right media crew member you need!, Register quick and search for the right crew member.</p>
-              <p><a href="{{asset ('/aboutus')}}" class="btn btn-primary py-3 px-5" style="background:orange;">Read More</a></p>
+              <p><a href="{{asset ('/about')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More about</a></p>
             </div>
           </div>
         </div>
@@ -108,16 +108,16 @@
         <!--Grid column-->
         <div class="col-md-4 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fa fa-map-marker-alt fa-2x text-orange"></i>
-                    <p>San Francisco, CA 94126, USA</p>
+            <li><i class="fa fa-map-marker-alt fa-2x text-orange"></i>
+                    <p>World Media Crew Members</p>
                 </li>
 
                 <li><i class="fa fa-phone mt-4 fa-2x text-orange"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p>+31 6 42213877 </p>
                 </li>
 
                 <li><i class="fa fa-envelope mt-4 fa-2x text-orange"></i>
-                    <p>contact@mdbootstrap.com</p>
+                    <p>info@worldmediacrew.com</p>
                 </li>
             </ul>
         </div>

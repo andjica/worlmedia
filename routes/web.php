@@ -18,6 +18,7 @@ Route::get('/blog', 'FrontController@blog');
 Route::get('/freelancers', 'FrontController@freelancers')->name('freelancers');
 Route::get('/allmembers', 'FrontController@all')->name('allmembers');
 Route::get('/freelancer/{id}', 'FrontController@profile')->name('freelancer/{id}');
+Route::get('/terms', 'HomeController@terms');
 
 /*Route::get('/profile', 'FrontController@profile');*/
 Route::get('/contact-us', 'FrontController@contact')->name('contact-us');
@@ -25,6 +26,7 @@ Auth::routes();
 
 Route::get('/editprofile', 'HomeController@editprofile')->name('editprofile');
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 //user
 Route::post('/upgrade-user', 'UserController@store')->name('upgrade-user');

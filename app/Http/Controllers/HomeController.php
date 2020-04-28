@@ -73,4 +73,9 @@ class HomeController extends Controller
         }
         return view('pages.editprofile', compact('user', 'purchases'), $this->data);
     }
+
+    public function terms(){
+        return view('pages.terms');
+        
+    }
 }

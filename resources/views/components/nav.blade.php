@@ -47,7 +47,7 @@
               <li>
 
          <a href="{{asset('/')}}">
-                <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep druga-clasa img-logo">
+                <img src="{{asset('/')}}images/logo2.png" rel="canonical" alt="Image" title="Logo world media crew"class="img-fluid new-rep druga-clasa img-logo">
           </a>
           </li>
              <!-- <li class="active">
@@ -55,18 +55,19 @@
                 </li>-->
                
                 <li>
-                  <a href="{{ asset('/services')}}" class="nav-link text-left">Challenges</a>
+                  <a href="{{ asset('/services')}}" rel="canonical" class="nav-link text-left" title="Challenger from world media crew">Challenges</a>
                 </li>
+                
 
                 <li>
-                    <a href="{{ asset('/allmembers')}}" class="nav-link text-left" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                 <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
                 </li>-->
                 
                 
-                <li><a href="{{ asset('/register')}}" class="nav-link text-left">Join Us</a></li>
+                <li><a href="{{ asset('/register')}}" rel="canonical" class="nav-link text-left" title="Register in world media crew platform">Join Us</a></li>
                
                   
                   @if(auth()->user() && auth()->user()->role_id == 2)
@@ -76,11 +77,11 @@
                   <li><a href="{{ asset ('/admin-home')}}" class="nav-link text-left">Admin panel</a></li>
                   <li><a href="{{ url('/logout') }}" class="collapse-item"> <i class="fas fa-sign-out-alt"></i>Logout </a></li>
                   @else
-                    <li><a href="{{route('login')}}">Login</a></li>
+                    <li><a href="{{route('login')}}" rel="canonical">Login</a></li>
                   @endif
                   </li>
                   <li>
-                    <a href="{{ asset('/contact-us')}}" class="nav-link text-left">Contact</a>
+                    <a href="{{ asset('/contact-us')}}" rel="canonical" class="nav-link text-left" title="Contact World Media Crew"> Contact</a>
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>

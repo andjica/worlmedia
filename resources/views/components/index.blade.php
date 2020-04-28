@@ -5,7 +5,7 @@
             <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
               <h1>The best database platform for Media crew members</h1>
               <p>On our platform you will find the right media crew member you need!, Register quick and search for the right crew member.</p>
-              <p><a href="{{asset ('/aboutus')}}" class="btn btn-primary py-3 px-5" style="background:orange;">Read More</a></p>
+              <p><a href="{{asset ('/aboutus')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More</a></p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="col-md-6">
         
-            <h2 class="heading-92913 text-black">About World Media Crew Members </h2>
+            <h1 class="heading-92913 text-black">About World Media Crew Members </h1>
             <p>We have the worlds leading platform for media crew members, all the categories are there for everyone that is working in the media industrie. You can contact people from all the 46 countries all around the world.</p>
             <p>We have made this platform so user friendly that it is very easy to use and for a very reasonable price you can join the community to gain more jobs in the media world!
               

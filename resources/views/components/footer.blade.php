@@ -11,27 +11,28 @@
             <h3 class="footer-heading"><span>World media crew</span></h3>
             <ul class="list-unstyled">
                 <li><a href="{{asset('/')}}">Home</a></li>
-                <li><a href="{{asset('/services')}}">Services</a></li>
-                <li><a href="{{asset('/freelancers')}}">Crew-Members</a></li>
-                <li><a href="{{asset('/aboutus')}}">About US</a></li>
-                <li><a href="{{asset('/blog')}}">Blog</a></li>
-                <li><a href="{{asset('/contact')}}">Contact</a></li>
+                <li><a href="{{asset('/services')}}" title="Challenger from world media crew">Challenges</a></li>
+                <li><a href="{{asset('/freelancers')}}" title="Members from world media crew">Crew-Members</a></li>
+                {{-- <li><a href="{{asset('/blog')}}" title="Blog Page for World Media Crew platform">Blog</a></li> --}}
+                <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Our Services</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/register')}}">Make an account</a></li>
-                  <li><a href="{{asset('/login')}}">Login with account</a></li>
-                  <li><a href="{{asset('/services')}}">Services</a></li>
+                  <li><a href="{{asset('/register')}}" title="Register in World Media Crew platform">Make an account</a></li>
+                  <li><a href="{{asset('/login')}}" title="Login page">Login with account</a></li>
+                  <li><a href="{{asset('/services')}}" title="Challengers page">Challengers</a></li>
+                  <li><a href="{{asset('/about')}}" title="About World Media Crew platform">about us</a></li>
+
               </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/contact')}}">Contact</a></li>
-                  <li><a href="#">Support Community</a></li>
-                  <li><a href="#">Press</a></li>
+                  <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
+                  <li><a href="{{asset('/Contact')}}" title="Contact Us">Support Community</a></li>
+                  <li><a href="{{asset('/terms')}}" title="Contact Us">Terms & Conditions</a></li>
                   <li><a href="#">FAQ</a></li>
                   <li><a href="#">Our Partners</a></li>
               </ul>
@@ -43,7 +44,7 @@
             <div class="copyright">
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright ©<script>document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved World Media Crew Members| This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://dfambusiness.com" target="_blank">DFAM Digital Agency</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
             </div>

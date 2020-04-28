@@ -2006,7 +2006,7 @@ border-color: transparent transparent transparent deepskyblue;
   position: fixed;
   right: 0;
   top: 651px;
-  background: blue;
+  background: deepskyblue;
   padding: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px
@@ -2024,7 +2024,7 @@ border-color: transparent transparent transparent deepskyblue;
     height: 86px;
     top: 242px;
     bottom: 0;
-    background: blue;
+    background: deepskyblue;
     padding: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -2033,4 +2033,9 @@ border-color: transparent transparent transparent deepskyblue;
     color: white;
     font-size: 4em;
 }
+  }
+
+  .projka{
+    margin-top: 220px;
+    font-weight: 800;
   }

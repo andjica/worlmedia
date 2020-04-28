@@ -87,15 +87,15 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fa fa-map-marker-alt fa-2x text-orange"></i>
-                    <p>San Francisco, CA 94126, USA</p>
+                    <p>World Media Crew Members</p>
                 </li>
 
                 <li><i class="fa fa-phone mt-4 fa-2x text-orange"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p>+31 6 42213877 </p>
                 </li>
 
                 <li><i class="fa fa-envelope mt-4 fa-2x text-orange"></i>
-                    <p>contact@mdbootstrap.com</p>
+                    <p>info@worldmediacrew.com</p>
                 </li>
             </ul>
         </div>
