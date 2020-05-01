@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-md navbar-light twt1 shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="./images/logo2.png" class="img-fluid" style="     margin-top: -14px;    width: 190px;">
+                    <img src="./images/logo2.png" class="img-fluid" style="     margin-top: -14px;    width: 122px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -218,7 +218,7 @@
     var copyShareUrl = copy(shareUrl);
     
     // Set value via markup or JS
-    shareUrl.value = "http://dfambusiness.com/world/public/";
+    shareUrl.value = "https://worldmediacrew.com/public/";
   
     // Click listener with copyShareUrl handler
     shareUrl.addEventListener('click', copyShareUrl, false);

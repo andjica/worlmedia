@@ -94,143 +94,159 @@
     </div>
 
 
+    <!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin-top:60px; text-align:center;">
+<h1>Welcome our new Media Crew Members</h1>
+<!--Controls-->
+<div class="controls-top" style="text-align: center;
+    font-size: 42px;">
     
-    <div class="site-section bg-light">
-      <div class="container">
-          <h2 class="new">Our new members</h2>
-        <div class="row justify-content-center mb-5">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>                    </div>
-                    <div class="carousel-item">
-                    <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>                    </div>
-                    <div class="carousel-item">
-                    <div class="person">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                <div class="social">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                  <a href="#"><span class="icon-twitter"></span></a>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </div>
-              </figure>
-              <div class="person-contents">
-                <h3>Craig Daniel</h3>
-                <span class="position">Engineer</span>
-              </div>
-            </div>                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-          
+  <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+  <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+      class="fa fa-chevron-right"></i></a>
+</div>
+<!--/.Controls-->
+
+<!--Indicators-->
+<ol class="carousel-indicators">
+  <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+  <li data-target="#multi-item-example" data-slide-to="1"></li>
+  
+</ol>
+<!--/.Indicators-->
+
+<!--Slides-->
+<div class="carousel-inner" role="listbox">
+
+  <!--First slide-->
+  <div class="carousel-item active">
+
+    <div class="col-md-3" style="float:left">
+     <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
         </div>
       </div>
     </div>
+
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+    
+     <div class="col-md-3" style="float:left">
+     <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--/.First slide-->
+
+  <!--Second slide-->
+  <div class="carousel-item">
+
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-3" style="float:left">
+      <div class="card mb-2">
+        <img class="card-img-top rondje"
+          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--/.Second slide-->
+
+ 
+
+</div>
+<!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
 
     
     
 
    
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <span class="text-serif text-primary">Testimonial</span>
-            <h3 class="heading-92913 text-black text-center">What Customer Saying...</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_4_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-md-6 col-lg-4">
-            <div class="testimony-39291">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum cumque commodi, unde doloribus.</p>
-              </blockquote>
-              <div class="d-flex vcard align-items-center">
-                <div class="pic mr-3">
-                  <img src="images/person_3_sq.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div class="text">
-                  <strong class="d-block">John Doe</strong>
-                  <span>CEO and Co-Founder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="site-section bg-image overlay" style="    background-image: url(./images/4.jpg);
     background-size: contain;">
@@ -238,8 +254,8 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
+            <p class="lead text-white"></p>
+                <a href="{{asset('/contact')}}" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
       </div>
@@ -259,5 +275,10 @@
     display:none;
   }
 }
-  
+  .rondje{
+    border-radius:100%;
+  }
+  .card{
+    border:none !important;
+  }
 </style>
