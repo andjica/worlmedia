@@ -102,9 +102,6 @@ class FrontController extends Controller
         }*/
         return view('pages.profile', compact('user'));
         
-       
-       
-        
     }
 
     public function contact()
