@@ -1791,6 +1791,7 @@ width:200px;
 background-size: cover;
 background-repeat: no-repeat;
 }
+
 .image-background3
 {
 height:70px;
@@ -1799,10 +1800,23 @@ background-size: cover;
 background-repeat: no-repeat;
 float:left;
 }
+
+.image-background4
+
+{
+height:150px;
+width:150px;
+background-size: cover;
+background-repeat: no-repeat;
+}
 .main-row
 {
   margin-top:100px;
  
+}
+#carousel-random
+{
+  margin-bottom:100px;
 }
 
 .alert-s
