@@ -22,7 +22,15 @@ class FrontController extends Controller
     }
     public function index(){
 
-        return view('pages.index', $this->data);
+        $usersfirstrandom = User::where('city_id', '!=', 'null')
+                    ->where('category_id', '!=', 'null')
+                    ->inRandomOrder()->limit(4)->get();
+
+        $userssecondrandom = User::where('city_id', '!=', 'null')
+                    ->where('category_id', '!=', 'null')
+                    ->inRandomOrder()->limit(4)->get();
+
+        return view('pages.index', compact('usersfirstrandom', 'userssecondrandom'), $this->data);
     }
 
     public function services(){
@@ -82,7 +90,7 @@ class FrontController extends Controller
         $user = User::find($id);
         $userId = $user->id;
 
-        if(Review::where('user_id', $userId)->first())
+        /*if(Review::where('user_id', $userId)->first())
         {
             $userrate = Review::where('user_id', $userId)->sum('rate');
             $usercount = Review::where('user_id', $userId)->count();
@@ -91,8 +99,8 @@ class FrontController extends Controller
             
           
             return view('pages.profile', compact('user', 'rate'));
-        }
-        return view('pages.profile', compact('user', 'rate'));
+        }*/
+        return view('pages.profile', compact('user'));
         
        
        
