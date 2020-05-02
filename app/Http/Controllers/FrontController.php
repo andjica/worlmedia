@@ -14,6 +14,7 @@ class FrontController extends Controller
 
     public function __construct()
     {
+        $this->middleware('auth');
         $this->data['categories'] = Category::orderBy('name', 'desc')->get();
         $this->data['cities'] =  City::orderBy('name', 'asc')->get();
         
@@ -53,6 +54,7 @@ class FrontController extends Controller
         
         $usersfilter = User::where('category_id', $category)
                 ->where('city_id', $city)
+                ->orderBy('created_at', 'desc')
                 ->paginate(6);
 
         $categoryname = Category::where('id', $category)->first();
@@ -78,6 +80,7 @@ class FrontController extends Controller
     {
         $users = User::where('city_id', '!=', 'null')
         ->where('category_id', '!=', 'null')
+        ->orderBy('created_at', 'desc')
         ->paginate(6);
         
         return view('pages.freeall', compact('users'), $this->data);
