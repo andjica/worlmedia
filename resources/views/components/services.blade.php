@@ -99,7 +99,7 @@
      
   <section>
      <div class="wrap nemaga">
-      <div class="container">
+      <div class="container p-5">
       <center>
           <h1 class="projka">The best challenger games for our Members!</h1>
           </center>
@@ -279,33 +279,8 @@
   <div class='tri'></div>
   <div class='tri'></div>
   <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
-  <div class='tri'></div>
+
+ 
   </div>
 </div>
 </section>
@@ -313,46 +288,41 @@
     
   <section class="">
   
-    <div class="py-5 sta " style="">
-      <div class="container " style="text-align:center;">
+    <div class="py-5 sta" style="">
+      <div class="container mt-5" style="text-align:center;">
         <h2 class="novica">Challenge 1 </h2>
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
+          <div class="col-lg-6 boze">
+            <img src="{{asset('/')}}images/cannon1.png" class="img-fluid next"/>
+            <div class="absoluter shadow">
+              <h1 class="winner text-serif">Win</h1>
+          </div>
+          </div>
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
                 <li class="pada"><h3 class="new12">Only 1000 Starters </h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
-                <small>How does it work?<br>
+                <p>How does it work?<br>
               Winner becomes known with the name Lottery<br>
             Which name is taken out would win on the livestream<br>
           To enter the competition, all you need is to register, to fill in your profile<br>
-        And we will pick a random winner!</small> <Br>
+        And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-primary tet"> Join now!</a>
-
+        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
+        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp;Starts on July 1</h3>
             </ul>
           </div>
-
-          <div class="col-lg-6 boze ">
-            <img src="./images/cannon.png" class="img-fluid next" />
-            <div class="absoluter">
-              <h1 class="winner">Win</h1>
-          </div>
-          </div>
-         
         </div>
-        <Center>
-        <h3 style="text-align: center; font-weight: 800;">Starts on July 1</h3>
-</Center>
+
       </div>
     </div>
 </section>
-
-<section class="mt">
-    <div class="py-5 sta " style="">
-      <div class="container " style="text-align:center;">
+<hr>
+<section class="mb-5">
+      <div class="container sta pb-5" style="text-align:center;">
         <h2 class="novica">Challenge 2 </h2>
         <h5>The Pro media crew members</h5>
         <div class="row" style="text-align: center;">
@@ -362,73 +332,78 @@
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
-                <small>How does it work?<br>
+                <p>How does it work?<br>
               Winner becomes known with the name Lottery<br>
             Which name is taken out would win on the livestream<br>
           To enter the competition, all you need is to login and have a pro account<br>
-        And we will pick a random winner!</small> <Br>
+        And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-primary tet"> Join now!</a>
-
+        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
+        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on August 1</h3>
             </ul>
           </div>
 
-          <div class="col-lg-6 boze ">
-            <img src="./images/telefon.png" class="img-fluid next" />
-            <div class="absoluter">
-              <h1 class="winner">Win</h1>
+          <div class="col-lg-6 boze">
+            <img src="{{asset('/')}}images/telefon1.png" class="img-fluid next" />
+            <div class="absoluter shadow bg-orange">
+              <h1 class="winner text-serif">Win</h1>
           </div>
           </div>
          
         </div>
-        <Center>
-        <h3 style="text-align: center; font-weight: 800;">Starts on August 1</h3>
-</Center>
+      
+
+      </div>
+    
+</section>
+<div class="site-section bg-image overlay" style="background-image: url(./images/4.jpg);
+    background-size: contain;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="text-white">Get In Touch With Us</h2>
+            <p class="lead text-white"></p>
+                <a href="{{asset('/contact-us')}}" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
+          </div>
+        </div>
       </div>
     </div>
-</section>
-
-<section class="mt">
-    <div class="py-5 sta " style="">
+<section class="mb-5">
+    <div class="py-5 sta pb-5">
       <div class="container " style="text-align:center;">
         <h2 class="novica">Challenge 3 </h2>
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
+          <div class="col-lg-6 boze ">
+            <img src="{{asset('/')}}images/app.png" class="img-fluid next1" />
+            <div class="absoluter shadow">
+              <h1 class="winner text-serif">Win</h1>
+          </div>
+          </div>
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
                 <li class="pada"><h3 class="new12">Only 1000 Starters </h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
-                <small>How does it work?<br>
+                <p>How does it work?<br>
               Winner becomes known with the name Lottery<br>
             Which name is taken out would win on the livestream<br>
           To enter the competition, all you need is to register, to fill in your profile<br>
-        And we will pick a random winner!</small> <Br>
+        And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-primary tet"> Join now!</a>
-
+        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
+        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on September 1</h3>
             </ul>
           </div>
-
-          <div class="col-lg-6 boze ">
-            <img src="./images/app.png" class="img-fluid next1" />
-            <div class="absoluter">
-              <h1 class="winner">Win</h1>
-          </div>
-          </div>
-         
         </div>
-        <Center>
-        <h3 style="text-align: center; font-weight: 800;">Starts on September 1</h3>
-</Center>
       </div>
     </div>
 </section>
-
-<section class=" mt">
-    <div class="py-5 sta " style="">
-      <div class="container " style="text-align:center;">
+<hr>
+<section class="mb-5">
+    <div class="py-5 sta pb-5">
+      <div class="container" style="text-align:center;">
         <h2 class="novica">Challenge 4 </h2>
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
@@ -438,28 +413,24 @@
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
-                <small>How does it work?<br>
+                <p>How does it work?<br>
               Winner becomes known with the name Lottery<br>
             Which name is taken out would win on the livestream<br>
           To enter the competition, all you need is to register, to fill in your profile<br>
-        And we will pick a random winner!</small> <Br>
+        And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-primary tet"> Join now!</a>
-
+        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
+        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
             </ul>
           </div>
 
-          <div class="col-lg-6 boze ">
-            <img src="./images/prav.png" class="img-fluid next2" />
-            <div class="absoluter">
-              <h1 class="winner">Win</h1>
+          <div class="col-lg-6 boze">
+            <img src="{{asset('/')}}images/prav1.png" class="img-fluid next2" />
+            <div class="absoluter shadow">
+              <h1 class="winner text-serif">Win</h1>
           </div>
-          </div>
-         
+          </div> 
         </div>
-        <Center>
-        <h3 style="text-align: center; font-weight: 800;">Starts on November 1</h3>
-</Center>
       </div>
     </div>
 </section>
@@ -530,7 +501,7 @@
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
             <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <p class="mb-0"><a href="#" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
+            <p class="mb-0"><a href="{{asset('/contact-us')}}" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
       </div>
@@ -542,6 +513,7 @@
         {
           .boze{
             height: 320px;
+           
           }
 
           .mt{
@@ -552,7 +524,7 @@
           height:520px;
           width:100%;
           background: rgb(63,94,251);
-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%);
+          background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%);
           clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
             
         }
@@ -606,15 +578,15 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%)
                 }
 
                 .absoluter{
-                  position: absolute;
-    right: 111px;
-    background: grey;
-    height: 120px;
-    z-index: 1000;
-    width: 120px;
-    top: 328px;
-    border-radius: 100%;
-    color: white;
+                position: absolute;
+                right: 111px;
+                background: orange;
+                height: 120px;
+                z-index: 1000;
+                width: 120px;
+                top: 328px;
+                border-radius: 100%;
+                color: white;
                 }
 
                 .winner{
@@ -635,7 +607,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%)
 
 .wrap {
   transform-style: preserve-3d;
-  perspective: 900px;
+  perspective:;
   margin-top: 120px;
 }
 

@@ -47,7 +47,7 @@
               <li>
 
          <a href="{{asset('/')}}">
-                <img src="{{asset('/')}}images/logo2.png" rel="canonical" alt="Image" title="Logo world media crew"class="img-fluid new-rep druga-clasa img-logo">
+                <img src="{{asset('/')}}images/logo3.png" rel="canonical" alt="Image" title="Logo world media crew"class="img-fluid new-rep druga-clasa img-logo">
           </a>
           </li>
              <!-- <li class="active">

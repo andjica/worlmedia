@@ -1,6 +1,6 @@
 @include('components.nav-dashboard')
 <div class="container p-0">
-
+@isset($user)
     <h1 class="h3 mb-3" style="color: transparent;">Settings</h1>
     <div class="row main-row">
     <div class="col-lg-12">
@@ -39,11 +39,17 @@
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#data" role="tab">
                       Your Purchases
                     </a>
-                    
+                    @if($user->city_id == null || $user->category_id == null)
+
+                    @else
+                    <a class="list-group-item list-group-item-action"  href="{{asset('/freelancer/'.$user->id)}}">
+                      Your Profile
+                    </a>
+                    @endif
                 </div>
             </div>
         </div>
-        @isset($user)
+
         <div class="col-md-8 col-xl-8">
        
             <div class="tab-content">
@@ -210,7 +216,7 @@
                                     @if($user->city_id == null)
                                     <select class="form-control" name="cityid">
                                         @foreach($cities as $city)
-											<option value="{{$category->id}}">{{$city->name}}</option>
+											<option value="{{$city->id}}">{{$city->name}}</option>
                                          @endforeach
                                     </select>
                                     @else

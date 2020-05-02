@@ -5,7 +5,6 @@
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
               <h1>About World media crew members</h1>
               <p>This is the best way to get your media business going and developing a perfect carreer!</p>
-              <p><a href="#" class="btn btn-primary py-3 px-5">Read more</a></p>
             </div>
           </div>
         </div>
@@ -27,7 +26,7 @@
               
             <Br>
           We also have over 100.000 visitors a month on our platform, so it is very easy to generate more customers and clients through our platform! Make sure you make an account to stay updated!</p>
-            <p><a href="{{asset ('/freelancers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
+            <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
           </div>
         </div>
       </div>
@@ -86,7 +85,7 @@
 </p>            
 <p> The reason why we are giving such huge prices is that we want to offer our clients something unique, it is not only a perfect place to find jobs, it is also perfect in any way to get real prices each month!   </p>       
           
-            <p><a href="{{asset ('/freelancers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
+            <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
           </div>
         </div>
       </div>

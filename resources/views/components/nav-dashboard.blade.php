@@ -23,7 +23,7 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
               <li>
               <a href="{{asset ('/')}}">
-                <img src="{{asset('/')}}images/logo2.png" alt="Image" class="img-fluid new-rep img-logo">
+                <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep img-logo">
               </a>
                 </li>
               <li class="active">

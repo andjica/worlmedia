@@ -31,7 +31,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="images/welcome.jpg" alt="Image" class="img-fluid" style="    border-top-right-radius: 120px;
+            <img src="{{asset('/')}}images/welcome2.jpg" alt="Image" class="img-fluid" style="    border-top-right-radius: 120px;
     border-bottom-left-radius: 120px;">
           </div>
           <div class="col-md-6">
