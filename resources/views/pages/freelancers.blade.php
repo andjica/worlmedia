@@ -33,6 +33,7 @@
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->category->name}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->city->name}}, {{$user->city->country->name_country}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->email}}</p>
+                <small class="mr-1">Posted on: {{$user->created_at->format('d-m-Y')}}</small><br>
                 <div class="d-flex">
                   
                   <div class="ml-auto price">

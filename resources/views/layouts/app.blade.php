@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-md navbar-light twt1 shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="./images/logo2.png" class="img-fluid" style="     margin-top: -14px;    width: 122px;">
+                    <img src="{{asset('/')}}images/logo3.png" class="img-fluid" style="     margin-top: -14px;    width: 122px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -129,7 +129,7 @@
       <div class="container" style="text-align: center;">
       <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
+            <p class="mb-4"><img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid" alt="world media crew"></p>
             <p>The number #1 place to hire and find your right media crew member in the world!</p>  
             <p><a href="#">Learn More</a></p>
           </div>

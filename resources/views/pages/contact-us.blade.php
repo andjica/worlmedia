@@ -15,7 +15,7 @@
       </div>
 </div>
 
-<div class="container">
+<div class="container p-5">
 <div class="row">
 <div class="col-lg-12">
 <section class="mb-4">
@@ -30,10 +30,10 @@
                     {{session('success')}}
                 </div>
                 @endif
-    <div class="row">
+    <div class="row p-5 shadow">
     
         <!--Grid column-->
-        <div class="col-md-8 mb-md-0 mb-5">
+        <div class="col-md-8 mb-md-0 mb-5 mt-5">
             <form id="contact-fs" name="contact-form" action="{{route('contact')}}" method="POST">
             @csrf
                 <!--Grid row-->

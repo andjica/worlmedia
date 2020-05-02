@@ -11,7 +11,7 @@
 <section id="freelancers" class="nova">
     
   <div class="container" style="  margin-top: 20px;">
-        <div class="row " style=" margin-top:160px !important;">
+        <div class="row bag res65 ">
         @include('components.search')
 
         <div class="col-lg-9">
@@ -38,7 +38,7 @@
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->category->name}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->city->name}}, {{$user->city->country->name_country}}</p>
                 <p><span class="icon-room mr-1 text-primary"></span> {{$user->email}}</p>
-                <small class="mr-1">Posted by: {{$user->created_at->format('d-m-Y')}}</small><br>
+                <small class="mr-1">Posted on: {{$user->created_at->format('d-m-Y')}}</small><br>
                 <div class="d-flex">
                   
                   <div class="ml-auto price">
@@ -84,6 +84,18 @@
 <style>
     .tw34{
         font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+    }
+
+    @media screen and (max-width:1240px){
+  .res65{
+    margin-top: -140px !important;
+  }
+    }
+
+    @media screen and (min-width:1440px){
+    .bag{
+      margin-top:160px !important;
+    }
     }
 </style>
 @include('components.footer')
