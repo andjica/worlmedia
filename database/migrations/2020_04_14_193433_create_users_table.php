@@ -24,12 +24,6 @@ class CreateUsersTable extends Migration
             $table->text('desc_one')->nullable();
             $table->text('desc_two')->nullable();
             $table->text('desc_three')->nullable();
-            $table->mediumtext('skill_one')->nullable();
-            $table->mediumtext('skill_two')->nullable();
-            $table->mediumtext('skill_tree')->nullable();
-            $table->mediumtext('skill_four')->nullable();
-            $table->mediumtext('skill_five')->nullable();
-            $table->mediumtext('skill_six')->nullable();
             $table->string('link')->nullable();
             $table->mediumtext('mobile')->nullable();
             $table->mediumtext('url')->nullable();
