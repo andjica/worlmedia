@@ -33,6 +33,9 @@
                       Change password
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
+                      Manage skills
+                    </a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
                       Contact Support
                     </a>
                    
@@ -157,43 +160,6 @@
                         <div class="card-body">
                         <form action="{{route('upgrade-info')}}" method="post" id="adding-info">
                         @csrf
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk1" id="skills" placeholder="Type something about your skill" value="{{$user->skill_one}}">
-                                        @if ($errors->has('sk1'))  <p style="color:red;">{{$errors->first('sk1')}}</p> @endif
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk2" id="skills" placeholder="Type something about your skill" value="{{$user->skill_two}}">
-                                        @if ($errors->has('sk2'))  <p style="color:red;">{{$errors->first('sk2')}}</p> @endif
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk3" id="skills" placeholder="Type something about your skill" value="{{$user->skill_tree}}">
-                                        @if ($errors->has('sk3'))  <p style="color:red;">{{$errors->first('sk3')}}</p> @endif
-                                    </div>
-
-                                    <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk4" id="skills" placeholder="Type something about your skill" value="{{$user->skill_four}}">
-                                        @if ($errors->has('sk4'))  <p style="color:red;">{{$errors->first('sk4')}}</p> @endif
-                                    </div>    
-
-                                                                    
-                                </div>
-                                <div class="form-row">
-                                <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk5" id="skills" placeholder="Type something about your skill" value="{{$user->skill_five}}">
-                                        @if ($errors->has('sk5'))  <p style="color:red;">{{$errors->first('sk5')}}</p> @endif
-                                    </div>   
-                                    <div class="form-group col-md-3">
-                                        <label for="inputFirstName">Write your skills</label>
-                                        <input rows="2" class="form-control" name="sk6" id="skills" placeholder="Type something about your skill" value="{{$user->skill_six}}">
-                                        @if ($errors->has('sk6'))  <p style="color:red;">{{$errors->first('sk6')}}</p> @endif
-                                    </div>   
-                                </div>
                                 <div class="form-group">
                                 <label for="inputCategory">Choose category</label>
                                    @if($user->category_id == null)
