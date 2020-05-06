@@ -11,6 +11,7 @@ use App\Role;
 use App\Category;
 use App\City;
 use App\Review;
+use App\SkillUsers;
 
 class User extends Authenticatable
 {
@@ -72,5 +73,10 @@ class User extends Authenticatable
     public function reviews()
     {
         return $this->hasMany(Review::class, 'user_id');
+    }
+
+    public function skillusers()
+    {
+        return $this->hasMany(SkillUsers::class, 'user_id');
     }
 }
