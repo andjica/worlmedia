@@ -117,33 +117,16 @@ class UserController extends Controller
     public function storeinfo()
     {
         request()->validate([
-            'sk1' => 'max:60',
-            'sk2' => 'max:60',
-            'sk3' => 'max:60',
-            'sk4' => 'max:60',
-            'sk5' => 'max:60',
-            'sk6' => 'max:60',
             'link' => 'url'
         ],
         [
-            'sk1.max' => 'Max characters for skills is 60',
-            'sk2.max' => 'Max characters for skills is 60',
-            'sk3.max' => 'Max characters for skills is 60',
-            'sk4.max' => 'Max characters for skills is 60',
-            'sk5.max' => 'Max characters for skills is 60',
-            'sk6.max' => 'Max characters for skills is 60'
+            'url.link' => 'must be a link'
         ]);
 
         $userId = auth()->user()->id;
 
         $user = User::where('id', $userId)->first();
 
-        $user->skill_one = request()->sk1;
-        $user->skill_two = request()->sk2;
-        $user->skill_tree = request()->sk3;
-        $user->skill_four = request()->sk4;
-        $user->skill_five = request()->sk5;
-        $user->skill_six = request()->sk6;
         $user->category_id = request()->categoryid;
         $user->city_id = request()->cityid;
         $user->link = request()->link;
