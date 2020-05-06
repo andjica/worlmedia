@@ -15,26 +15,26 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('skill_one');
-            $table->integer('percent_one');
-            $table->string('skill_two');
-            $table->integer('percent_two');
-            $table->string('skill_three');
-            $table->integer('percent_three');
-            $table->string('skill_four');
-            $table->integer('percent_four');
-            $table->string('skill_five');
-            $table->integer('percent_five');
-            $table->string('skill_six');
-            $table->integer('percent_six');
-            $table->string('skill_seven');
-            $table->integer('percent_seven');
-            $table->string('skill_eight');
-            $table->integer('percent_eight');
-            $table->string('skill_nine');
-            $table->integer('percent_nine');
-            $table->string('skill_ten');
-            $table->integer('percent_ten');
+            $table->string('skill_one')->nullable();;
+            $table->integer('percent_one')->nullable();;
+            $table->string('skill_two')->nullable();;
+            $table->integer('percent_two')->nullable();;
+            $table->string('skill_three')->nullable();;
+            $table->integer('percent_three')->nullable();;
+            $table->string('skill_four')->nullable();;
+            $table->integer('percent_four')->nullable();;
+            $table->string('skill_five')->nullable();;
+            $table->integer('percent_five')->nullable();;
+            $table->string('skill_six')->nullable();;
+            $table->integer('percent_six')->nullable();;
+            $table->string('skill_seven')->nullable();;
+            $table->integer('percent_seven')->nullable();;
+            $table->string('skill_eight')->nullable();;
+            $table->integer('percent_eight')->nullable();;
+            $table->string('skill_nine')->nullable();;
+            $table->integer('percent_nine')->nullable();;
+            $table->string('skill_ten')->nullable();;
+            $table->integer('percent_ten')->nullable();;
             $table->integer('user_id')->unsigned()->index();
             $table->timestamps();
 
