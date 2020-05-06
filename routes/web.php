@@ -32,6 +32,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/upgrade-user', 'UserController@store')->name('upgrade-user');
 Route::post('/upgrade-info', 'UserController@storeinfo')->name('upgrade-info');
 Route::post('/edit-user', 'UserController@update')->name('edit-user');
+//skills
+Route::post('/add-skills', 'SkillController@store')->name('add-skills');
 
 Route::group(['middleware' => ['checkaccount']], function () 
 {
