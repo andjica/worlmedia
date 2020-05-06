@@ -27,7 +27,7 @@ $(document).ready(function(){
         sumobile.innerHTML = 'Mobile ok';
       }
 
-      if(!regexurl .test(link)) 
+      if(!regexurl.test(link)) 
       {
           e.preventDefault();
           $('#link').css('border-color','red');
