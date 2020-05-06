@@ -3,14 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\SkillUser;
+use App\User;
 
 class Skill extends Model
 {
     protected $guarded = [];
 
-    public function skillusers()
+    public function user()
     {
-        return $this->hasMany(SkillUser::class, 'skill_id');
+        return $this->belongsTo(User::class);
     }
 }

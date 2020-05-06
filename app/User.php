@@ -75,8 +75,8 @@ class User extends Authenticatable
         return $this->hasMany(Review::class, 'user_id');
     }
 
-    public function skillusers()
+    public function skill()
     {
-        return $this->hasMany(SkillUsers::class, 'user_id');
+        return $this->hasOne(Skill::class, 'user_id');
     }
 }
