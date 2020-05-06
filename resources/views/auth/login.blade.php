@@ -1,9 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container hgohg">
+    <div class="row">
+    <div class="col-md-6 hghgh">
+    <h3>What we offer at WMCM </h3>
+    <video class="col-lg-12 jbg155" autoplay="autoplay" muted="false" loop="loop" >
+          <source src="videos/test3.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="col-md-6 brisi hghgh1">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -71,3 +77,25 @@
     </div>
 </div>
 @endsection
+
+<style>
+.hgohg{
+    height: 500px;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    position: relative;
+    margin-bottom: -218px;
+    border-radius:20px;
+}
+
+.hghgh{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.hghgh1{
+    text-align: center;
+    padding-top: 106px;
+}
+</style>

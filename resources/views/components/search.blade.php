@@ -1,6 +1,7 @@
 
 <form action="{{route('freelancers')}}" method="get" id="form-search"> 
-	<div class="container sickness deskic">
+	<div class="container sickness deskic nekaproba">
+	<h1 style="    margin-bottom: 40px;">Find here you Media Crew Member</h1>
 	  <div class="row no-gutters new-res">
 	
 				        <div class="col-md mr-md-2">
@@ -47,3 +48,12 @@
 </div>
 </form>
   
+<style>
+.nekaproba{
+	
+    background-color: #95b9ec42;
+    padding: 76px;
+	border-radius: 22px;
+	margin-top: 60px;
+}
+</style>

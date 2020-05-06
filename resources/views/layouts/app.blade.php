@@ -9,7 +9,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>The best database platform for Media crew members</title>
+  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logo1.png">
+  <meta name="description" content="World Media Crew is new database platform. You can contact people from all the 46 countries all around the world.">
+  <meta name="keywords" content="World Media Crew platform, users, all around world">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Scripts -->
@@ -20,10 +23,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/app1.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
-<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="margin-top:-150px;  width: 100%;   position: absolute;">
+<video playsinline="playsinline" autoplay="autoplay" class="responsic" muted="muted" loop="loop" >
       <source src="videos/testt.mp4" type="video/mp4">
      </video>
     <div id="app">
@@ -58,15 +63,13 @@
                         <li class="nav-item">
                                         <a class="nav-link" href="{{ asset('/home') }}">Dashboard</a>
                                      </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('/') }}">Home</a>
-                                     </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link" href="{{ asset('./editprofile') }}">My Profile</a>
+                                    </li>
                                      <li class="nav-item ">
                                         <a class="nav-link xdb" href="{{ asset('./allmembers') }}">Crew-Members</a>
                                     </li>
-                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ asset('./editprofile') }}">User-Profile</a>
-                                    </li>
+                                     
                                     <li class="nav-item">
                                         <a class="nav-link" href="#invite">Invite-friends</a>
                                     </li>
@@ -125,11 +128,11 @@
     </div>
 
 
-    <div class="footer bg-light" style=" margin-top: autopx;  padding-top: 40px; padding-bottom:40px; ">
+    <div class="footer bg-light nopp" style="  padding-top: 40px; padding-bottom:40px; ">
       <div class="container" style="text-align: center;">
       <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid" alt="world media crew"></p>
+            <p class="mb-4" style="    margin-top: -24px;"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
             <p>The number #1 place to hire and find your right media crew member in the world!</p>  
             <p><a href="#">Learn More</a></p>
           </div>
@@ -137,27 +140,28 @@
             <h3 class="footer-heading"><span>World media crew</span></h3>
             <ul class="list-unstyled">
                 <li><a href="{{asset('/')}}">Home</a></li>
-                <li><a href="{{asset('/services')}}">Services</a></li>
-                <li><a href="{{asset('/freelancers')}}">Crew-Members</a></li>
-                <li><a href="{{asset('/aboutus')}}">About US</a></li>
-                <li><a href="{{asset('/blog')}}">Blog</a></li>
-                <li><a href="{{asset('/contact')}}">Contact</a></li>
+                <li><a href="{{asset('/services')}}" title="Challenger from world media crew">Challenges</a></li>
+                <li><a href="{{asset('/freelancers')}}" title="Members from world media crew">Crew-Members</a></li>
+                {{-- <li><a href="{{asset('/blog')}}" title="Blog Page for World Media Crew platform">Blog</a></li> --}}
+                <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Our Services</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/register')}}">Make an account</a></li>
-                  <li><a href="{{asset('/login')}}">Login with account</a></li>
-                  <li><a href="{{asset('/services')}}">Services</a></li>
+                  <li><a href="{{asset('/register')}}" title="Register in World Media Crew platform">Make an account</a></li>
+                  <li><a href="{{asset('/login')}}" title="Login page">Login with account</a></li>
+                  <li><a href="{{asset('/services')}}" title="Challengers page">Challengers</a></li>
+                  <li><a href="{{asset('/about')}}" title="About World Media Crew platform">about us</a></li>
+
               </ul>
           </div>
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/contact')}}">Contact</a></li>
-                  <li><a href="#">Support Community</a></li>
-                  <li><a href="#">Press</a></li>
+                  <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
+                  <li><a href="{{asset('/Contact')}}" title="Contact Us">Support Community</a></li>
+                  <li><a href="{{asset('/terms')}}" title="Contact Us">Terms & Conditions</a></li>
                   <li><a href="#">FAQ</a></li>
                   <li><a href="#">Our Partners</a></li>
               </ul>
@@ -168,9 +172,8 @@
           <div class="col-12">
             <div class="copyright">
                 <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright ©<script>document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                   Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved World Media Crew Members
+                    <!--| This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://dfambusiness.com" target="_blank">DFAM Digital Agency</a>-->
                     </p>
             </div>
           </div>

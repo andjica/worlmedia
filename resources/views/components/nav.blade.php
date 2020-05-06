@@ -67,21 +67,22 @@
                 </li>-->
                 
                 
-                <li><a href="{{ asset('/register')}}" rel="canonical" class="nav-link text-left" title="Register in world media crew platform">Join Us</a></li>
                
                   
                   @if(auth()->user() && auth()->user()->role_id == 2)
-                  <li><a href="{{ asset ('/editprofile')}}" class="nav-link text-left">Edit profile</a></li>
+                  <li><a href="{{ asset ('/editprofile')}}" class="nav-link text-left">My profile</a></li>
                   <li><a href="{{ url('/logout') }}" class="collapse-item"> <i class="fas fa-sign-out-alt"></i>Logout </a></li>
                   @elseif(auth()->user()  && auth()->user()->role_id == 1)
                   <li><a href="{{ asset ('/admin-home')}}" class="nav-link text-left">Admin panel</a></li>
                   <li><a href="{{ url('/logout') }}" class="collapse-item"> <i class="fas fa-sign-out-alt"></i>Logout </a></li>
                   @else
                     <li><a href="{{route('login')}}" rel="canonical">Login</a></li>
+                    <li><a href="{{ asset('/register')}}" rel="canonical" class="nav-link text-left" title="Register in world media crew platform">Join Us</a></li>
+
                   @endif
                   </li>
                   <li>
-                    <a href="{{ asset('/contact-us')}}" rel="canonical" class="nav-link text-left" title="Contact World Media Crew"> Contact</a>
+                    <a href="{{ asset('/contact-us')}}" rel="canonical" class="nav-link text-left" title="Contact World Media Crew"> Help</a>
                   </li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>

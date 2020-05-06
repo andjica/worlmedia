@@ -31,7 +31,7 @@
                 </li>
                
                 <li>
-                  <a href="{{ asset ('/services')}}" class="nav-link text-left">Services</a>
+                  <a href="{{ asset ('/services')}}" class="nav-link text-left">Challenges</a>
                  
                 </li>
 

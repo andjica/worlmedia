@@ -97,7 +97,7 @@
                 <div class="row">
                
             
-</div>
+                </div>
 
 
 
@@ -124,7 +124,7 @@
 </div>
 </div>
 <div class="row">
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg-3 mx-auto">
       <div class="row">
             @if($user->skill_one == null)
             @else
@@ -169,7 +169,7 @@
             @endif
         </div>
     </div>
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg-3 mx-auto">
       <div class="row">
             @if($user->skill_four == null)
             @else
@@ -213,7 +213,8 @@
             </div>
             @endif
         </div>
-    </div>      
+    </div>
+    @include('components.rate')      
 </div>
 
                 

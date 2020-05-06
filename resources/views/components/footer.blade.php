@@ -3,7 +3,7 @@
       <div class="container" style="text-align: center">
         <div class="row">
           <div class="col-lg-3">
-            <p class="mb-4"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
+            <p class="mb-4" style="margin-top: -10px;"><img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid" alt="world media crew"></p>
             <p>The number #1 place to hire and find your right media crew member in the world!</p>  
             <p><a href="#">Learn More</a></p>
           </div>
@@ -43,9 +43,9 @@
           <div class="col-12">
             <div class="copyright">
                 <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved World Media Crew Members| This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://dfambusiness.com" target="_blank">DFAM Digital Agency</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved World Media Crew Members
+                    <!--| This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://dfambusiness.com" target="_blank">DFAM Digital Agency</a>-->
+                
                     </p>
             </div>
           </div>
@@ -190,5 +190,6 @@
             });
         });
     </script>
+
 
 </body>

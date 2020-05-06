@@ -1,0 +1,35 @@
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background: white !important;
+}
+
+@media screen and (max-width:768px){
+.responsic{
+  margin-top: 70px;
+    width: 100%;
+    position: absolute;
+}
+.brisi{
+    margin-top: 244px;
+}
+
+.jbg155{
+    width: 100%;
+    margin-top: -6px;
+    height: 250px;
+}
+.nopp{
+    margin-top: 300px;
+}
+}
+@media screen and (min-width:1020px){
+
+.responsic{
+  margin-top:-150px;  width: 100%;   position: absolute;}
+
+  .jbg155{
+    width: 100%;
+    margin-top: -6px;
+    height: 100%;
+}
+}
