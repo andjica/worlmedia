@@ -28,27 +28,63 @@
 </div>
 
 
-        <div class="" style="height: 420px; width: 100%;  padding-top: 88px;">
-            <div class="row">
+  
+            <div class="row" style="padding-top: 88px;">
                 <div class="col-lg-4 xvs">
                     <hr/>
                         </div>
-                            <div class="col-lg-4 ggg" style="color: white;">
-
-                                <center>
+                            <div class="col-lg-4 ggg mx-auto pb-5 text-center" style="color: white;">
+                            <div class="col-lg-12 daodah">
+                                    <div class="col-lg-6">
+                                    @isset($countfollowers)
+                                    <button type="button" class="btn btn-success teck desno">Followers ({{$countfollowers}})</button>
+                                    @endisset
+                                    </div>
+                                      <div class="col-lg-6">
+                                        @isset($countfollowing)
+                                          <button type="button" class="btn btn-primary daf levo">Following ({{$countfollowing}})</button>
+                                        @endisset
+                                      </div>
+                                  </div>
+                               
                                 <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
+                                  
                                 </div>
-                                <h1 class="media-heading">{{$user->name}}</h1>
-                                <small>{{$user->city->name}}, {{$user->city->country->name_country}}</small><br>
-                                </center>
+                                <h1 class="media-heading text-center">{{$user->name}}</h1>
+                                <p class="text-center mx-auto">{{$user->city->name}}, {{$user->city->country->name_country}}</p><br>
+                                @if(auth()->user() == null)
+                                @elseif(auth()->user()->id == $user->id)
+                                    
+                                @elseif (auth()->user()->followings->contains($user->id))
+                                <form action="{{route('unfollow')}}" method="get">
+                                @csrf
+                                <button type="submit" class="btn btn-info btn-sm p-4  border-0 shadow zoom">
+                                <p class="text-serif text-w ">UnFollow this user</p>
+                                </button>
+                               <input type="hidden" value="{{$user->id}}" name="user">
+                                </i><br>
+                                </form>
+                                @else
+                                <form action="{{route('follow')}}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-warning btn-sm p-4  border-0 shadow zoom btn-andjica">
+                                <p class="text-serif text-w ">Follow this user</p>
+                                </button>
+                               <input type="hidden" value="{{$user->id}}" name="user">
+                                </i><br>
+                                </form>
+                               
+                                @endif
+                                <Br>
+                               
                         </div>
                     <div class="col-lg-4 xvb">
                 <hr/>
             </div>
-        </div>
+        
 </div>
     </section>
-    
+    <hr class="style-six"> 
  
               
     
@@ -63,7 +99,7 @@
         
           <h3 class="text-secondary">About {{$user->name}},</h3><small>{{$user->city->name}}, {{$user->city->country->name_country}}</small><br>
           <ul class="list-group ">
-            <li class="list-group-item bg-light"><span>Name:</span> <span>{{$user->name}}</span></li>
+            <li class="list-group-item bg-light"><span>Name:</span> <span>x{{$user->name}}</span></li>
             <li class="list-group-item bg-light"><span>Country:</span> <span>{{$user->city->country->name_country}}</span></li>
             <li class="list-group-item bg-light"><span>City:</span> <span>{{$user->city->name}}</span></li>
             <li class="list-group-item bg-light"><span>Available:</span> <span>yes</span></li>
@@ -124,99 +160,173 @@
 </div>
 </div>
 <div class="row">
-    <div class="col-lg-3 mx-auto">
+    <div class="col-lg-12 mx-auto">
+    @isset($skill)
       <div class="row">
-            @if($user->skill_one == null)
-            @else
-            <div class="col-md-12 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_one}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
-            </div>
-            </div>
-            </div>
-            </div>
-            @endif
+           @if($skill->skill_one == null || $skill->percent_one == null)
 
-            @if($user->skill_two == null)
-            @else
-            <div class="col-md-12 animate-box">
+           @else
+          <div class="col-md-6 animate-box">
             <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_two}}</h3>
+            <h3 class="text-dark">{{$skill->skill_one}}</h3>
             <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
+            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_one}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_one}}%">
+            <span>{{$skill->percent_one}}</span>
             </div>
             </div>
             </div>
-            </div>
-            @endif
+          </div>
+          @endif
 
-            @if($user->skill_tree == null)
-            @else
-            <div class="col-md-12 animate-box">
+          @if($skill->skill_two == null || $skill->percent_two == null)
+
+          @else
+            <div class="col-md-6 animate-box">
             <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_tree}}</h3>
+            <h3 class="text-dark">{{$skill->skill_two}}</h3>
             <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
+            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_two}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_two}}%">
+            <span>{{$skill->percent_two}}</span>
             </div>
             </div>
             </div>
             </div>
-            @endif
+          @endif
+           
+          @if($skill->skill_three == null || $skill->percent_three == null)
+        
+          @else
+          <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+          <h3 class="text-dark">{{$skill->skill_three}}</h3>
+          <div class="progress">
+          <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_three}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_three}}%">
+          <span>{{$skill->percent_three}}</span>
+          </div>
+          </div>
+          </div>
+          </div>
+          @endif
+
+          @if($skill->skill_four == null || $skill->percent_four == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_four}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_four}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_four}}%">
+        <span>{{$skill->percent_four}}</span>
         </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_five == null || $skill->percent_five == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_five}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_five}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_five}}%">
+        <span>{{$skill->percent_five}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_six == null || $skill->percent_six == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_six}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_six}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_six}}%">
+        <span>{{$skill->percent_six}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_seven == null || $skill->percent_seven == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_seven}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_seven}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_seven}}%">
+        <span>{{$skill->percent_seven}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_eight == null || $skill->percent_eight == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_eight}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_eight}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_eight}}%">
+        <span>{{$skill->percent_eight}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_nine == null || $skill->percent_nine == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_nine}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_nine}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_nine}}%">
+        <span>{{$skill->percent_nine}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_ten == null || $skill->percent_ten == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h3 class="text-dark">{{$skill->skill_ten}}</h3>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_ten}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_ten}}%">
+        <span>{{$skill->percent_ten}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+        
+           
+          
+      </div>
     </div>
-    <div class="col-lg-3 mx-auto">
+    <div class="col-lg-6 mx-auto">
       <div class="row">
-            @if($user->skill_four == null)
-            @else
-            <div class="col-md-12 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_four}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
-            </div>
-            </div>
-            </div>
-            </div>
-            @endif
-
-            @if($user->skill_five == null)
-            @else
-            <div class="col-md-12 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_five}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
-            </div>
-            </div>
-            </div>
-            </div>
-            @endif
-
-            @if($user->skill_six == null)
-            @else
-            <div class="col-md-12 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$user->skill_six}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-            <span>100%</span>
-            </div>
-            </div>
-            </div>
-            </div>
-            @endif
+   
+           
         </div>
+        @endisset
     </div>
-    @include('components.rate')      
+      
 </div>
-
+@include('components.rate')  
                 
 </div>
 </div>
@@ -224,6 +334,25 @@
 <button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
 
 @endisset
+
+<style>
+  .zoom:-webkit-any-link {
+    color: red;
+  }
+  .zoom:hover {
+    transform: scale(1.07);
+    color: lightblue;
+  }
+   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.btn-andjica
+{
+  background:no-repeat;
+}
+.text-w
+{
+  color:white !important;
+}
+</style>
 
 
 

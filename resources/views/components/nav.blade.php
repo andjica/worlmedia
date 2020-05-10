@@ -4,7 +4,7 @@
 <div class="site-mobile-menu site-navbar-target">
 <div class="site-mobile-menu-header">
 <div class="site-mobile-menu-close mt-3">
-<span class="icon-close2 js-menu-toggle"></span>
+<span class="icon-close2 js-menu-toggle" ></span>
 </div>
 </div>
 <div class="site-mobile-menu-body"></div>
@@ -22,8 +22,8 @@
 
 
 <div class="col-6 d-block d-lg-none text-right">
-<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
-  <span class="icon-menu h3 usta"></span></a>
+<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black" >
+  <span class="icon-menu h3 usta" style="    color: black !important;"></span></a>
 </div>
 </div>
 </div>

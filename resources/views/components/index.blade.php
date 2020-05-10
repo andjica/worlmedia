@@ -5,7 +5,7 @@
             <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
               <h1>The best database platform for Media crew members</h1>
               <p>On our platform you will find the right media crew member you need!, Register quick and search for the right crew member.</p>
-              <p><a href="{{asset ('/aboutus')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More</a></p>
+              <p><a href="{{asset ('/about')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More</a></p>
             </div>
           </div>
         </div>
@@ -17,7 +17,7 @@
             <div class="col-lg-7 mx-auto text-center" data-aos="fade-up">
               <h1>You will find the right crew member here</h1>
               <p> Look for you right crew member easy on our platform</p>
-              <p><a href="{{asset ('/freelancers')}}" class="btn btn-primary py-3 px-5" style="background:orange;">See Members</a></p>
+              <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-5" style="background:orange;">See Members</a></p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
               
             <Br>
           We also have over 100.000 visitors a month on our platform, so it is very easy to generate more customers and clients through our platform! Make sure you make an account to stay updated!</p>
-            <p><a href="{{asset ('/freelancers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
+            <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
           </div>
         </div>
       </div>
