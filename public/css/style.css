@@ -2055,4 +2055,33 @@ border-color: transparent transparent transparent deepskyblue;
     font-weight: 800;
   }
 
- 
+ .daodah{
+  top: 162px;
+ }
+
+ .teck{
+  background: deepskyblue !important;
+  color: white !important;
+  padding: 10px !important;
+ }
+
+ .daf{
+  padding: 10px !important;
+ }
+
+ .desno{
+  text-align: right !important;
+  float: right !important;
+ }
+
+.levo{
+
+    text-align: left !important;
+    float: left !important;
+   
+}
+@media screen and (max-width:468px){
+  .night{
+    display: none;
+  }
+}
