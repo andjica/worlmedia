@@ -81,3 +81,7 @@ Route::post('/contact', 'EmailController@send')->name('contact');
 
 //review
 Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
+
+
+Route::post('/follow', 'FollowController@follow')->name('follow');
+Route::get('/unfollow', 'FollowController@unfollow')->name('unfollow');
