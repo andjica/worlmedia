@@ -7,6 +7,8 @@ use App\Category;
 use App\City;
 use App\User;
 use App\Review;
+use App\Skill;
+use App\Follower;
 
 class FrontController extends Controller
 {
@@ -90,20 +92,17 @@ class FrontController extends Controller
 
     public function profile($id){
         
-        $user = User::find($id);
+        $user = User::find($id) ?? abort(404);
         $userId = $user->id;
 
-        /*if(Review::where('user_id', $userId)->first())
-        {
-            $userrate = Review::where('user_id', $userId)->sum('rate');
-            $usercount = Review::where('user_id', $userId)->count();
-            
-            $rate = $userrate/$usercount;
-            
-          
-            return view('pages.profile', compact('user', 'rate'));
-        }*/
-        return view('pages.profile', compact('user'));
+        $skill = Skill::where('user_id', $userId)->first();
+        
+        $countfollowing = Follower::where('user_id', $userId)->count();
+
+        $countfollowers = Follower::where('is_following_id', $userId)->count();
+        
+        
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers'));
         
     }
 

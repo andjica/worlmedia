@@ -127,6 +127,7 @@ class UserController extends Controller
 
         $user = User::where('id', $userId)->first();
 
+        
         $user->category_id = request()->categoryid;
         $user->city_id = request()->cityid;
         $user->link = request()->link;

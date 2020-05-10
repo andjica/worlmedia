@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Account;
+use App\Skill;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -74,12 +75,39 @@ class RegisterController extends Controller
             
         ]);
 
+        $userId = $user->id;
+
         if($user)
         {
             Account::create([
                 'user_id' => $user->id,
                 'acc_type_id' => 1,
                 'valid_until' => null
+            ]);
+
+            Skill::create([
+                'skill_one' => "write some skill",
+                'percent_one' => 98,
+                'skill_two' => "like html",
+                'percent_two' => 89,
+                'skill_three' => "add your skill",
+                'percent_three' => 89,
+                'skill_four' => "html",
+                'percent_four' => 89,
+                'skill_five' => "html",
+                'percent_five' => 89,
+                'skill_six' => "html",
+                'percent_six' => 89,
+                'skill_seven' => "html",
+                'percent_seven' => 89,
+                'skill_eight' => "html",
+                'percent_eight' => 89,
+                'skill_nine' => "html",
+                'percent_nine' => 89,
+                'skill_ten' => "html",
+                'percent_ten' => 89,
+                'user_id' => $userId
+        
             ]);
         }
         return $user;

@@ -24,7 +24,7 @@ class SkillController extends Controller
     {
         $userId = auth()->user()->id;
 
-        $skill = new Skill();
+        $skill = Skill::where('user_id', $userId)->first();
 
         $skill->skill_one = request()->sk1;
         $skill->percent_one = request()->pr1;
@@ -57,9 +57,16 @@ class SkillController extends Controller
         $skill->percent_ten = request()->pr10;
 
         $skill->user_id = $userId;
-        
-        $skill->save();
 
-        return redirect()->back();
+        try{
+            $skill->save();
+
+            return redirect()->back()->with('success', 'You make changes about your skills successfully :)');
+        }
+        catch(\Throwable $e)
+        {
+            return redirect()->back()->with('error', 'Oops, something went wrong, try latter');
+        }
+        
     }
 }

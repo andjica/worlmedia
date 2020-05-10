@@ -11,7 +11,7 @@ use App\Role;
 use App\Category;
 use App\City;
 use App\Review;
-use App\SkillUsers;
+use App\Skill;
 
 class User extends Authenticatable
 {
@@ -77,6 +77,26 @@ class User extends Authenticatable
 
     public function skill()
     {
-        return $this->hasOne(Skill::class, 'user_id');
+        return $this->hasMany(Skill::class, 'user_id');
+    }
+
+    public function followings()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'is_following_id');
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'is_following_id');
+    }
+
+    public function numberOfFollowers()
+    {
+        return $this->followedBy->count();
+    }
+
+    public function followingNumber()
+    {
+        return $this->following->count();
     }
 }

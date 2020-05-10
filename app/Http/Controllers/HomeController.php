@@ -9,6 +9,7 @@ use App\Country;
 use App\User;
 use App\Account;
 use App\Purchase;
+use App\Skill;
 
 class HomeController extends Controller
 {
@@ -59,7 +60,7 @@ class HomeController extends Controller
 
         
         $userId = auth()->user()->id;
-        $user = User::where('id', $userId)->first();
+        $user = User::where('id', $userId)->with('skill')->first();
         
         $purchases = Purchase::where('user_id', $userId)->get();
        
@@ -67,11 +68,16 @@ class HomeController extends Controller
 
         $type = $checkingaccount->acc_type_id;
         
+
+        $skill = Skill::where('user_id', $userId)->first();
+
         if($type == 1)
         {
             return redirect('/home');
         }
-        return view('pages.editprofile', compact('user', 'purchases'), $this->data);
+        return view('pages.editprofile', compact('user', 'purchases', 'skill'), $this->data);
+
+        
     }
 
     public function terms(){
