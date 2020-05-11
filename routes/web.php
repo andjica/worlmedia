@@ -85,3 +85,6 @@ Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
 
 Route::post('/follow', 'FollowController@follow')->name('follow');
 Route::get('/unfollow', 'FollowController@unfollow')->name('unfollow');
+
+//images
+Route::post('/add-image', 'ImageController@store')->name('add-image');
