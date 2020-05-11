@@ -1809,6 +1809,19 @@ width:150px;
 background-size: cover;
 background-repeat: no-repeat;
 }
+.image-background5
+{
+height:70px;
+width:70px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.image-background5:hover {
+  /*transform: scale(1.5);*/
+  zoom:170%;
+  
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 .main-row
 {
   margin-top:100px;
