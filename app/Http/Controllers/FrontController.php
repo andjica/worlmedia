@@ -98,11 +98,14 @@ class FrontController extends Controller
         $skill = Skill::where('user_id', $userId)->first();
         
         $countfollowing = Follower::where('user_id', $userId)->count();
+        $following = $user->followings;
 
+        
         $countfollowers = Follower::where('is_following_id', $userId)->count();
+        $followers = Follower::where('is_following_id', $userId)->get();
         
         
-        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers'));
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following'));
         
     }
 
