@@ -17,6 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->string('url', 100);
+            $table->string('alt');
             $table->timestamps();
 
             $table->foreign('user_id')
