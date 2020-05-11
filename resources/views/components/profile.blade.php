@@ -37,13 +37,87 @@
                             <div class="col-lg-12 daodah">
                                     <div class="col-lg-6">
                                     @isset($countfollowers)
-                                    <button type="button" class="btn btn-success teck desno">Followers ({{$countfollowers}})</button>
+                                    <button type="button" class="btn btn-success teck desno" data-toggle="modal" data-target="#followers">Followers ({{$countfollowers}})</button>
+                                    <!-- Modal Followers -->
+                                      <div class="modal fadeInUp" id="followers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content bg-light ">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title text-dark" id="exampleModalLabel">People who follow {{$user->name}}</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body text-dark">
+                                                <div class="my-3 p-3 bg-light rounded shadow-sm text-left">
+                                                  <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+                                                  @foreach($followers as $fl)
+                                                  <a href="{{asset('/freelancer/'.$fl->user->id)}}">
+                                                  <div class="media text-muted pt-3">
+                                                  <div class="rounded-circle mx-auto image-background5"  style="background-image: url({{asset('/image-users/'.$fl->user->url)}});">
+                                                        
+                                                  </div>
+                                                    <a href="{{asset('/freelancer/'.$fl->user->id)}}" class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+                                                      <strong class="d-block text-gray-dark"><br>&nbsp;{{$fl->user->email}}</strong>
+                                                    </a>
+                                                  </div>
+                                                    </a>
+                                                  @endforeach
+                                                  <small class="d-block text-right mt-3">
+                                                    <a href="#">All updates</a>
+                                                  </small>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     @endisset
                                     </div>
                                       <div class="col-lg-6">
                                         @isset($countfollowing)
-                                          <button type="button" class="btn btn-primary daf levo">Following ({{$countfollowing}})</button>
-                                        @endisset
+                                          <button type="button" class="btn btn-primary daf levo" data-toggle="modal" data-target="#following">Following ({{$countfollowing}})</button>
+                                           <!-- Modal Following -->
+                                          <div class="modal fadeInUp" id="following" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content bg-light ">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title text-dark" id="exampleModalLabel">Modal title</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body text-dark">
+                                                  <div class="my-3 p-3 bg-light rounded shadow-sm text-left">
+                                                    <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+                                                    @foreach($following as $fg)
+                                                    <a href="{{asset('/freelancer/'.$fg->id)}}">
+                                                    <div class="media text-muted pt-3">
+                                                      <div class="rounded-circle mx-auto image-background5"  style="background-image: url({{asset('/image-users/'.$fg->url)}});">
+                                                        
+                                                      </div>
+                                                      <a href="{{asset('/freelancer/'.$fg->id)}}" class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
+                                                        <strong class="d-block text-gray-dark"><br>&nbsp;{{$fg->email}}</strong>
+                                                      </a>
+                                                    </div>
+                                                    </a>
+                                                    @endforeach
+                                                    <small class="d-block text-right mt-3">
+                                                      <a href="#">All updates</a>
+                                                    </small>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          @endisset
                                       </div>
                                   </div>
                                
@@ -87,66 +161,71 @@
     <hr class="style-six"> 
  
               
-    
-
-<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-  <div class="container">
-    <div class="row d-flex">
-   
-          <div class="col-lg-6 shadow p-3">
-          <div class="row justify-content-start pb-3">
-          <div class="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
-        
-          <h3 class="text-secondary">About {{$user->name}},</h3><small>{{$user->city->name}}, {{$user->city->country->name_country}}</small><br>
-          <ul class="list-group ">
-            <li class="list-group-item bg-light"><span>Name:</span> <span>x{{$user->name}}</span></li>
-            <li class="list-group-item bg-light"><span>Country:</span> <span>{{$user->city->country->name_country}}</span></li>
-            <li class="list-group-item bg-light"><span>City:</span> <span>{{$user->city->name}}</span></li>
-            <li class="list-group-item bg-light"><span>Available:</span> <span>yes</span></li>
-            <li class="list-group-item bg-light"><span>Email:</span> <span>{{$user->email}}</span></li>
-            <li class="list-group-item bg-light"><span>Phone: </span> <span>{{$user->mobile}}</span></li>
-          </ul>
-        
-         
-          </div>
-          </div>
-          <div class="counter-wrap ftco-animate d-flex mt-md-3 fadeInUp ftco-animated">
-          <div class="text">
-          <p class="mb-4">
-          <p>{{$user->desc_one}}</p><br>
-                                      <p>{{$user->desc_two}}</p>
-          </p>
-          </div>
-        </div>
-      
-          </div>
-
-          <div class="col-lg-6">
-          <div class="container">
-            <div class="row justify-content-center pb-5">
-              <div class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated">
-                
-                <h2 class="mb-4">Equipment</h2>
-                <p class="cust">{{$user->desc_three}}</p>
-                </div>
-                </div>
-                <div class="row">
-               
-            
-                </div>
-
-
-
-              </div>
-              </div>
-
+    <section class="about-user">
+      <div class="container">
+          <div class="row mt-5">
+          <div class="col-lg-4">
+          <div class="card bg-light shadow">
+          <i class="fa fa-user-circle fa-2x text-orange text-center mt-3"></i>
+            <div class="card-body border-top mt-2">
+              <h1 class="text-dark text-serif text-center">About</h1>
+              <p class="card-text text-dark">
+                Name: &nbsp;{{$user->name}}<br>
+                From: &nbsp;{{$user->city->country->name_country}}, {{$user->city->name}}<br>
+                Email: &nbsp; {{$user->email}}<br>
+                Mobile: &nbsp; {{$user->mobile}}<br>
+                <a href="{{$user->link}}">{{$user->link}}</a>
+              </p>
+              
+            </div>
+            <div class="card-body border-top mt-2">
+              <h1 class="text-dark text-serif text-center">Equipment</h1>
+              <p class="card-text text-dark">
+                {{$user->desc_three}}
+              </p>
+              
             </div>
           </div>
-    </div>
-  </div>
-</section>
-
-
+          </div>
+          <div class="col-lg-4">
+          <div class="card bg-light shadow">
+          <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
+            <div class="card-body border-top mt-2">
+              <h1 class="text-dark text-serif text-center">About</h1>
+              <p class="card-text text-dark">
+                {{$user->desc_one}}
+              </p>
+            </div>
+          </div>
+        
+              <blockquote>
+              <button class="btn btn-warning"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
+              </blockquote>
+           
+          </div>
+          <div class="col-lg-4">
+          <div class="card bg-light shadow">
+          <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
+            <div class="card-body border-top mt-2">
+              <h1 class="text-dark text-serif text-center">About</h1>
+              <p class="card-text text-dark">
+                {{$user->desc_two}}
+              </p>
+              
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+    <div class="container shadow p-3">
+   
+        @include('components.skills')
+          
+    </div>             
+                
+  
 
 <hr class="style-six">
 
@@ -161,168 +240,7 @@
 </div>
 <div class="row">
     <div class="col-lg-12 mx-auto">
-    @isset($skill)
-      <div class="row">
-           @if($skill->skill_one == null || $skill->percent_one == null)
-
-           @else
-          <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$skill->skill_one}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_one}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_one}}%">
-            <span>{{$skill->percent_one}}</span>
-            </div>
-            </div>
-            </div>
-          </div>
-          @endif
-
-          @if($skill->skill_two == null || $skill->percent_two == null)
-
-          @else
-            <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-            <h3 class="text-dark">{{$skill->skill_two}}</h3>
-            <div class="progress">
-            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_two}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_two}}%">
-            <span>{{$skill->percent_two}}</span>
-            </div>
-            </div>
-            </div>
-            </div>
-          @endif
-           
-          @if($skill->skill_three == null || $skill->percent_three == null)
-        
-          @else
-          <div class="col-md-6 animate-box">
-          <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-          <h3 class="text-dark">{{$skill->skill_three}}</h3>
-          <div class="progress">
-          <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_three}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_three}}%">
-          <span>{{$skill->percent_three}}</span>
-          </div>
-          </div>
-          </div>
-          </div>
-          @endif
-
-          @if($skill->skill_four == null || $skill->percent_four == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_four}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_four}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_four}}%">
-        <span>{{$skill->percent_four}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_five == null || $skill->percent_five == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_five}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_five}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_five}}%">
-        <span>{{$skill->percent_five}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_six == null || $skill->percent_six == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_six}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_six}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_six}}%">
-        <span>{{$skill->percent_six}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_seven == null || $skill->percent_seven == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_seven}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_seven}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_seven}}%">
-        <span>{{$skill->percent_seven}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_eight == null || $skill->percent_eight == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_eight}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_eight}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_eight}}%">
-        <span>{{$skill->percent_eight}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_nine == null || $skill->percent_nine == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_nine}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_nine}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_nine}}%">
-        <span>{{$skill->percent_nine}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-
-        @if($skill->skill_ten == null || $skill->percent_ten == null)
-        
-        @else
-        <div class="col-md-6 animate-box">
-        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
-        <h3 class="text-dark">{{$skill->skill_ten}}</h3>
-        <div class="progress">
-        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_ten}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_ten}}%">
-        <span>{{$skill->percent_ten}}</span>
-        </div>
-        </div>
-        </div>
-        </div>
-        @endif
-        
-           
-          
-      </div>
-    </div>
-    <div class="col-lg-6 mx-auto">
-      <div class="row">
    
-           
-        </div>
-        @endisset
     </div>
       
 </div>

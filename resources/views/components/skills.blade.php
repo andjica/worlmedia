@@ -1,143 +1,167 @@
 @isset($skill)
-<form action="{{route('add-skills')}}" method="post" id="">
-                        @csrf
-                                <div class="form-group">
-                               
-                                </div>
-                                <div class="form-row">
-                                <div class="form-group col-md-4 border br-1">
-                                        <label for="Mobile">Skill one</label>
-                                        <input type="text" class="form-control" id="sk1" name="sk1" value="{{$skill->skill_one}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr1" name="pr1" value="{{$skill->percent_one}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill two</label>
-                                        <input type="text" class="form-control" id="sk2" name="sk2" value="{{$skill->skill_two}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr2" name="pr2" value="{{$skill->percent_two}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                </div>
-                        
-                                <div class="form-row">
-                                <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Three</label>
-                                        <input type="text" class="form-control" id="sk3" name="sk3" value="{{$skill->skill_three}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr3" name="pr3" value="{{$skill->percent_three}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Four</label>
-                                        <input type="text" class="form-control" id="sk4" name="sk4" value="{{$skill->skill_four}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr4" name="pr4" value="{{$skill->percent_four}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="form-row">
-                                <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill five</label>
-                                        <input type="text" class="form-control" id="sk5" name="sk5" value="{{$skill->skill_five}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr5" name="pr5" value="{{$skill->percent_five}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Six</label>
-                                        <input type="text" class="form-control" id="sk6" name="sk6" value="{{$skill->skill_six}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr6" name="pr6" value="{{$skill->percent_six}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Seven</label>
-                                        <input type="text" class="form-control" id="sk7" name="sk7" value="{{$skill->skill_seven}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr7" name="pr7" value="{{$skill->percent_seven}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill eight</label>
-                                        <input type="text" class="form-control" id="sk8" name="sk8" value="{{$skill->skill_eight}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr8" name="pr8" value="{{$skill->percent_eight}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="form-row">
-                                <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Nine</label>
-                                        <input type="text" class="form-control" id="sk9" name="sk9" value="{{$skill->skill_nine}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr9" name="pr9" value="{{$skill->percent_nine}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                               
-                                <div class="form-group col-md-4">
-                                        <label for="Mobile">Skill Ten</label>
-                                        <input type="text" class="form-control" id="sk10" name="sk10" value="{{$skill->skill_10}}">
-                                        <p id="er-mobile" class="text-danger"></p> 
-                                        <p id="su-mobile" class="text-info"></p> 
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="Link">Percent</label>
-                                        <input type="text" class="form-control" id="pr10" name="pr10" value="{{$skill->percent_ten}}">
-                                         <p id="er-url" class="text-danger"></p> 
-                                         <p id="su-url" class="text-info"></p> 
-                                    </div>
-                                    </div>
-                                <input type="submit" class="btn btn-primary" value="Save changes">
-                            </form>
-                            @endisset
+     <div class="row m-5">
+     <h1 class="text-dark text-serif text-center mx-auto">Skills</h1>
+
+    </div>
+      <div class="row mt-5">
+      
+           @if($skill->skill_one == null || $skill->percent_one == null)
+
+           @else
+          <div class="col-md-6 animate-box">
+            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+            <h4 class="text-dark">{{$skill->skill_one}}</h4>
+            <div class="progress">
+            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_one}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_one}}%">
+            <span>{{$skill->percent_one}}</span>
+            </div>
+            </div>
+            </div>
+          </div>
+          @endif
+
+          @if($skill->skill_two == null || $skill->percent_two == null)
+
+          @else
+            <div class="col-md-6 animate-box">
+            <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+            <h4 class="text-dark">{{$skill->skill_two}}</h4>
+            <div class="progress">
+            <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_two}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_two}}%">
+            <span>{{$skill->percent_two}}</span>
+            </div>
+            </div>
+            </div>
+            </div>
+          @endif
+           
+          @if($skill->skill_three == null || $skill->percent_three == null)
+        
+          @else
+          <div class="col-md-6 animate-box">
+          <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+          <h4 class="text-dark">{{$skill->skill_three}}</h4>
+          <div class="progress">
+          <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_three}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_three}}%">
+          <span>{{$skill->percent_three}}</span>
+          </div>
+          </div>
+          </div>
+          </div>
+          @endif
+
+          @if($skill->skill_four == null || $skill->percent_four == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_four}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_four}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_four}}%">
+        <span>{{$skill->percent_four}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_five == null || $skill->percent_five == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_five}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_five}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_five}}%">
+        <span>{{$skill->percent_five}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_six == null || $skill->percent_six == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_six}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_six}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_six}}%">
+        <span>{{$skill->percent_six}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_seven == null || $skill->percent_seven == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_seven}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_seven}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_seven}}%">
+        <span>{{$skill->percent_seven}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_eight == null || $skill->percent_eight == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_eight}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_eight}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_eight}}%">
+        <span>{{$skill->percent_eight}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_nine == null || $skill->percent_nine == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_nine}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_nine}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_nine}}%">
+        <span>{{$skill->percent_nine}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+
+        @if($skill->skill_ten == null || $skill->percent_ten == null)
+        
+        @else
+        <div class="col-md-6 animate-box">
+        <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
+        <h4 class="text-dark">{{$skill->skill_ten}}</h4>
+        <div class="progress">
+        <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{$skill->percent_ten}}" aria-valuemin="0" aria-valuemax="100" style="width:{{$skill->percent_ten}}%">
+        <span>{{$skill->percent_ten}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        @endif
+        
+           
+          
+      </div>
+    </div>
+    <div class="col-lg-6 mx-auto">
+      <div class="row">
+   
+           
+        </div>
+        @endisset

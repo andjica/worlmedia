@@ -261,7 +261,7 @@
                             <h5 class="card-title mb-0">Your information</h5>
                         </div>
                         <div class="card-body">
-                            @include('components.skills')
+                            @include('components.create-skills')
 
                         </div>
                     </div>
