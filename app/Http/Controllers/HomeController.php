@@ -10,6 +10,7 @@ use App\User;
 use App\Account;
 use App\Purchase;
 use App\Skill;
+use App\Image;
 
 class HomeController extends Controller
 {
@@ -42,6 +43,8 @@ class HomeController extends Controller
 
         $useradmin = User::where('id', $userId)->where('role_id', 1)->first();
 
+        
+
         if($useradmin)
         {
             return redirect('/admin-home');
@@ -71,11 +74,15 @@ class HomeController extends Controller
 
         $skill = Skill::where('user_id', $userId)->first();
 
+        $images = Image::where('user_id', $userId)->get();
+
+     
+
         if($type == 1)
         {
             return redirect('/home');
         }
-        return view('pages.editprofile', compact('user', 'purchases', 'skill'), $this->data);
+        return view('pages.editprofile', compact('user', 'purchases', 'skill', 'images'), $this->data);
 
         
     }
