@@ -9,6 +9,9 @@
                     {{session('success')}}
                 </div>
                 @endif
+    @if(session('error'))
+           <div class="alert alert-danger">{{session('error')}}</div>
+     @endif
     </div>
     </div>
     <div class="row">
@@ -58,7 +61,7 @@
 
         <div class="col-md-8 col-xl-8">
         @if ($errors->has('image2'))  <p style="color:red;">{{$errors->first('image2')}}</p> @endif
-
+        @if ($errors->has('imagedesc'))  <p style="color:red;">{{$errors->first('imagedesc')}}</p> @endif
             <div class="tab-content">
 
                 <div class="tab-pane  show active" id="biography" role="tabpanel">
@@ -85,9 +88,7 @@
                             <h5 class="card-title mb-0">Public info</h5>
                         </div>
                 <div class="card-body">
-                    @if(session('error'))
-                        <div class="alert- alert-danger p-2">{{session('error')}}</div>
-                    @endif
+                   
                     <form action="{{route('upgrade-user')}}" method="post" enctype="multipart/form-data">
                     @csrf
                         <div class="row">
