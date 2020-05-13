@@ -9356,3 +9356,33 @@ hr.style-six {
     {
       width: 60px;
     }
+
+    .about-user{
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 500px;
+     
+    }
+
+    .skills
+    {
+      margin-top:370px;
+    }
+
+    .profile-padding-top
+    {
+      padding-top: 100px;
+    }
+
+    .card-abs
+    {
+      position: absolute;
+      top:150px;
+    }
+
+    .slika
+    {
+      height:300px; 
+      background-size:cover; 
+    }

@@ -18,8 +18,6 @@ class CreateFollowersTable extends Migration
                 $table->primary(['user_id', 'is_following_id']);
                 $table->integer('user_id')->unsigned()->index();
                 $table->integer('is_following_id')->unsigned()->index();
-                $table->integer('rate')->nullable();
-                $table->mediumtext('comment')->nullable();
                 $table->timestamps();
     
                 $table->foreign('user_id')
