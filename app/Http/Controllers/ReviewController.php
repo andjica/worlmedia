@@ -12,21 +12,8 @@ class ReviewController extends Controller
     {
         $rate = request()->rate;
         $userid = request()->userid;
-        
-        $review = new Review();
-        
-        $review->user_id = $userid;
-        $review->user_respond = 1;
-        $review->comment = "andjica daje komentare";
-        $review->rate = $rate;
+        $comment = request()->comment;
 
-        try{
-            $review->save();
-            return redirect()->back()->with('success', 'Thank for giving rate');
-        }
-        catch(\Throwable $e)
-        {
-            return redirect()->back()->with('error', 'Oops, something went wrong, try latter');
-        }
+        
     }
 }

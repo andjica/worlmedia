@@ -9,6 +9,7 @@ use App\User;
 use App\Review;
 use App\Skill;
 use App\Follower;
+use App\Image;
 
 class FrontController extends Controller
 {
@@ -104,8 +105,9 @@ class FrontController extends Controller
         $countfollowers = Follower::where('is_following_id', $userId)->count();
         $followers = Follower::where('is_following_id', $userId)->get();
         
-        
-        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following'));
+        $images = Image::where('user_id', $userId)->get();
+
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images'));
         
     }
 

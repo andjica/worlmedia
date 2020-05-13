@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Image;
 
 class ImageController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store()
     {
         request()->validate([
@@ -55,5 +62,33 @@ class ImageController extends Controller
         }
        
 
+    }
+
+
+    public function destroy($id)
+    {
+        $image = Image::find($id) ?? abort(404);
+        
+        
+
+       try{
+
+        $image_path = public_path('image-resume/'.$image->url);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
+
+        $image->delete();
+        return redirect()->back()->with('success', 'You deleted image successfully');
+
+       }
+       catch(\Throwable $e)
+       {
+           return redirect()->back()->with('error', 'Error Message: There is a Problem Deleting Your Image, try latter');
+       }
+        
+        
+
+        
     }
 }
