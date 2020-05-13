@@ -27,6 +27,10 @@ Auth::routes();
 Route::get('/editprofile', 'HomeController@editprofile')->name('editprofile');
 Route::get('/home', 'HomeController@index')->name('home');
 
+//images
+Route::post('/add-image', 'ImageController@store')->name('add-image');
+Route::get('/delete-image/{id}', 'ImageController@destroy')->name('delete-image');
+
 
 //user
 Route::post('/upgrade-user', 'UserController@store')->name('upgrade-user');
@@ -86,5 +90,3 @@ Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
 Route::post('/follow', 'FollowController@follow')->name('follow');
 Route::get('/unfollow', 'FollowController@unfollow')->name('unfollow');
 
-//images
-Route::post('/add-image', 'ImageController@store')->name('add-image');

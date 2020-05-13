@@ -29,7 +29,7 @@
 
 
   
-            <div class="row" style="padding-top: 88px;">
+            <div class="row profile-padding-top">
                 <div class="col-lg-4 xvs">
                     <hr/>
                         </div>
@@ -158,12 +158,12 @@
         
 </div>
     </section>
-    <hr class="style-six"> 
+   
  
               
     <section class="about-user">
       <div class="container">
-          <div class="row mt-5">
+          <div class="row mt-5 p-2">
           <div class="col-lg-4">
           <div class="card bg-light shadow">
           <i class="fa fa-user-circle fa-2x text-orange text-center mt-3"></i>
@@ -197,11 +197,16 @@
               </p>
             </div>
           </div>
-        
+          @if(auth()->user())
+            @if(auth()->user()->id == $user->id)
+
+            @else
               <blockquote>
-              <button class="btn btn-warning"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
+              <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
               </blockquote>
-           
+              @endif
+           @else
+           @endif
           </div>
           <div class="col-lg-4">
           <div class="card bg-light shadow">
@@ -218,39 +223,27 @@
         </div>
       </div>
     </section>
+   
     <section class="skills">
+    <hr class="style-six">
+
     <div class="container shadow p-3">
    
         @include('components.skills')
           
     </div>             
                 
-  
-
-<hr class="style-six">
+    </section>
 
 
-<section class="ftco-section" id="skills-section">
-<div class="container">
-<div class="row justify-content-center pb-5">
-<div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
-<h2 class="mb-4">My Skills</h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-</div>
-</div>
-<div class="row">
-    <div class="col-lg-12 mx-auto">
-   
-    </div>
-      
-</div>
-@include('components.rate')  
-                
-</div>
-</div>
+
+
+<section class="image-gallery">
+  @include('components.image-gallery')
 </section>
+<hr class="style-six">
 <button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
-
+@include('components.rate')
 @endisset
 
 <style>

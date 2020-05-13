@@ -158,10 +158,6 @@
            
           
       </div>
-    </div>
-    <div class="col-lg-6 mx-auto">
-      <div class="row">
+
    
-           
-        </div>
         @endisset

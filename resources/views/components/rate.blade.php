@@ -1,6 +1,4 @@
-<button type="button" class="btn btn-primary m-5" data-toggle="modal" data-target="#andjica">
-Rate this crew member
-                        </button>
+
 
                         <!-- Modal -->
                         <div class="modal "  id="andjica" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -25,12 +23,19 @@ Rate this crew member
                               <form action="{{route('give-rate')}}"  id="form-rate" method="post">
                                 @csrf
                               <div class="modal-body text-center">
+                              <div class="form-group">
+                              <label for="rate">Give a rate to {{$user->name}}</label>
                                 <select name="rate" class="form-control"  style="background:white !important;">
                                   <option value="7">7</option>
                                   <option value="8">8</option>
                                   <option value="9">9</option>
                                   <option value="10">10</option>
                                 </select>
+                                </div>
+                                <div class="form-group">
+                                <label for="rate">Give a comment for your rate to {{$user->name}}</label>
+                                  <textarea class="form-control" style="background:white !important" name="comment"></textarea>
+                                </div>
                                 <input type="hidden" value="{{$user->id}}" name="userid">
                               </div>
                               <div class="modal-footer">
