@@ -107,7 +107,11 @@ class FrontController extends Controller
         
         $images = Image::where('user_id', $userId)->get();
 
-        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images'));
+        $countrate = Review::where('is_matched_id', $userId)->count();
+        $useravg = Review::where('is_matched_id', $userId)->avg('rate');
+        
+
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg'));
         
     }
 

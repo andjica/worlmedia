@@ -90,13 +90,8 @@ class User extends Authenticatable
         return $this->belongsToMany(User::class, 'followers', 'user_id', 'is_following_id');
     }
 
-    public function numberOfFollowers()
+    public function usersrated()
     {
-        return $this->followedBy->count();
-    }
-
-    public function followingNumber()
-    {
-        return $this->following->count();
+        return $this->hasMany(Review::class,'is_matched_id');
     }
 }
