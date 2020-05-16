@@ -14,10 +14,11 @@ class CreateReviewsTable extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->primary(['user_id', 'is_following_id']);
+            $table->primary(['user_id', 'is_matched_id']);
                 $table->integer('user_id')->unsigned()->index();
-                $table->integer('is_following_id')->unsigned()->index();
-                $table->integer('rate');
+                $table->integer('is_matched_id')->unsigned()->index();
+                $table->boolean('matched_status');
+                $table->integer('rate')->nullable();
                 $table->mediumtext('comment')->nullable();
                 $table->timestamps();
     
@@ -26,7 +27,7 @@ class CreateReviewsTable extends Migration
                     ->on('users')
                     ->onDelete('cascade');
     
-                $table->foreign('is_following_id')
+                $table->foreign('is_matched_id')
                     ->references('id')
                     ->on('users')
                     ->onDelete('cascade');

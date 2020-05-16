@@ -1584,7 +1584,7 @@ pre {
  font-weight: 400;
  line-height: 1.5;
  color: #495057;
- background-color: #2d6dda;
+ background-color: white;
  background-clip: padding-box;
  border: 1px solid #ced4da;
  border-radius: 0.25rem;
@@ -1603,7 +1603,7 @@ pre {
    border: 0; }
  .form-control:focus {
    color: #495057;
-   background-color: #2d6dda;
+   background-color: white;
    border-color: #80bdff;
    outline: 0;
    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -1626,7 +1626,7 @@ pre {
 
 select.form-control:focus::-ms-value {
  color: #495057;
- background-color: #2d6dda; }
+ background-color: white; }
 
 .form-control-file,
 .form-control-range {
@@ -8335,7 +8335,7 @@ h1, h2, h3, h4, h5,
 
 .form-control {
  height: 52px !important;
- background: #2d6dda !important;
+ background: white !important;
  color: #000000 !important;
  font-size: 18px;
  border-radius: 5px;
@@ -8966,7 +8966,7 @@ li{
   background: linear-gradient(0deg, rgba(92,141,196,1) 0%, rgba(45,49,253,1) 100%);
   background-size: cover;
    background-position: right; 
-   
+   height:630px;
 }
 
 @media screen and (max-width:468px){
@@ -9361,13 +9361,13 @@ hr.style-six {
       position: absolute;
       text-align: center;
       width: 100%;
-      top: 500px;
+      top: 490px;
      
     }
 
     .skills
     {
-      margin-top:370px;
+      margin-top:400px;
     }
 
     .profile-padding-top
@@ -9385,4 +9385,15 @@ hr.style-six {
     {
       height:300px; 
       background-size:cover; 
+    }
+
+    .hidden
+    {
+      visibility: hidden;
+    }
+
+    .h-rate
+    {
+      font-size: 40px;
+      position: absolute;
     }

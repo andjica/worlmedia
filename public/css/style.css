@@ -2040,7 +2040,7 @@ border-color: transparent transparent transparent deepskyblue;
   border-bottom-left-radius: 20px
 }
 .fa-4x {
-  color: white;
+  color: orange !important;
   font-size: 4em;
 }
 }
@@ -2097,4 +2097,22 @@ border-color: transparent transparent transparent deepskyblue;
   .night{
     display: none;
   }
+}
+
+.stable{
+  position: absolute;
+  top: 14px;
+  text-align: center;
+  left: 53px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+.nova125{
+  position: fixed !important;
+  right: 0;
+  width: 13rem;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
 }

@@ -4,6 +4,7 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <section class="db12">
+<div class="container">
 <div class="night">
   <div class="shooting_star"></div>
   <div class="shooting_star"></div>
@@ -26,18 +27,36 @@
   <div class="shooting_star"></div>
   <div class="shooting_star"></div>
 </div>
-
-
+<div class="row mx-auto">
+      <div class="col-lg-12">
+          @if(session('success'))
+                <div class="alert alert-success mt-5">
+                    {{session('success')}}
+                </div>
+                @endif
+                @if(session('error'))
+                <div class="alert alert-danger mt-5">
+                    {{session('error')}}
+                </div>
+                @endif
+          </div>
+</div>
   
             <div class="row profile-padding-top">
                 <div class="col-lg-4 xvs">
                     <hr/>
+                   <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                      Launch demo modal
+                    </button>
+                                          
                         </div>
+                        @include('components.match')
                             <div class="col-lg-4 ggg mx-auto pb-5 text-center" style="color: white;">
                             <div class="col-lg-12 daodah">
                                     <div class="col-lg-6">
                                     @isset($countfollowers)
-                                    <button type="button" class="btn btn-success teck desno" data-toggle="modal" data-target="#followers">Followers ({{$countfollowers}})</button>
+                                    <button type="button" class="btn btn-success teck desno" data-toggle="modal" data-target="#followers">Connections ({{$countfollowers}})</button>
                                     <!-- Modal Followers -->
                                       <div class="modal fadeInUp" id="followers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -79,7 +98,7 @@
                                     </div>
                                       <div class="col-lg-6">
                                         @isset($countfollowing)
-                                          <button type="button" class="btn btn-primary daf levo" data-toggle="modal" data-target="#following">Following ({{$countfollowing}})</button>
+                                          <button type="button" class="btn btn-primary daf levo" data-toggle="modal" data-target="#following">Crew Members ({{$countfollowing}})</button>
                                            <!-- Modal Following -->
                                           <div class="modal fadeInUp" id="following" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -119,14 +138,18 @@
                                           </div>
                                           @endisset
                                       </div>
+                            
                                   </div>
                                
                                 <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
                                   
-                                </div>
+                                </div><br>
                                 <h1 class="media-heading text-center">{{$user->name}}</h1>
-                                <p class="text-center mx-auto">{{$user->city->name}}, {{$user->city->country->name_country}}</p><br>
+                                <p class="text-center mx-auto">{{$user->city->name}}, {{$user->city->country->name_country}}</p>
                                 @if(auth()->user() == null)
+                                <a href="{{route('login')}}"  class="btn btn-warning btn-sm p-4 mb-5 border-0 shadow zoom btn-andjica">
+                                <p class="text-serif text-w ">Follow this user</p>
+                                </a>
                                 @elseif(auth()->user()->id == $user->id)
                                     
                                 @elseif (auth()->user()->followings->contains($user->id))
@@ -150,12 +173,32 @@
                                
                                 @endif
                                 <Br>
-                               
+                              
                         </div>
                     <div class="col-lg-4 xvb">
                 <hr/>
+                @if($countrate == null)
+                @else
+                <div class="card float-right shadow nova125">
+                  <div class="card-body">
+                  <h5 class="card-title text-center">Avarage rate</h5>
+                  <div class="row">
+                  <div class="col-lg-12 text-center">
+                  <i class="fa fa-trophy fa-5x text-orange mt-3"></i>
+                  @isset($useravg)
+                    <h1 class="mt-3 stable">{{round($useravg, 2)}}</h1>
+                    @endisset
+                  </div>
+                
+                </div>
+                </div>
+                @isset($countrate)
+                <p class="count-text text-center text-primary">({{$countrate}}) Rates</p>
+                @endisset
+                </div>
             </div>
-        
+            @endif
+</div>
 </div>
     </section>
    
@@ -163,6 +206,7 @@
               
     <section class="about-user">
       <div class="container">
+         
           <div class="row mt-5 p-2">
           <div class="col-lg-4">
           <div class="card bg-light shadow">
@@ -199,7 +243,9 @@
           </div>
           @if(auth()->user())
             @if(auth()->user()->id == $user->id)
-
+            <blockquote class="hidden">
+              <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
+              </blockquote>
             @else
               <blockquote>
               <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>

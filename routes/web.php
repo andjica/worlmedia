@@ -84,6 +84,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/contact', 'EmailController@send')->name('contact');
 
 //review
+Route::post('/give-match', 'ReviewController@match')->name('give-match');
 Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
 
 
