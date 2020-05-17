@@ -107,11 +107,23 @@ class FrontController extends Controller
         
         $images = Image::where('user_id', $userId)->get();
 
-        $countrate = Review::where('is_matched_id', $userId)->count();
+        $countrate = Review::where('is_matched_id', $userId)->where('matched_status',1)->count();
         $useravg = Review::where('is_matched_id', $userId)->avg('rate');
         
+        if(auth()->user())
+        {
+            $matched = Review::where('user_id', auth()->user()->id)->where('is_matched_id', $userId)->first();
 
-        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg'));
+            if($matched)
+            {
+                return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
+            }   
+        }
+        else{
+            return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
+        }
+
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
         
     }
 

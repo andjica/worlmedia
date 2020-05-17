@@ -9,50 +9,37 @@ use App\User;
 class ReviewController extends Controller
 {
 
-    public function match()
-    {
-        
-    }
 
     public function rate()
     {
+
+
         $rate = request()->rate;
         $userid = auth()->user()->id;
         $comment = request()->comment;
-        $userrated = request()->userid;
+        $usermatched = request()->userid;
 
         //finding name from user profile
-        $userfind = User::find($userrated);
+        $userfind = User::find($usermatched);
         $username = $userfind->name;
 
-        $review = new Review();
-        $review->user_id = $userid;
-        $review->is_rated_id = $userrated;
-        $review->comment = $comment;
-        $review->rate = $rate;
-
         
-        $reviewone = Review::where('user_id', $userid)->where('is_rated_id', $userrated)->first();
-
+        $review = Review::where('user_id', $userid)->update([
+            'comment' => $comment,
+            'rate' => $rate,
+            'matched_status' => 1
+        ]);
         
+        try{
+            return redirect()->back()->with('success', 'You gave a rate to '.$username.' successfully :)');
 
-        if($reviewone)
+        }
+        catch(\Throwable $e)
         {
-            
-                return redirect()->back()->with('error', 'Sorry, you have already give a rate to '.$username);
+            return redirect()->back()->with('error', 'Ops :( , something went wrong, please try latter');
+        } 
            
-        }
-        else
-        {
-            try{
-                $review->save();
-                return redirect()->back();
-            }
-            catch(\Throwable $e)
-            {
-                return abort(500);
-            }
-        }
+        
        
     }
 }
