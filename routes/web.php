@@ -88,6 +88,6 @@ Route::post('/give-match', 'EmailController@match')->name('give-match');
 Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
 
 
-Route::post('/follow-user', 'FollowController@follow')->name('follow-user');
+Route::post('/follow', 'FollowController@follow')->name('follow');
 Route::get('/unfollow', 'FollowController@unfollow')->name('unfollow');
 

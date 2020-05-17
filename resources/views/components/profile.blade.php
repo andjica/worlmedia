@@ -176,7 +176,7 @@
                                 </i><br>
                                 </form>
                                 @else
-                                <form action="{{route('follow-user')}}" method="POST">
+                                <form action="{{route('follow')}}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-warning btn-sm p-4  border-0 shadow zoom btn-andjica">
                                 <p class="text-serif text-w">Follow this user</p>
