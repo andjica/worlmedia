@@ -1,7 +1,7 @@
 
 <form action="{{route('freelancers')}}" method="get" id="form-search"> 
 	<div class="container sickness deskic nekaproba">
-	<h1 style="    margin-bottom: 40px;">Find here you Media Crew Member</h1>
+	<h1 style="margin-bottom: 40px; color:white">Find here you Media Crew Member</h1>
 	  <div class="row no-gutters new-res">
 	
 				        <div class="col-md mr-md-2">

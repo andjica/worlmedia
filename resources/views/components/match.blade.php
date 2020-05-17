@@ -12,27 +12,29 @@
       </div>
       <div class="modal-body bg-light">
           <h2 class="text-serif text-dark text-center">Match {{$user->name}}</h2>
-        <form action="{{route('give-match')}}" method="post">
+        <form action="{{route('give-match')}}" method="post" id="form-match">
             @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Your email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" value="{{auth()->user()->email}}" name="userauth">
+            <input type="email" class="form-control"  id="email-match" value="{{auth()->user()->email}}" name="userauth">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <p id="er-ems"></p>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Your message</label>
-            <textarea class="form-control"></textarea>
+            <textarea class="form-control" id="message-match" name="message"></textarea>
+            <p id="er-msg"></p>
         </div>
         <div class="form-group form-check">
-            <input type="hidden" class="form-check-input" id="" value="{{$user->id}}" name="usermatch">
-            
+            <input type="hidden" class="form-check-input" id="" value="{{$user->id}}" name="userid">
+            <input type="hidden" class="form-check-input" id="" value="{{$user->email}}" name="useremail">
         </div>
         
         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary" id="match-apply">Save changes</button>
       </div>
       </form>
     </div>

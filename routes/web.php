@@ -84,10 +84,10 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/contact', 'EmailController@send')->name('contact');
 
 //review
-Route::post('/give-match', 'ReviewController@match')->name('give-match');
+Route::post('/give-match', 'EmailController@match')->name('give-match');
 Route::post('/give-rate', 'ReviewController@rate')->name('give-rate');
 
 
-Route::post('/follow', 'FollowController@follow')->name('follow');
+Route::post('/follow-user', 'FollowController@follow')->name('follow-user');
 Route::get('/unfollow', 'FollowController@unfollow')->name('unfollow');
 

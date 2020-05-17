@@ -85,7 +85,7 @@
 
 
   <script src="{{asset('/')}}js/main.js"></script>
-
+  <!-- Andjica Custom Js -->
   <script src="{{asset('/')}}js/form-upgrade.js"></script>
   <script src="{{asset('/')}}js/contact-form.js"></script>
 
@@ -93,105 +93,9 @@
   <script src="{{asset('/')}}js/go-back.js"></script>
   <script src="{{asset('/')}}js/select2.js"></script>
 
-  <script>
-      $(document).ready(function(){
-        $('#form-search').submit(function(e){
-          let cat = $('#categorys').val();
-          let cit = $('#citys').val();
+  <script src="{{asset('/')}}js/city-category.js"></script>
+  <script src="{{asset('/')}}js/contact-fs.js"></script>
+  <script src="{{asset('/')}}js/match.js"></script>
 
-          let ercat = document.getElementById('er-category');
-          let ercit = document.getElementById('er-city');
-
-          let errors = [];
-
-          if(cat == "")
-          {
-            e.preventDefault();
-            errors.push = "Neka mistake";
-            ercat.innerHTML = "Please enter category";     
-          }
-
-          if(cit == "")
-          {
-            e.preventDefault();
-            errors.push = "Neka mistake";
-            ercit.innerHTML = "Please enter city";     
-          }
-
-          if(errors.length == 0)
-          {
-            return true;
-          }
-        });
-      });
-    </script>
-
-    <script>
-        $(document).ready(function(){
-            $('#contact-fs').submit(function(e){
-
-                let den = $('#val1').val();
-                let erden = document.getElementById('erval1');
-
-                let and = $('#val2').val();
-                let erand = document.getElementById('erval2');
-
-                let svetlanica = $('#val3').val();
-                let ersvetlanica = document.getElementById('erval3');
-
-                let ljubisa = $('#val4').val();
-                let erljubisa = document.getElementById('erval4');
-
-
-                let errors = [];
-
-                if(den == ""){
-                  e.preventDefault();
-                  errors.push = "Please fil in your name";
-                  erden.innerHTML = "Please fil in your name";     
-
-                }
-
-                if(and == ""){
-                  e.preventDefault();
-                  errors.push = "ouch, mistake is made";
-                  erand.innerHTML = "please fill in your email";
-                }
-
-                if(svetlanica == ""){
-                  e.preventDefault();
-                  errors.push = "ouch, another mistake";
-                  ersvetlanica.innerHTML = "please fill in the subject";
-                }
-
-                if(ljubisa == ""){
-                  e.preventDefault();
-                  errors.push = "mistake again";
-                  erljubisa.innerHTML = "please fill in the message";
-                }
-                let emailReg = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-
-                if(!emailReg.test(and))
-                {
-        
-                      erand.innerHTML = "Please enter a valid email address";
-                      errors.push = "nije ok";
-                      e.preventDefault();
-                }
-
-                if(erros.length == 0){
-                  return true;
-                }
-
-                
-                                  
-
-
-            });
-        });
-    </script>
-  <script>
-  </script>
-
-
+  <!-- End Andjica Custom Js -->
 </body>

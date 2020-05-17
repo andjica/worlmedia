@@ -45,13 +45,27 @@
             <div class="row profile-padding-top">
                 <div class="col-lg-4 xvs">
                     <hr/>
-                   <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                      Launch demo modal
+                  @if(auth()->user())
+                    @if(auth()->user()->id == $user->id)
+                    @elseif($matched)
+                       @if($matched->matched_status == 0)
+                      <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
+                        @else
+                        <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica-update"><i class="fa fa-heart text-light"></i>Update{{$user->name}}</button>
+                        @endif
+                    @else
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="idemo">
+                      Match
                     </button>
-                                          
+                    @include('components.match')
+                    @endif
+                    @else
+                    <a href="{{route('login')}}" class="btn btn-primary">
+                      Give a match
+                  </a>
+                          @endif                
                         </div>
-                        @include('components.match')
+                        
                             <div class="col-lg-4 ggg mx-auto pb-5 text-center" style="color: white;">
                             <div class="col-lg-12 daodah">
                                     <div class="col-lg-6">
@@ -153,7 +167,7 @@
                                 @elseif(auth()->user()->id == $user->id)
                                     
                                 @elseif (auth()->user()->followings->contains($user->id))
-                                <form action="{{route('unfollow')}}" method="get">
+                                <form action="{{route('unfollow')}}" method="GET">
                                 @csrf
                                 <button type="submit" class="btn btn-info btn-sm p-4  border-0 shadow zoom">
                                 <p class="text-serif text-w ">UnFollow this user</p>
@@ -162,10 +176,10 @@
                                 </i><br>
                                 </form>
                                 @else
-                                <form action="{{route('follow')}}" method="post">
+                                <form action="{{route('follow-user')}}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-warning btn-sm p-4  border-0 shadow zoom btn-andjica">
-                                <p class="text-serif text-w ">Follow this user</p>
+                                <p class="text-serif text-w">Follow this user</p>
                                 </button>
                                <input type="hidden" value="{{$user->id}}" name="user">
                                 </i><br>
@@ -241,18 +255,7 @@
               </p>
             </div>
           </div>
-          @if(auth()->user())
-            @if(auth()->user()->id == $user->id)
-            <blockquote class="hidden">
-              <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
-              </blockquote>
-            @else
-              <blockquote>
-              <button class="btn btn-warning float-left btn-lg" data-toggle="modal" data-target="#andjica"><i class="fa fa-heart text-light"></i>Give a rate to {{$user->name}}</button>
-              </blockquote>
-              @endif
-           @else
-           @endif
+          
           </div>
           <div class="col-lg-4">
           <div class="card bg-light shadow">
