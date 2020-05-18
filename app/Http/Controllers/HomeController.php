@@ -39,10 +39,16 @@ class HomeController extends Controller
     {
         $userId = auth()->user()->id;
         
-        $useraccount = Account::where('acc_type_id', 2)->where('user_id', $userId)->first();
+        $freeAccount =  Account::where('acc_type_id', 1)->where('user_id', $userId)->first();
+        $useraccountPro = Account::where('acc_type_id', 2)->where('user_id', $userId)->first();
+        $useraccountSuperPro = Account::where('acc_type_id', 3)->where('user_id', $userId)->first();
 
         $useradmin = User::where('id', $userId)->where('role_id', 1)->first();
 
+        $currentUser = Account::where('user_id', $userId)->first();
+        
+        $accountValidTime = $currentUser->valid_until;
+        $currentTime = \Carbon\Carbon::now();
         
 
         if($useradmin)
@@ -50,11 +56,14 @@ class HomeController extends Controller
             return redirect('/admin-home');
         }
 
-        if($useraccount)
+        elseif($freeAccount || $useraccountPro || $useraccountSuperPro)
         {
+            if($currentTime > $accountValidTime)
+            {
+                return view('home');
+            }
             return redirect('/editprofile');
         }
-        
         return view('home');
     }
 
@@ -71,18 +80,18 @@ class HomeController extends Controller
 
         $type = $checkingaccount->acc_type_id;
         
-
+       
         $skill = Skill::where('user_id', $userId)->first();
 
         $images = Image::where('user_id', $userId)->get();
 
      
 
-        if($type == 1)
+      /*  if($type == 1)
         {
             return redirect('/home');
-        }
-        return view('pages.editprofile', compact('user', 'purchases', 'skill', 'images'), $this->data);
+        }*/
+        return view('pages.editprofile', compact('user', 'purchases', 'skill', 'images', 'checkingaccount'), $this->data);
 
         
     }

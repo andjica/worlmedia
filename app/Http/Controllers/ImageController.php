@@ -37,14 +37,15 @@ class ImageController extends Controller
         else{
             if(request()->image2){
 
-                $image2 = request()->file('image2');
-                $name2 = $image2->getClientOriginalName();
+                $image = request()->file('image2');
+                $name = str_slug(request()->imagedesc).'.'.$image->getClientOriginalExtension();
             
-                $destinationPath2 = public_path('/image-resume');
-                $image2->move($destinationPath2, $name2);
+                $destinationPath = public_path('/image-resume');
+
+                $image->move($destinationPath, $name);
     
                 $imagemodel = new Image();
-                $imagemodel->url = $name2;
+                $imagemodel->url = $name;
                 $imagemodel->alt = $alt;
                 $imagemodel->user_id = $user;
     

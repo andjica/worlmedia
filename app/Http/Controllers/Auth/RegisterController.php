@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -82,7 +83,7 @@ class RegisterController extends Controller
             Account::create([
                 'user_id' => $user->id,
                 'acc_type_id' => 1,
-                'valid_until' => null
+                'valid_until' => Carbon::now()->addDay(3)
             ]);
 
             Skill::create([

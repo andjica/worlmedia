@@ -17,7 +17,7 @@ class FrontController extends Controller
 
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
         $this->data['categories'] = Category::orderBy('name', 'desc')->get();
         $this->data['cities'] =  City::orderBy('name', 'asc')->get();
         
@@ -110,20 +110,23 @@ class FrontController extends Controller
         $countrate = Review::where('is_matched_id', $userId)->where('matched_status',1)->count();
         $useravg = Review::where('is_matched_id', $userId)->avg('rate');
         
+        $comments = Review::where('is_matched_id', $userId)->get();
+        
         if(auth()->user())
         {
+           
             $matched = Review::where('user_id', auth()->user()->id)->where('is_matched_id', $userId)->first();
-
             if($matched)
             {
-                return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
+                return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched', 'comments'));
             }   
+            else{
+                return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched', 'comments'));
+            }
         }
-        else{
-            return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
-        }
+       
 
-        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'matched'));
+        return view('pages.profile', compact('user', 'skill','countfollowing','countfollowers', 'followers', 'following', 'images', 'countrate', 'useravg', 'comments'));
         
     }
 

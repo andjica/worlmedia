@@ -79,8 +79,7 @@ class UserController extends Controller
             if(request()->image){
 
                 $image = request()->file('image');
-                $name = $image->getClientOriginalName();
-            
+                $name = str_slug(request()->username).'.'.$image->getClientOriginalExtension();
                 $destinationPath = public_path('/image-users');
                 $image->move($destinationPath, $name);
               

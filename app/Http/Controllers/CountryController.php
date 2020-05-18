@@ -63,7 +63,7 @@ class CountryController extends Controller
         ]);
 
         $country = new Country();
-        $country->name_country = request()->name;
+        $country->name_country = request()->name_country;
         
 
         try{
@@ -95,7 +95,8 @@ class CountryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $country = Country::find($id) ?? abort(404);
+        return view('pages.country.edit-country', compact('country'), $this->data); 
     }
 
     /**
@@ -105,9 +106,28 @@ class CountryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        request()->validate([
+            'name' => 'required|min:3',
+
+        ],
+        [
+            'name.required' => 'Country name is required',
+           
+        ]);
+
+        $country = Country::find($id) ?? abort(404);
+        $country->name_country = request()->name;
+        try{
+            $country->save();
+            return redirect()->back()->with('success', 'You update country successfully');
+        }
+        catch(\Throwable $e)
+        {
+            return abort(500);
+        }
+        
     }
 
     /**
