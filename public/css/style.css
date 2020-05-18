@@ -2116,3 +2116,19 @@ border-color: transparent transparent transparent deepskyblue;
     border-top-left-radius: 30px !important;
     border-bottom-left-radius: 30px !important;
 }
+
+@media screen and (min-width:1450px){
+  footer .bg-light .nopp{
+    padding-top: 340px;
+  }
+}
+
+
+@media screen and (max-width:3500px){
+  footer .bg-light .nopp{
+    padding-top: 340px;
+  }
+}
+
+
+

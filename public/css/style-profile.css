@@ -9397,3 +9397,8 @@ hr.style-six {
       font-size: 40px;
       position: absolute;
     }
+
+    .back-orange
+    {
+      background:orange;
+    }

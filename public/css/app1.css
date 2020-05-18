@@ -25,7 +25,9 @@
 @media screen and (min-width:1020px){
 
 .responsic{
-  margin-top:-150px;  width: 100%;   position: absolute;}
+  margin-top:-150px;  width: 100%;   position: absolute;
+  height: 946px;
+}
 
   .jbg155{
     width: 100%;
