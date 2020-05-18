@@ -44,6 +44,8 @@ Route::group(['middleware' => ['checkaccount']], function ()
 
     //admin
     Route::get('/admin-home', 'AdminController@index')->name('admin-home');
+    Route::get('/admin-users', 'AdminController@users')->name('admin-users');
+    Route::get('/invoice/{id}', 'AdminController@invoice')->name('admin-invoice');
 
     //city
     Route::get('/admin-cities', 'CityController@index')->name('admin-cities');
@@ -77,6 +79,8 @@ Route::group(['middleware' => ['checkaccount']], function ()
 //payment
 Route::post('/active-pro', 'PaymentController@activepro')->name('active-pro');
 Route::get('/status-pro', 'PaymentController@statuspro')->name('status-pro'); 
+Route::post('/active-super-pro', 'PaymentController@superpro')->name('active-super-pro');
+Route::get('/status-super', 'PaymentController@statussuper')->name('status-super'); 
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
