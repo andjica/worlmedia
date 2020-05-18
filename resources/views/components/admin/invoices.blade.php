@@ -1,12 +1,12 @@
 
 
-@foreach($purchases as $pu)
+@foreach($invoices as $pu)
 
-  <div class="card">
+<div class="card">
 <div class="card-header">
 Invoice: 
 <strong>{{$pu->created_at->format('d-m-Y')}}</strong> 
-  <span class="float-right"> Your account is active until: <strong>{{$pu->valid_until}}</strong></span>
+<span class="float-right"> Your account is active until: <strong>{{$pu->valid_until}}</strong></span>
 
 </div>
 <div class="card-body">
@@ -15,7 +15,7 @@ Invoice:
 <h6 class="mb-3">From:</h6>
 <div>
 </div>
-<div>Madalinskiego 8</div>
+<div></div>
 @if($pu->user->city_id == null)
 
 @else
@@ -48,7 +48,7 @@ Invoice:
 <th>Description</th>
 
 <th class="right">Unit Cost</th>
-  <th class="center">Qty</th>
+<th class="center">Qty</th>
 <th class="right">Total</th>
 </tr>
 </thead>
@@ -59,7 +59,7 @@ Invoice:
 <td class="left">Account type bought</td>
 
 <td class="right">${{$pu->price}},00</td>
-  <td class="center">1</td>
+<td class="center">1</td>
 <td class="right">${{$pu->price}},00</td>
 </tr>
 </tbody>

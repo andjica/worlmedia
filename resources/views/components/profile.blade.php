@@ -284,16 +284,27 @@
                 
     </section>
 
-
-
-
-<section class="image-gallery">
-  @include('components.image-gallery')
-</section>
-<hr class="style-six">
-<button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
-@include('components.rate')
-@endisset
+    <section class="image-gallery">
+      @include('components.image-gallery')
+    </section>
+    <section class="comments">
+      
+      @if($countrate == null)
+      @else
+      <div class="container shadow p-3">
+          <div class="row m-5">
+            <h1 class="text-dark text-serif text-center mx-auto">Cooments from users who matched {{$user->name}}</h1>
+          </div>
+          <div class="row">
+          @include('components.comments')
+      </div>
+    </div>
+      @endif
+    </section>
+    <hr class="style-six">
+    <button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
+    @include('components.rate')
+    @endisset
 
 <style>
   .zoom:-webkit-any-link {

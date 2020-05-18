@@ -9,7 +9,7 @@
                         <i class="fa fa-users text-orange"></i>
                     </a>
                   
-                    <a class="list-group-item list-group-item-action"  href="#information">
+                    <a class="list-group-item list-group-item-action"  href="{{route('admin-users')}}">
                         Purchases administration
                         
                     </a>

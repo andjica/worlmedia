@@ -14,7 +14,6 @@
       <th scope="row">{{$cat->id}}</th>
       <td>{{$cat->name}}</td>
       <td><a href="{{asset('/edit-category/'.$cat->id)}}">Edit &nbsp;<i class="fa fa-edit text-info"></i></a></td>
-      
    </tr>
     @endforeach
   </tbody>

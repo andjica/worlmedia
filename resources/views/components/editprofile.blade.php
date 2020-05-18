@@ -1,5 +1,5 @@
 @include('components.nav-dashboard')
-<div class="container p-0">
+<div class="container p-0 mb-5">
 @isset($user)
     <h1 class="h3 mb-3" style="color: transparent;">Settings</h1>
     <div class="row main-row">
@@ -12,6 +12,8 @@
     @if(session('error'))
            <div class="alert alert-danger">{{session('error')}}</div>
      @endif
+     <div class="card card-fixed">
+        @include('components.card-account-info')
     </div>
     </div>
     <div class="row">
@@ -45,7 +47,7 @@
                       Contact Support
                     </a>
                    
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#data" role="tab">
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#invoice" role="tab">
                       Your Purchases
                     </a>
                     @if($user->city_id == null || $user->category_id == null)
@@ -308,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane " id="data" role="tabpanel">
+                <div class="tab-pane " id="invoice" role="tabpanel">
                     <div class="card">
                         <div class="card-body">
                      
@@ -325,12 +327,18 @@
     </div>
 
 </div>
-
+</div>
 <style>
 
 body{
     
     background:#F0F8FF;
+}
+.card-fixed
+{
+    width: 18rem;    
+    position: fixed;
+    right: 0;
 }
 
 </style>

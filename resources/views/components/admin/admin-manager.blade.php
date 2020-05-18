@@ -23,7 +23,7 @@
             Status of your earnings
             </div>
             <div class="card-body text-center">
-                <h5 class="card-title">Special purchases</h5>
+                <h5 class="card-title">Your users</h5>
                 <div class="counter col_fourth end">
                 <i class="fa fa-cc-paypal fa-3x text-orange"></i>
                 @if($totalearn == null)
