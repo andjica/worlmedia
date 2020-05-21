@@ -81,10 +81,16 @@ class FrontController extends Controller
 
     public function all()
     {
-        $users = User::where('city_id', '!=', 'null')
+        $users = User::with('reviews')
+        ->where('city_id', '!=', 'null')
         ->where('category_id', '!=', 'null')
         ->orderBy('created_at', 'desc')
         ->paginate(6);
+
+        //$countrate = Review::where('matched_status',1)->count();
+        
+        //$useravg = Review::where('is_matched_id', $userId)->avg('rate');
+
         
         return view('pages.freeall', compact('users'), $this->data);
     }
@@ -133,6 +139,11 @@ class FrontController extends Controller
     public function contact()
     {
         return view('pages.contact-us');
+    }
+
+    public function privacy()
+    {
+        return view('pages.privacy');
     }
 
 }
