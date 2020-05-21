@@ -623,3 +623,13 @@ legend {
     font-size: 16px;
   }
 }
+
+
+@media screen and (max-width:768px){
+  .tt{
+    margin-bottom:-480px;
+  }
+  .vrhunski{
+    margin-top: 120px;
+  }
+}

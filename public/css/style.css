@@ -1657,15 +1657,15 @@ h1, h2, h3, h4, h5,
 
     .bruv{
       background: orange;
-      height: 30px;
-      width: 120px;
+      height: 40px;
+      width: 68px;
       position: absolute;
       text-align: center;
       right: 15px;
       top: 0;
-      color:white;
+      color: white;
       border-bottom-left-radius: 20px;
-      padding: 5px;
+      padding: 10px;
     }
 
     .fa{
@@ -1925,7 +1925,7 @@ background:none;
 }
 
 .nova{
-  margin-top:180px;
+  margin-top:20px;
 }
 
 }
@@ -2033,7 +2033,8 @@ border-color: transparent transparent transparent deepskyblue;
 .h768{
   position: fixed;
   right: 0;
-  top: 651px;
+  top: 80%;
+  z-index: 1000;
   background: deepskyblue;
   padding: 10px;
   border-top-left-radius: 20px;
@@ -2042,6 +2043,9 @@ border-color: transparent transparent transparent deepskyblue;
 .fa-4x {
   color: orange !important;
   font-size: 4em;
+}
+.rx7{
+  color: white !important;
 }
 }
 
@@ -2088,7 +2092,8 @@ border-color: transparent transparent transparent deepskyblue;
  }
 
 .levo{
-
+  position: relative;
+  z-index: 100;
     text-align: left !important;
     float: left !important;
    
@@ -2128,7 +2133,59 @@ border-color: transparent transparent transparent deepskyblue;
   footer .bg-light .nopp{
     padding-top: 340px;
   }
+
+  
+  .gore{
+    margin-top: -100px;
+  }
+  .card-fixed{
+    display: none;
+  }
+  body{
+    width: 100%;
+  }
 }
 
 
+@media screen and (min-width:768px){
+  .sticky-wrapper {
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    width: 100%;
+    background: transparent;    height: 72px !important;
+  }
+.gore{
+  margin-top: 60px;
+}
 
+.centri{
+  text-align: center;
+    display: block !important;
+    width: 100%;
+}
+
+}
+.bg-info{
+  border-top-right-radius: 30px;
+}
+
+
+.fa-star{    font-size: 10px !important}
+
+
+@media screen and (max-width:768px){
+  .zares{
+    margin-top: 520px;
+  }
+  .namob{
+    display: block !important;
+    padding-left: 28px;
+  }
+
+  .centricac{
+    position: relative;
+    left: 7% !important;
+}
+  }
+}

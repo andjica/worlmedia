@@ -35,3 +35,21 @@
     height: 100%;
 }
 }
+
+@media screen and (max-width:768px){
+    .brisi{
+        margin-top: -100px;
+    }
+
+    .twt125{
+        background: black;
+    width: 100%;
+    text-align: center;
+    z-index: 20040;
+    position: relative;
+    margin-left: 0px !important;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    }
+   
+}
