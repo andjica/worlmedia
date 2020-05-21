@@ -1,47 +1,60 @@
 @include('components.head')
 @include('components.nav')
-<video class="dajboze bezi naopako mt-12" autoplay="autoplay" muted="muted" loop="loop" >
-          <source src="videos/test3.mp4" type="video/mp4">
-        </video>
+
 <div class="s01 tt ">
   
+@include('components.search')
 
 </div>
   
 <section id="freelancers" class="nova">
     
   <div class="container" style="  margin-top: 20px;">
-        <div class="row bag res65 ">
-        @include('components.search')
+        <div class="row res65 zares ">
 
-        <div class="col-lg-9">
+        <div class="col-lg-12 vrhunski">
          
               <h5>@isset($categoryname){{$categoryname->name}} &nbsp;> @endisset @isset($cityname) {{$cityname->name}}@endisset</h5> 
              <br>
                
-        <div class="row">  
+        <div class="zares row">  
         @foreach($users as $user)
         <div class="col-md-6 col-lg-4 mb-4">
-
-            <div class="service-39381">
-            <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});">
+           
+        
+             
+            
+            <div class="service-39381" style="border-radius: 30px;">
+            <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});     background-size: contain;">
             </div>
          
               <div class="bruv bg-info">
-              <i class="fa fa-star text-white"></i>
-              <i class="fa fa-star text-white"></i>
-              <i class="fa fa-star text-white"></i>
-              <i class="fa fa-star text-white"></i>
-              <i class="fa fa-star text-white"></i>
+              @foreach($user->reviews as $rs)
+              {{round($rs->avg('rate'), 2)}}
+              <i class="fa fa-trophy text-white"> </i>
+              @endforeach
+             
             </div>
               <div class="p-4">
-                <p><span class="icon-room mr-1 text-primary"></span> {{$user->category->name}}</p>
-                <p><span class="icon-room mr-1 text-primary"></span> {{$user->city->name}}, {{$user->city->country->name_country}}</p>
-                <p><span class="icon-room mr-1 text-primary"></span> {{$user->email}}</p>
-                <small class="mr-1">Posted on: {{$user->created_at->format('d-m-Y')}}</small><br>
-                <div class="d-flex">
-                  
-                  <div class="ml-auto price">
+                <div class="col-lg-12" style="display: flex;
+    margin-top: -52px;
+    position: relative;
+    width: 100%;
+    padding: 10px;">
+                  <div class="col-lg-6">
+                  <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-primary tyt text-white" style="background:deepskyblue !important;">Connections</a>
+
+                    </div>
+                    <div class="col-lg-6">
+                    <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-success tyt text-black" style="background:#ffbd39 !important;">Crew Members</a>
+
+                    </div>
+                  </div>
+                <div class="d-flex centri namob">
+                <p style="    font-size: 12px;">Function: {{$user->category->name}}</p>
+                <p style="    font-size: 12px;">Place: {{$user->city->name}}, {{$user->city->country->name_country}}</p>
+
+                  <div class="ml-auto price centricac">
                   <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-warning py-3 px-5 text-white">Visit Member Profile</a>
                   </div>
                   
@@ -57,18 +70,7 @@
         </ul>
         </div>
  
-        <div class="col-lg-3">
         
-          <h3 class="text-align-center">Sponsored partners</h3>
-            <div class="new-img">
-                
-            </div>
-            
-            
-            @include('components.sidebar')
-            
-            
-        </div>
     </div>
    
 
@@ -96,6 +98,17 @@
     .bag{
       margin-top:160px !important;
     }
+    }
+
+    .tyt{
+      font-size: 12px;   
+    color:black;
+    font-weight: 700;
+    text-align: center;
+    }
+
+    .succes{
+      background:#ffbd39 !important;
     }
 </style>
 @include('components.footer')

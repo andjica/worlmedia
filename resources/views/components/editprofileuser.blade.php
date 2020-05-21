@@ -9,7 +9,7 @@
   <div class="card-body">
       <h3 class="card-title"> Create Your future here!<br>Pro Account</h3><br>
     <h5 class="card-title">$5,99- <small>/p.month</small> </h5>
-    <p class="card-text">The biggest platform on the planet for media crew members, for only 1,- a month you can create a perfect user-profile and start promoting yourself! </p>
+    <p class="card-text">The biggest platform on the planet for media crew members, for only $5,99 a month you can create a perfect user-profile and start promoting yourself! </p>
     <form action="{{route('active-pro')}}" method="POST">
         @csrf
         <input type="submit" class="btn btn-primary xdb" value="Activate Pro"></a>
@@ -21,7 +21,7 @@
   <div class="card-body">
       <h3 class="card-title"> Create Your future here!<Br>SuperPro Account</h3><br>
     <h5 class="card-title">$59,99- <small>One year(12 months)</small> </h5>
-    <p class="card-text">The biggest platform on the planet for media crew members, for only 12,- a month you can create a perfect user-profile and start promoting yourself! </p>
+    <p class="card-text">The biggest platform on the planet for media crew members, for only $4,99,- a month you can create a perfect user-profile and start promoting yourself! </p>
     <form action="{{route('active-super-pro')}}" method="POST">
         @csrf
         <input type="submit" class="btn btn-primary xdb" value="Activate SuperPro"></a>
@@ -31,7 +31,7 @@
 <div class="card col-lg-4" >
   <img src="./images/logo1.png" class="card-img-top swa" alt="...">
   <div class="card-body">
-    <h5 class="card-title">World media crew oppertunity's for only $5,99,- a month!</h5>
+    <h5 class="card-title">World media crew oppertunity's for only $4,99,- a month!</h5>
     <ul class="fa-ul">
               <li><span class="fa-li"><i class="fa fa-check"></i></span>Create Perfect user profile</li>
               <li><span class="fa-li"><i class="fa fa-check"></i></span>Show your skills in front of milions of interessted people!</li>

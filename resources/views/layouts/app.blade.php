@@ -28,7 +28,7 @@
 
 </head>
 <body>
-<video playsinline="playsinline" autoplay="autoplay" class="responsic" muted="muted" loop="loop" >
+<video playsinline="playsinline" autoplay="autoplay"  poster="../images/3627634.jpg" class="responsic" muted="muted" loop="loop" >
       <source src="videos/testt.mp4" type="video/mp4">
      </video>
     <div id="app">
@@ -222,7 +222,7 @@
     var copyShareUrl = copy(shareUrl);
     
     // Set value via markup or JS
-    shareUrl.value = "https://worldmediacrew.com/public/";
+    shareUrl.value = "https://worldmediacrew.com/";
   
     // Click listener with copyShareUrl handler
     shareUrl.addEventListener('click', copyShareUrl, false);

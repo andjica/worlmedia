@@ -1,12 +1,12 @@
 <html lang="en">
 
 <head>
-  <title>The best database platform for Media crew members</title>
+  <title>The best database platform for Media crew members </title>
   <link rel="icon" type="image/png" href="{{asset('/')}}/images/logo1.png">
-  <meta name="description" content="World Media Crew is new database platform. You can contact people from all the 46 countries all around the world.">
-  <meta name="keywords" content="World Media Crew platform, users, all around world">
+  <meta name="description" content="World Media Crew is new a database platform. You can contact people from all the 46 countries all around the world.">
+  <meta name="keywords" content="World Media Crew platform, users, all around the world, media jobs, crew members jobs, database platform media, database platform jobs, platform, database, jobs">
   <meta charset="utf-8">
-  <meta name="author" content="Danny Milosevic">
+  <meta name="author" content="Danny Milosevic, Andjela Milosevic Stojanovic">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Dancing+Script:400,700|Muli:300,400" rel="stylesheet">

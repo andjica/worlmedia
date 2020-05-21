@@ -1,15 +1,32 @@
 
+<div class="site-wrap jbt">
+<div class="site-mobile-menu site-navbar-target">
+<div class="site-mobile-menu-header">
+<div class="site-mobile-menu-close mt-3">
+<span class="icon-close2 js-menu-toggle" ></span>
+</div>
+</div>
+<div class="site-mobile-menu-body"></div>
+</div>
+<div class="header-top bg-light ">
+<div class="container tw24 ">
+<div class="row align-items-center">
+<div class="col-5 col-lg-3 strava">
+<a href="{{asset ('/')}}">
+<img src="{{asset('/')}}images/logo1.png" alt="Image" class="img-fluid jebemga">
 
-  <div class="site-wrap jbt">
+</a>
+</div>
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
+
+
+<div class="col-6 d-block d-lg-none text-right">
+<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black" >
+  <span class="icon-menu h3 usta" style="    color: black !important;"></span></a>
+</div>
+</div>
+</div>
+
 
 
   
@@ -23,7 +40,7 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
               <li>
               <a href="{{asset ('/')}}">
-                <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep img-logo">
+                <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep nemga img-logo">
               </a>
                 </li>
               <li class="active">
@@ -39,7 +56,6 @@
                     <a href="{{ asset ('/allmembers')}}" class="nav-link text-left" style="background: orange;  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                
-                 <li><a href="{{ asset ('/blog')}}" class="nav-link text-left">Blog</a></li>
               
                   @if(auth()->user() && auth()->user()->role_id == 2)
                   <li><a href="{{ asset ('/editprofile')}}" class="nav-link text-left">Edit profile</a></li>
@@ -51,6 +67,8 @@
                     <li><a href="{{route('login')}}">Login</a></li>
                   @endif
                   </li>
+                  <li><a href="{{ asset ('/contact-us')}}" class="nav-link text-left">Help</a></li>
+
               </ul>                                                                                                                                                                                                                                                                                          </ul>
             </nav>
 

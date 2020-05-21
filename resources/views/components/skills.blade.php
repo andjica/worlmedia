@@ -1,9 +1,9 @@
 @isset($skill)
-     <div class="row m-5">
+     <div class="row m-5 ">
      <h1 class="text-dark text-serif text-center mx-auto">Skills</h1>
 
     </div>
-      <div class="row mt-5">
+      <div class="row mt-5 pdal">
       
            @if($skill->skill_one == null || $skill->percent_one == null)
 
@@ -161,3 +161,11 @@
 
    
         @endisset
+
+        <Style>
+        @media screen and (max-width:768px){
+        .pdal{
+          padding: 20px !important; 
+        }
+        }
+        </style>

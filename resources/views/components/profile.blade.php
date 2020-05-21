@@ -5,28 +5,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <section class="db12">
 <div class="container">
-<div class="night">
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-  <div class="shooting_star"></div>
-</div>
+
 <div class="row mx-auto">
       <div class="col-lg-12">
           @if(session('success'))
@@ -43,7 +22,7 @@
 </div>
   
             <div class="row profile-padding-top">
-                <div class="col-lg-4 xvs">
+                <div class="col-lg-4 xvs ">
                     <hr/>
                   @if(auth()->user())
                     @if(auth()->user()->id == $user->id)
@@ -68,13 +47,13 @@
                         
                             <div class="col-lg-4 ggg mx-auto pb-5 text-center" style="color: white;">
                             <div class="col-lg-12 daodah">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 ">
                                     @isset($countfollowers)
-                                    <button type="button" class="btn btn-success teck desno" data-toggle="modal" data-target="#followers">Connections ({{$countfollowers}})</button>
+                                    <button type="button" class="btn btn-success teck desno molibci" data-toggle="modal" data-target="#followers">Connections ({{$countfollowers}})</button>
                                     <!-- Modal Followers -->
                                       <div class="modal fadeInUp" id="followers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
-                                          <div class="modal-content bg-light ">
+                                          <div class="modal-content bg-light " style="margin-top:120px;">
                                             <div class="modal-header">
                                               <h5 class="modal-title text-dark" id="exampleModalLabel">People who follow {{$user->name}}</h5>
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -87,7 +66,7 @@
                                                   @foreach($followers as $fl)
                                                   <a href="{{asset('/freelancer/'.$fl->user->id)}}">
                                                   <div class="media text-muted pt-3">
-                                                  <div class="rounded-circle mx-auto image-background5"  style="background-image: url({{asset('/image-users/'.$fl->user->url)}});">
+                                                  <div class="rounded-circle mx-auto image-background5"  style="background-image: url({{asset('/image-users/'.$fl->user->url)}});     background-size: contain;">
                                                         
                                                   </div>
                                                     <a href="{{asset('/freelancer/'.$fl->user->id)}}" class="media-body pb-3 mb-0  lh-125 border-bottom border-gray">
@@ -110,13 +89,13 @@
                                       </div>
                                     @endisset
                                     </div>
-                                      <div class="col-lg-6">
+                                      <div class="col-lg-6 ">
                                         @isset($countfollowing)
-                                          <button type="button" class="btn btn-primary daf levo" data-toggle="modal" data-target="#following">Crew Members ({{$countfollowing}})</button>
+                                          <button type="button" class="btn btn-primary daf levo molibci" data-toggle="modal" data-target="#following"> Crew Members ({{$countfollowing}})</button>
                                            <!-- Modal Following -->
                                           <div class="modal fadeInUp" id="following" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
-                                              <div class="modal-content bg-light ">
+                                              <div class="modal-content bg-light " style=" margin-top: 120px;">
                                                 <div class="modal-header">
                                                   <h5 class="modal-title text-dark" id="exampleModalLabel">Modal title</h5>
                                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -161,16 +140,16 @@
                                 <h1 class="media-heading text-center">{{$user->name}}</h1>
                                 <p class="text-center mx-auto">{{$user->city->name}}, {{$user->city->country->name_country}}</p>
                                 @if(auth()->user() == null)
-                                <a href="{{route('login')}}"  class="btn btn-warning btn-sm p-4 mb-5 border-0 shadow zoom btn-andjica">
-                                <p class="text-serif text-w ">Follow this user</p>
+                                <a href="{{route('login')}}"  class="btn btn-warning btn-sm p-4 mb-5 border-0 shadow zoom andjica faca">
+                                <p class=" text-black ">Follow this user</p>
                                 </a>
                                 @elseif(auth()->user()->id == $user->id)
                                     
                                 @elseif (auth()->user()->followings->contains($user->id))
                                 <form action="{{route('unfollow')}}" method="GET">
                                 @csrf
-                                <button type="submit" class="btn btn-info btn-sm p-4  border-0 shadow zoom">
-                                <p class="text-serif text-w ">UnFollow this user</p>
+                                <button type="submit" class="btn btn-info btn-sm p-4 andjela border-0 shadow zoom faca">
+                                <p class=" text-w ">UnFollow this user</p>
                                 </button>
                                <input type="hidden" value="{{$user->id}}" name="user">
                                 </i><br>
@@ -178,8 +157,8 @@
                                 @else
                                 <form action="{{route('follow')}}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn btn-warning btn-sm p-4  border-0 shadow zoom btn-andjica">
-                                <p class="text-serif text-w">Follow this user</p>
+                                <button type="submit" class="btn btn-warning btn-sm p-4  border-0 shadow zoom btn-andjica faca">
+                                <p class=" text-w">Follow this user</p>
                                 </button>
                                <input type="hidden" value="{{$user->id}}" name="user">
                                 </i><br>
@@ -221,13 +200,14 @@
     <section class="about-user">
       <div class="container">
          
-          <div class="row mt-5 p-2">
-          <div class="col-lg-4">
+          <div class="row mt-5 p-2 ">
+          <div class="col-lg-4 prva">
           <div class="card bg-light shadow">
           <i class="fa fa-user-circle fa-2x text-orange text-center mt-3"></i>
             <div class="card-body border-top mt-2">
-              <h1 class="text-dark text-serif text-center">About</h1>
-              <p class="card-text text-dark">
+              <h1 class="text-dark  text-center">Information</h1>
+              <p class="card-text text-dark" style="    text-align: left;
+    padding: 20px;">
                 Name: &nbsp;{{$user->name}}<br>
                 From: &nbsp;{{$user->city->country->name_country}}, {{$user->city->name}}<br>
                 Email: &nbsp; {{$user->email}}<br>
@@ -237,7 +217,7 @@
               
             </div>
             <div class="card-body border-top mt-2">
-              <h1 class="text-dark text-serif text-center">Equipment</h1>
+              <h1 class="text-dark  text-center">Equipment</h1>
               <p class="card-text text-dark">
                 {{$user->desc_three}}
               </p>
@@ -249,7 +229,7 @@
           <div class="card bg-light shadow">
           <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
             <div class="card-body border-top mt-2">
-              <h1 class="text-dark text-serif text-center">About</h1>
+              <h1 class="text-dark  text-center">Carreer</h1>
               <p class="card-text text-dark">
                 {{$user->desc_one}}
               </p>
@@ -259,9 +239,9 @@
           </div>
           <div class="col-lg-4">
           <div class="card bg-light shadow">
-          <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
+          <i class="fa fa-user text-orange mt-3 fa-2x text-center"></i>
             <div class="card-body border-top mt-2">
-              <h1 class="text-dark text-serif text-center">About</h1>
+              <h1 class="text-dark  text-center">About Me</h1>
               <p class="card-text text-dark">
                 {{$user->desc_two}}
               </p>
@@ -276,7 +256,7 @@
     <section class="skills">
     <hr class="style-six">
 
-    <div class="container shadow p-3">
+    <div class="container shadow p-3 ">
    
         @include('components.skills')
           
@@ -293,7 +273,7 @@
       @else
       <div class="container shadow p-3">
           <div class="row m-5">
-            <h1 class="text-dark text-serif text-center mx-auto">Cooments from users who matched {{$user->name}}</h1>
+            <h1 class="text-dark  text-center mx-auto">Cooments from users who matched {{$user->name}}</h1>
           </div>
           <div class="row">
           @include('components.comments')
@@ -318,10 +298,39 @@
 .btn-andjica
 {
   background:no-repeat;
+  background-color:black !important;
 }
-.text-w
-{
-  color:white !important;
+.text-w {
+    color: white !important;
+    font-family: sans-serif !important;
+    font-weight: 700;
+    line-height: 16px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.card{
+  border-radius: 20px !important;
+}
+
+.andjela{
+  background: black !important;
+}
+@media screen and (max-width:768px){
+  .skills{
+    margin-top:1000px;
+  }
+  .prva{
+    margin-top: 272px;
+}
+.molibci{
+  font-size: 12px;
+
+}
+
+  }
+  .faca{
+    position:relative; z-index:1000;
+  }
 }
 </style>
 

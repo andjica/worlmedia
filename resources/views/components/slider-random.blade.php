@@ -1,4 +1,4 @@
-
+<div class="container">
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel" style="margin-top:60px; text-align:center;">
 <h1>Welcome our new Media Crew Members</h1>
@@ -74,3 +74,4 @@
 <!--/.Slides-->
 </div>
 <!--/.Carousel Wrapper-->
+</div>

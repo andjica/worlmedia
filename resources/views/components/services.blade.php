@@ -295,14 +295,14 @@
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
           <div class="col-lg-6 boze">
-            <img src="{{asset('/')}}images/cannon1.png" class="img-fluid next"/>
+            <img src="{{asset('/')}}images/p1.png" class=" next"/>
             <div class="absoluter shadow">
               <h1 class="winner text-serif">Win</h1>
           </div>
           </div>
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-                <li class="pada"><h3 class="new12">Only 1000 Starters </h3></li>
+                <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -312,8 +312,43 @@
           To enter the competition, all you need is to register, to fill in your profile<br>
         And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
-        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp;Starts on July 1</h3>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+Enter the Challenge
+</button>
+
+<!-- Modal -->
+<div class="modal fadeInUp" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>The Rules</h3>
+        <ul>
+        <li><p>Invite 1000 Media crew members </p> </li>
+        <li><p>Get 25 reviews on your profile </p> </li>
+        <li><p>Get 25 ratings on your profile </p> </li>
+        <li><p>Share on social media 15 times, with hashtags #worldmediacrew & #wmcchallenge </p> </li>
+        <li><p>And make a huge chance to win a Canon EOS 2000D + 18-55mm IS II</p> </li>
+        <li><p>You need at least 2000 social media followers </p></li>
+        <li><p>You need at least 100 on World media Crew Members  </p></li>
+
+
+
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{asset ('./register')}}" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</div>          <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp;Starts on July 1</h3>
             </ul>
           </div>
         </div>
@@ -329,7 +364,7 @@
         <div class="row" style="text-align: center;">
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-                <li class="pada"><h3 class="new12">Only 1000 Pro members </h3></li>
+            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -339,13 +374,46 @@
           To enter the competition, all you need is to login and have a pro account<br>
         And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
-        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on August 1</h3>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
+Enter the Challenge
+</button>
+
+<!-- Modal -->
+<div class="modal fadeInUp" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h3>The Rules</h3>
+      <ul>
+      <li><p>Invite 10.000 Media crew members </p></li>
+      <li><p>Get 200 reviews on your profile </p></li>
+      <li><p>Get 200 ratings on your profile </p></li>
+      <li><p>You need at least 2000 social media followers </p></li>
+      <li><p>Share on social media 35 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+      <li><p>And make a huge chance to win a Canon EOS 6D MARK 2 + 24-105mm F/2.8 L USM II</p></li>
+      <li><p>You need at least 5000 social media followers </p></li>
+      <li><p>You need at least 300 on World media Crew Members </p></li>
+       </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{asset ('./register')}}" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</div>          <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on August 1</h3>
             </ul>
           </div>
 
           <div class="col-lg-6 boze">
-            <img src="{{asset('/')}}images/telefon1.png" class="img-fluid next" />
+            <img src="{{asset('/')}}images/p2.png" class=" next" />
             <div class="absoluter shadow bg-orange">
               <h1 class="winner text-serif">Win</h1>
           </div>
@@ -376,14 +444,14 @@
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
           <div class="col-lg-6 boze ">
-            <img src="{{asset('/')}}images/app.png" class="img-fluid next1" />
+            <img src="{{asset('/')}}images/p3.png" class=" next" />
             <div class="absoluter shadow">
               <h1 class="winner text-serif">Win</h1>
           </div>
           </div>
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-                <li class="pada"><h3 class="new12">Only 1000 Starters </h3></li>
+            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -393,8 +461,40 @@
           To enter the competition, all you need is to register, to fill in your profile<br>
         And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
-        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on September 1</h3>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3">
+Enter the Challenge
+</button>
+
+<!-- Modal -->
+<div class="modal fadeInUp" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h3>The Rules</h3>
+      <ul>
+      <li> <p>Invite 50.000 Media crew members </p> </li>
+      <li> <p>Get 500 reviews on your profile </p></li>
+      <li> <p>Get 500 ratings on your profile </p></li>
+      <li> <p>Share on social media 70 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+      <li> <p>And make a huge chance to win a Canon EOS 6D MARK 2 + 24-70mm F/2.8 L USM II</p></li>
+      <li> <p>You need at least 10.000 social media followers </p></li>
+      <li> <p>You need at least 500 Connections on World media Crew Members</p></li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{asset ('./register')}}" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</div>          <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on September 1</h3>
             </ul>
           </div>
         </div>
@@ -410,7 +510,7 @@
         <div class="row" style="text-align: center;">
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-                <li class="pada"><h3 class="new12">Only 1000 Starters </h3></li>
+            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -420,17 +520,119 @@
           To enter the competition, all you need is to register, to fill in your profile<br>
         And we will pick a random winner!</p> <Br>
 
-        <a href="{{asset('/register')}}" class="btn btn-warning shadow mt-5 btn-lg"> Join now!</a>
-        <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong4">
+Enter the Challenge
+</button>
+
+<!-- Modal -->
+<div class="modal fadeInUp" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h3>The Rules</h3>
+      <ul>
+         <li> <p>Invite 100.000 Media crew members </p> </li>
+         <li> <p>Get 1000 reviews on your profile </p></li>
+         <li> <p>Get 1000 ratings on your profile </p></li>
+         <li> <p>Share on social media 200 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+         <li> <p>And make a huge chance to win a Apple familiy Ipad Pro, IMac 27, Macbook Pro 13, iPhone 11, Iwatch, Airpods</p></li>
+         <li> <p>You need at least 25.000 social media followers </p></li>
+         <li> <p>You need at least 1000 Connections on World media Crew Members </p></li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{asset ('./register')}}" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</div>     
+
+   <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
             </ul>
           </div>
 
           <div class="col-lg-6 boze">
-            <img src="{{asset('/')}}images/prav1.png" class="img-fluid next2" />
+            <img src="{{asset('/')}}images/p4.png" class=" next1" />
             <div class="absoluter shadow">
               <h1 class="winner text-serif">Win</h1>
           </div>
           </div> 
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="mb-5">
+    <div class="py-5 sta pb-5">
+      <div class="container" style="text-align:center;">
+        <h2 class="novica">Challenge 5 </h2>
+        <h5>The starter media crew</h5>
+        <div class="row" style="text-align: center;">
+         
+          <div class="col-lg-6 boze">
+            <img src="{{asset('/')}}images/p5.png" class=" next2" />
+            <div class="absoluter shadow">
+              <h1 class="winner text-serif">Win</h1>
+          </div>
+          </div> 
+          <div class="col-lg-6" style="text-align:left !important;">
+            <ul class="ula">
+            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
+                <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
+                <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
+
+                <p>How does it work?<br>
+              Winner becomes known with the name Lottery<br>
+            Which name is taken out would win on the livestream<br>
+          To enter the competition, all you need is to register, to fill in your profile<br>
+        And we will pick a random winner!</p> <Br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong5">
+Enter the Challenge
+</button>
+
+<!-- Modal -->
+<div class="modal fadeInUp" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #4</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h3>The Rules</h3>
+      <ul>
+       <li><p> Invite 500.000 Media crew members </p></li>
+       <li><p>Get 5000 reviews on your profile </p></li>
+       <li> <p>Get 5000 ratings on your profile </p></li>
+       <li><p>Share on social media 500 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+       <li><p>And make a huge chance to win a Apple familiy Ipad Pro, IMac 27, Macbook Pro 13, iPhone 11, Iwatch, Airpods + $25.000 Dollars CASH!</p></li>
+      </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="{{asset ('./register')}}" class="btn btn-primary">Join Now</a>
+      </div>
+    </div>
+  </div>
+</div>     
+
+   <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
+            </ul>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -444,7 +646,7 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-white">Get In Touch With Us</h2>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="lead text-white">Contact us if you need help or more information</p>
             <p class="mb-0"><a href="{{asset('/contact-us')}}" class="btn btn-warning py-3 px-5 text-white">Contact Us</a></p>
           </div>
         </div>
@@ -473,22 +675,31 @@
             
         }
 
-        
+        .btn-warning{
+          background:deepskyblue !important;
+        }
 
+         p{
+          font-weight: 700;
+         }
         .ula{
           margin-top: 120px;
 
         }
         .next{
-          padding: 40px;
+          position: relative;
+    height: 100%;
+    margin-left: -88px;
         }
         .next1{
-          margin-top: 108px;
-    padding: 12px;
+          height: 100%;
+    margin-left: -120px;
         }
 
         .next2{
-          margin-top: 102px;
+          height: 77%;
+    margin-top: 34px;
+    margin-left: -10px;
         }
         .new12{
           font-weight: 800;

@@ -1,11 +1,13 @@
+
+
 <div class="hero-slide owl-carousel site-blocks-cover">
       <div class="intro-section" style="background-image: url('images/1.jpg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-7 ml-auto text-right" data-aos="fade-up">
-              <h1>The best database platform for Media crew members</h1>
+              <h1>The right database platform for Media crew members</h1>
               <p>On our platform you will find the right media crew member you need!, Register quick and search for the right crew member.</p>
-              <p><a href="{{asset ('/about')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More</a></p>
+              <p><a href="{{asset ('./about')}}" class="btn btn-primary py-3 px-5" style="background:orange;" title="About World Media Crew Members">Read More</a></p>
             </div>
           </div>
         </div>
@@ -25,8 +27,36 @@
 
     </div>
 
-
+    <div class="site-section">
+      <div class="container" style="text-align: center;">
+      <h1>What we offer our Crew Members</h1>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="./images/12.jpeg" class="img-fluid">
+            <h3>Save time & Money</h3>
+            <p>By creating an account on our platform you will save alot of time and money to get nice jobs!</p>
+          </div>
+          <div class="col-md-3">
+            <img src="./images/13.jpeg" class="img-fluid">
+            <h3>Create Your Profile</h3>
+            <p>On our platform you can create your unique and custom profile to impress you job-giver!</p>
+          </div>
+          <div class="col-md-3">
+            <img src="./images/15.jpeg" class="img-fluid">
+            <h3>Search Crew Profiles</h3>
+            <p>With our handy filter you can search for the right crew member very easy</p>
+          </div>
+          <div class="col-md-3">
+            <img src="./images/14.jpeg" class="img-fluid">
+            <h3>Win Huge prices!</h3>
+            <p>Yes you see it correctly, you can win prices of $30.000 dollars on our platform! just by joining!</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
+
+
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -36,13 +66,20 @@
           </div>
           <div class="col-md-6">
         
-            <h1 class="heading-92913 text-black">About World Media Crew Members </h1>
-            <p>We have the worlds leading platform for media crew members, all the categories are there for everyone that is working in the media industrie. You can contact people from all the 46 countries all around the world.</p>
-            <p>We have made this platform so user friendly that it is very easy to use and for a very reasonable price you can join the community to gain more jobs in the media world!
+            <h1 class="heading-92913 text-black">About World Media Crew </h1>
+            <p>
+World Media Crew is an international organization connecting all professionals in the area of
+Media to provide those in need essential and necessary solutions. World Media Crew is
+committed to building an environment where professionals are feeling welcome to help out
+others in the field of media or finding others to help them out.
+Focus on the world of Media
+World Media Crew is unique because it is a platform specifically developed for professionals
+in the field of media, but at the same time, it is diverse because it embraces all the broad
+spectrum of backgrounds, functions, and jobs found in the industry. From screenwriters to
+videographers, to make-up artists. You can find it all, within one network, and find the right
+person or job with only one click on our website or app.</p>
               
-            <Br>
-          We also have over 100.000 visitors a month on our platform, so it is very easy to generate more customers and clients through our platform! Make sure you make an account to stay updated!</p>
-            <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunity's</a></p>
+<a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunities</a></p>
           </div>
         </div>
       </div>
@@ -129,6 +166,19 @@
   .new-rep{
     display:none;
   }
+  .nekaproba {
+  background-color: #95b9ec42;
+  border-radius: 22px;
+  margin-top: -22px;
+  height: 272px;
+}
+
+.hah{
+  color: white;
+    font-size: 12px;
+    margin-top: -42px;
+    margin-bottom:10px !important;
+}
 }
   .rondje{
     border-radius:100%;
@@ -136,6 +186,8 @@
   .card{
     border:none !important;
   }
+
+ 
 
 
 </style>

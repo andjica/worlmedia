@@ -1,5 +1,6 @@
 @include('components.nav-dashboard')
-<div class="container p-0 mb-5">
+
+<div class="container p-0 mb-5 gore">
 @isset($user)
     <h1 class="h3 mb-3" style="color: transparent;">Settings</h1>
     <div class="row main-row">
@@ -18,7 +19,7 @@
     </div>
     <div class="row">
   
-        <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
        
             <div class="card">
                 <div class="card-header">
@@ -32,7 +33,7 @@
                     </a>
                   
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#information" role="tab">
-                     Your profile information
+                     My profile information
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">
                       Change password
@@ -41,20 +42,20 @@
                       Manage skills
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#images" role="tab">
-                     Resume images
+                     Portfolio images
                     </a>
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
                       Contact Support
                     </a>
                    
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#invoice" role="tab">
-                      Your Purchases
+                      My Purchases
                     </a>
                     @if($user->city_id == null || $user->category_id == null)
 
                     @else
                     <a class="list-group-item list-group-item-action"  href="{{asset('/freelancer/'.$user->id)}}">
-                      Your Profile
+                      My Profile
                     </a>
                     @endif
                 </div>
@@ -162,7 +163,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="card-title mb-0">Your information</h5>
+                            <h5 class="card-title mb-0">My information</h5>
                         </div>
                         <div class="card-body">
                         <form action="{{route('upgrade-info')}}" method="post" id="adding-info">
@@ -177,7 +178,7 @@
                                     </select>
                                     @else
                                     <select class="form-control" name="categoryid">
-                                       <option value="">Your current Category: {{$user->category->name}}</option>
+                                       <option value="">My current Category: {{$user->category->name}}</option>
 										@foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
                                          @endforeach
@@ -194,7 +195,7 @@
                                     </select>
                                     @else
                                     <select class="form-control" name="cityid">
-                                       <option value="">Your current City: {{$user->city->name}}</option>
+                                       <option value="">My current City: {{$user->city->name}}</option>
 										@foreach($cities as $city)
 											<option value="{{$city->id}}">{{$city->name}}</option>
                                          @endforeach
@@ -203,13 +204,13 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="Mobile">Your mobile telephone</label>
+                                        <label for="Mobile">My mobile telephone</label>
                                         <input type="text" class="form-control" id="mobile" name="mobile" value="{{$user->mobile}}">
                                         <p id="er-mobile" class="text-danger"></p> 
                                         <p id="su-mobile" class="text-info"></p> 
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="Link">Your website link</label>
+                                        <label for="Link">My portfolio link</label>
                                         <input type="text" class="form-control" id="link" name="link" value="{{$user->link}}">
                                          <p id="er-url" class="text-danger"></p> 
                                          <p id="su-url" class="text-info"></p> 
@@ -333,6 +334,7 @@
 body{
     
     background:#F0F8FF;
+    width:100%;
 }
 .card-fixed
 {
@@ -340,5 +342,23 @@ body{
     position: fixed;
     right: 0;
 }
+@media screen and (min-width:768px){
+    .tutorial{
+        position: fixed;
+    top: 50%;
+    right: 0;
+    color: black;
+    border-radius: 10px;
+    background: white;
+    height: 120px;
+    width: 80px;
+    text-align: center;
+    padding-top: 3%;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+    font-weight:700;
+    }
+}
+
 
 </style>
