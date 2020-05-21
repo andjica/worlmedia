@@ -14,6 +14,7 @@
 Route::get('/', 'FrontController@index');
 Route::get('/services', 'FrontController@services');
 Route::get('/about', 'FrontController@about');
+Route::get('/privacy', 'FrontController@privacy');
 Route::get('/blog', 'FrontController@blog');
 Route::get('/freelancers', 'FrontController@freelancers')->name('freelancers');
 Route::get('/allmembers', 'FrontController@all')->name('allmembers');
