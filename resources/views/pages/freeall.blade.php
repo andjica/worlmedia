@@ -40,8 +40,8 @@
               <div class="p-4">
               
                 <div class="d-flex centri namob">
-                <p style="    font-size: 12px;">Function: {{$user->category->name}}</p>
-                <p style="    font-size: 12px;">Place: {{$user->city->name}}, {{$user->city->country->name_country}}</p>
+                <p style="font-size: 12px;">Function: {{$user->category->name}}</p>
+                <p style="font-size: 12px;">Place: {{$user->city->name}}, {{$user->city->country->name_country}}</p>
 
                   <div class="ml-auto price centricac">
                   <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-warning py-3 px-5 text-white">Visit Member Profile</a>
