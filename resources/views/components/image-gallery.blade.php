@@ -7,7 +7,8 @@
             @foreach($images as $img)
 			<div class="col-lg-4 col-sm-6">
 				<div class="thumbnail">
-					<img src="{{asset('/image-resume/'.$img->url)}}" alt="{{$img->alt}}">
+					<img src="{{asset('/image-resume/'.$img->url)}}" alt="{{$img->alt}}" style="    height: 300px;
+    width: 100%;">
 				</div>
 			</div>
 			@endforeach

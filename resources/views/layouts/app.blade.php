@@ -144,7 +144,7 @@
                 <li><a href="{{asset('/services')}}" title="Challenger from world media crew">Challenges</a></li>
                 <li><a href="{{asset('/freelancers')}}" title="Members from world media crew">Crew-Members</a></li>
                 {{-- <li><a href="{{asset('/blog')}}" title="Blog Page for World Media Crew platform">Blog</a></li> --}}
-                <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
+                <li><a href="{{asset('/contact-us')}}" title="Contact Us">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -160,11 +160,10 @@
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
-                  <li><a href="{{asset('/Contact')}}" title="Contact Us">Support Community</a></li>
+                  <li><a href="{{asset('/contact-us')}}" title="Contact Us">Contact</a></li>
+                  <li><a href="{{asset('/Contact-us')}}" title="Contact Us">Support Community</a></li>
                   <li><a href="{{asset('/terms')}}" title="Contact Us">Terms & Conditions</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Our Partners</a></li>
+                  
               </ul>
           </div>
         </div>

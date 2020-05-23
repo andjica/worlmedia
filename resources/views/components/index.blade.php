@@ -49,7 +49,7 @@
           <div class="col-md-3">
             <img src="./images/14.jpeg" class="img-fluid">
             <h3>Win Huge prices!</h3>
-            <p>Yes you see it correctly, you can win prices of $30.000 dollars on our platform! just by joining!</p>
+            <p>Yes you see it correctly, you can win prices of $30.000 dollars on our platform! Just by joining!</p>
           </div>
         </div>
       </div>

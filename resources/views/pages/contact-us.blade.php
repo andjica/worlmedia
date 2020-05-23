@@ -42,9 +42,9 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">            
-                       
+                        <label for="name" class="">Your name</label>
+
                             <input type="text" id="val1" name="name" class="form-control">
-                            <label for="name" class="">Your name</label>
                             <p class="text-danger" id="erval1"></p>
 
                        
@@ -55,9 +55,9 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                       
+                        <label for="email" class="">Your email</label>
+
                             <input type="text" id="val2" name="email" class="form-control">
-                            <label for="email" class="">Your email</label>
                             <p class="text-danger" id="erval2"></p>
 
                        
@@ -72,8 +72,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
+                        <label for="subject" class="">Subject</label>
+
                             <input type="text" id="val3" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
                             <p class="text-danger" id="erval3"></p>
                         </div>
                     </div>
@@ -87,8 +88,9 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
+                        <label for="message">Your message</label>
+
                             <textarea type="text" id="val4" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
                             <p class="text-danger" id="erval4"></p>
                         </div>
 
@@ -112,7 +114,7 @@
                     <p>World Media Crew Members</p>
                 </li>
 
-                <li><i class="fa fa-phone mt-4 fa-2x text-orange"></i>
+                <li><i class="fa fa-whatsapp mt-4 fa-2x text-orange"></i>
                     <p>+31 6 42213877 </p>
                 </li>
 

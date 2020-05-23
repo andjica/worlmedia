@@ -33,14 +33,14 @@
       <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" style="    background: black;" role="banner">
 
       <div class="container">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-right samodesno">
           
-          <div class="mx-auto">
+        <div class="mx-right" style="width:100%;">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-              <li>
+              <ul class="site-menu main-menu js-clone-nav mr-right d-none pl-0 d-lg-block">
+              <li class="samolevo">
               <a href="{{asset ('/')}}">
-                <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep nemga img-logo">
+                <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep nemga img-logo1">
               </a>
                 </li>
               <li class="active">
@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ asset ('/allmembers')}}" class="nav-link text-left" style="background: orange;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset ('/allmembers')}}" class="nav-link text-left" style="  padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                
               
@@ -80,3 +80,11 @@
     </div>
     
     </div>
+<style>
+@media screen and (min-width:768px){
+  .samolevo{
+    float: left;
+  }
+}
+</style>
+

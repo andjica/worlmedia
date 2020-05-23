@@ -1843,6 +1843,13 @@ background-repeat: no-repeat;
   margin-top: -20px;
 }
 
+.img-logo1
+{
+  max-width: 100%;
+  height: 42px;
+  margin-top: -16px;
+}
+
 .new-cs{
   height: 52px !important;
 }

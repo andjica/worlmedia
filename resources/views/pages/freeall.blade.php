@@ -25,8 +25,10 @@
              
             
             <div class="service-39381" style="border-radius: 30px;">
-            <div class="rounded-circle mx-auto image-background2"  style="background-image: url({{asset('/image-users/'.$user->url)}});     background-size: contain;">
+            <a href="{{asset('/freelancer/'.$user->id)}}">
+            <div class="rounded-circle mx-auto image-background2" style="background-image: url({{asset('/image-users/'.$user->url)}});     background-size: cover; background-position:center;">
             </div>
+            </a>
          
               <div class="bruv bg-info">
               @foreach($user->reviews as $rs)
@@ -36,20 +38,7 @@
              
             </div>
               <div class="p-4">
-                <div class="col-lg-12" style="display: flex;
-    margin-top: -52px;
-    position: relative;
-    width: 100%;
-    padding: 10px;">
-                  <div class="col-lg-6">
-                  <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-primary tyt text-white" style="background:deepskyblue !important;">Connections</a>
-
-                    </div>
-                    <div class="col-lg-6">
-                    <a href="{{asset('/freelancer/'.$user->id)}}" class="btn btn-success tyt text-black" style="background:#ffbd39 !important;">Crew Members</a>
-
-                    </div>
-                  </div>
+              
                 <div class="d-flex centri namob">
                 <p style="    font-size: 12px;">Function: {{$user->category->name}}</p>
                 <p style="    font-size: 12px;">Place: {{$user->city->name}}, {{$user->city->country->name_country}}</p>

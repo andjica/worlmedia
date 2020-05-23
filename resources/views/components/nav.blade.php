@@ -41,10 +41,10 @@
       <div class="container">
         <div class="d-flex align-items-center">
           
-          <div class="mx-auto">
+          <div class="mx-right" style="width:100%;">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-              <li>
+              <ul class="site-menu main-menu js-clone-nav mr-right d-none pl-0 d-lg-block">
+              <li class="samolevo">
 
          <a href="{{asset('/')}}">
                 <img src="{{asset('/')}}images/logo3.png" rel="canonical" alt="Image" title="Logo world media crew"class="img-fluid new-rep druga-clasa img-logo">
@@ -60,7 +60,7 @@
                 
 
                 <li>
-                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px;  border-radius: 20px;">Crew Members</a>
                 </li>
                 <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
@@ -96,3 +96,10 @@
     
     </div>
   
+  <style>
+@media screen and (min-width:768px){
+  .samolevo{
+    float: left;
+  }
+}
+  </style>

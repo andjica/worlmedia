@@ -14,7 +14,7 @@
                 <li><a href="{{asset('/services')}}" title="Challenger from world media crew">Challenges</a></li>
                 <li><a href="{{asset('/freelancers')}}" title="Members from world media crew">Crew-Members</a></li>
                 {{-- <li><a href="{{asset('/blog')}}" title="Blog Page for World Media Crew platform">Blog</a></li> --}}
-                <li><a href="{{asset('/contact')}}" title="Contact Us">Contact</a></li>
+                <li><a href="{{asset('/contact-us')}}" title="Contact Us">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
