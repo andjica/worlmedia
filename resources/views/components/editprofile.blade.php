@@ -2,8 +2,12 @@
 
 <div class="container p-0 mb-5 gore">
 @isset($user)
+
     <h1 class="h3 mb-3" style="color: transparent;">Settings</h1>
     <div class="row main-row">
+    <div class="card card-fixed">
+        @include('components.card-account-info')
+    </div>
     <div class="col-lg-12">
     @if(session('success'))
                 <div class="alert alert-success">
@@ -13,9 +17,7 @@
     @if(session('error'))
            <div class="alert alert-danger">{{session('error')}}</div>
      @endif
-     <div class="card card-fixed">
-        @include('components.card-account-info')
-    </div>
+    
     </div>
     <div class="row">
   
@@ -275,23 +277,7 @@ body{
     position: fixed;
     right: 0;
 }
-@media screen and (min-width:768px){
-    .tutorial{
-        position: fixed;
-    top: 50%;
-    right: 0;
-    color: black;
-    border-radius: 10px;
-    background: white;
-    height: 120px;
-    width: 80px;
-    text-align: center;
-    padding-top: 3%;
-    border-top-left-radius:30px;
-    border-bottom-left-radius:30px;
-    font-weight:700;
-    }
-}
+
 
 
 </style>

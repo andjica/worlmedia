@@ -50,7 +50,7 @@ class HomeController extends Controller
         $accountValidTime = $currentUser->valid_until;
         $currentTime = \Carbon\Carbon::now();
         
-
+        
         if($useradmin)
         {
             return redirect('/admin-home');
@@ -62,7 +62,11 @@ class HomeController extends Controller
             {
                 return view('home');
             }
-            return redirect('/editprofile');
+            else
+            {
+                return redirect('/editprofile');
+            }
+           
         }
         return view('home');
     }
@@ -74,9 +78,14 @@ class HomeController extends Controller
         $userId = auth()->user()->id;
         $user = User::where('id', $userId)->with('skill')->first();
         
+        
+
         $purchases = Purchase::where('user_id', $userId)->get();
        
         $checkingaccount = Account::where('user_id', $userId)->first();
+        
+        $accountValidTime = $checkingaccount->valid_until;
+        $currentTime = \Carbon\Carbon::now();
 
         $type = $checkingaccount->acc_type_id;
         
@@ -91,7 +100,16 @@ class HomeController extends Controller
         {
             return redirect('/home');
         }*/
-        return view('pages.editprofile', compact('user', 'purchases', 'skill', 'images', 'checkingaccount'), $this->data);
+
+        if($currentTime > $accountValidTime)
+        {
+            return view('home');
+        }
+        else
+        {
+            return view('pages.editprofile', compact('user', 'purchases', 'skill', 'images', 'checkingaccount'), $this->data);
+        }
+       
 
         
     }

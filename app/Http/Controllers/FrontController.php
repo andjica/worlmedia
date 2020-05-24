@@ -10,7 +10,7 @@ use App\Review;
 use App\Skill;
 use App\Follower;
 use App\Image;
-
+use Illuminate\Support\Facades\DB;
 class FrontController extends Controller
 {
     private $data = [];
@@ -85,12 +85,18 @@ class FrontController extends Controller
         ->where('city_id', '!=', 'null')
         ->where('category_id', '!=', 'null')
         ->orderBy('created_at', 'desc')
-        ->paginate(6);
+        ->paginate(15);
 
         //$countrate = Review::where('matched_status',1)->count();
         
         //$useravg = Review::where('is_matched_id', $userId)->avg('rate');
 
+        /*return  $users = DB::table('users')
+        ->leftJoin('reviews', 'users.id', '=', 'reviews.user_id')
+        ->where('users.city_id', '!=', 'null')
+        ->where('users.category_id', '!=', 'null')
+        ->orderBy('users.created_at', 'desc')
+        ->paginate(12);*/
         
         return view('pages.freeall', compact('users'), $this->data);
     }

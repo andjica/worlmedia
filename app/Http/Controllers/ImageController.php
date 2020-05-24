@@ -16,6 +16,7 @@ class ImageController extends Controller
 
     public function store()
     {
+        
         request()->validate([
             'image2' => 'mimes:jpeg,png,jpg,gif,svg',
             'imagedesc' => 'required'
@@ -37,13 +38,14 @@ class ImageController extends Controller
         else{
             if(request()->image2){
 
+                $current = time();
                 $image = request()->file('image2');
-                $name = str_slug(request()->imagedesc).'.'.$image->getClientOriginalExtension();
+                $name = $current.str_slug(request()->imagedesc).'.'.$image->getClientOriginalExtension();
             
                 $destinationPath = public_path('/image-resume');
 
                 $image->move($destinationPath, $name);
-    
+                
                 $imagemodel = new Image();
                 $imagemodel->url = $name;
                 $imagemodel->alt = $alt;

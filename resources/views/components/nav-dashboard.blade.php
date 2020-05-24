@@ -43,7 +43,7 @@
                 <img src="{{asset('/')}}images/logo3.png" alt="Image" class="img-fluid new-rep nemga img-logo1">
               </a>
                 </li>
-              <li class="active">
+              <li>
                   <a href="{{ asset ('/')}}" class="nav-link text-left">Home</a>
                 </li>
                

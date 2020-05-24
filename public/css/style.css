@@ -2136,7 +2136,7 @@ border-color: transparent transparent transparent deepskyblue;
 }
 
 
-@media screen and (max-width:3500px){
+@media screen and (max-width:368px){
   footer .bg-light .nopp{
     padding-top: 340px;
   }

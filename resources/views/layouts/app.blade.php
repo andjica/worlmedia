@@ -41,11 +41,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ">
-
-                    </ul>
+                <div class="collapse navbar-collapse nekpukne" id="navbarSupportedContent">
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav twt125 ">
@@ -242,6 +239,12 @@
 
 <style>
 
+    @media screen and (min-width:768px){
+      .nekpukne{
+        position: absolute;
+    right: 16%;
+      }
+    }
     .xdb{
         background:orange;
         border: 1px solid orange;

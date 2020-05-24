@@ -6,7 +6,7 @@
     <div class="col-md-6 hghgh">
     <h3>What we offer at WMCM </h3>
     <video class="col-lg-12 jbg155" autoplay="autoplay" muted="false" loop="loop" >
-          <source src="videos/test3.mp4" type="video/mp4">
+          <source src="{{asset('/')}}videos/test3.mp4" type="video/mp4">
         </video>
     </div>
         <div class="col-md-6 hghgh">
@@ -18,7 +18,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First & Lastname') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
