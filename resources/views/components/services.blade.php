@@ -56,12 +56,12 @@
                 </li>-->
                
                 <li>
-                  <a href="{{ asset('/services')}}" rel="canonical" class="nav-link text-left" title="Challenger from world media crew">Challenges</a>
+                  <a href="{{ asset('/services')}}" rel="canonical" class="nav-link text-left" title="Challenger from world media crew" >Challenges</a>
                 </li>
                 
 
                 <li>
-                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px;  border-radius: 20px; background:deepskyblue;">Crew Members</a>
                 </li>
                 <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
@@ -303,10 +303,14 @@
         <div class="row" style="text-align: center;">
           <div class="col-lg-6 boze">
             <img src="{{asset('/')}}images/p1.png" class=" next"/>
+            <div class="col-lg-12 hghgh">
+            <h1 class="winner text-serif "> Canon EOS 2000D + 18-55mm IS II</h1>
+            </div>
             <div class="absoluter shadow">
-              <h1 class="winner text-serif">Win</h1>
+            <h1 class=" text-serif">Win</h1>
           </div>
           </div>
+         
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
                 <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
@@ -338,12 +342,20 @@ Enter the Challenge
         <h3>The Rules</h3>
         <ul>
         <li><p>Invite 1000 Media crew members </p> </li>
-        <li><p>Get 25 reviews on your profile </p> </li>
-        <li><p>Get 25 ratings on your profile </p> </li>
-        <li><p>Share on social media 15 times, with hashtags #worldmediacrew & #wmcchallenge </p> </li>
+        <li><p>Get 50 connections on your WMC profile </p> </li>
+        <li><p>Get 25 ratings on your WMC profile </p> </li>
+        <li><p>Get 25 reviews on your WMC profile </p> </li>
+        <li><p>Share on social media 20 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname </p> </li>
         <li><p>And make a huge chance to win a Canon EOS 2000D + 18-55mm IS II</p> </li>
-        <li><p>You need at least 2000 social media followers </p></li>
-        <li><p>You need at least 100 on World media Crew Members  </p></li>
+        <li><p>You need at least 1500 social media followers </p></li>
+        <br>
+        <h3> Deadlines</h3>
+        <br>
+        <li><p>Starting August 1st, Saturday 00:00 o'clock </p></li>
+        <li><p>Ending October 31st, Saturday 23:59 o'clock half final </p></li>
+        <li><p>On 21 Nov 19:30 Live Stream on WMC Youtube Channel, <br>Winner will be announced on our WMC Live Stream </p></li>
+        <li><p>December 1st, 17:00 o'clock </p></li>
+
 
 
 
@@ -399,14 +411,22 @@ Enter the Challenge
       <div class="modal-body">
       <h3>The Rules</h3>
       <ul>
-      <li><p>Invite 10.000 Media crew members </p></li>
-      <li><p>Get 200 reviews on your profile </p></li>
-      <li><p>Get 200 ratings on your profile </p></li>
-      <li><p>You need at least 2000 social media followers </p></li>
-      <li><p>Share on social media 35 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+      <li><p>Invite 5.000 Media crew members </p></li>
+      <li><p>Get 75 reviews on your profile </p></li>
+      <li><p>Get 75 ratings on your profile </p></li>
+      <li><p> Get minimale 200 connections on your WMC Profile</p></li>
+      <li><p> Get minimale 200 Crew Members on your WMC Profile</p></li>
+      <li><p>Share on social media 50 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname</p></li>
       <li><p>And make a huge chance to win a Canon EOS 6D MARK 2 + 24-105mm F/2.8 L USM II</p></li>
-      <li><p>You need at least 5000 social media followers </p></li>
-      <li><p>You need at least 300 on World media Crew Members </p></li>
+      <li><p>You need at least 7000 social media followers </p></li>
+
+      <br>
+        <h3> Deadlines</h3>
+        <br>
+        <li><p>Starting August 1st, Saturday 00:00 o'clock </p></li>
+        <li><p>Ending October 31st, Saturday 23:59 o'clock half final </p></li>
+        <li><p>On 22 Nov 16:30 Live Stream on WMC Youtube Channel, <br>Winner will be announced on our WMC Live Stream </p></li>
+        <li><p>December 1st, 18:00 o'clock </p></li>
        </ul>
       </div>
       <div class="modal-footer">
@@ -421,8 +441,11 @@ Enter the Challenge
 
           <div class="col-lg-6 boze">
             <img src="{{asset('/')}}images/p2.png" class=" next" />
+            <div class="col-lg-12 hghgh">
+            <h1 class="winner text-serif "> Canon EOS 6D MARK 2 + 24-105mm F/2.8 L USM II</h1>
+            </div>
             <div class="absoluter shadow bg-orange">
-              <h1 class="winner text-serif">Win</h1>
+              <h1 class=" text-serif">Win</h1>
           </div>
           </div>
          
@@ -450,10 +473,14 @@ Enter the Challenge
         <h2 class="novica">Challenge 3 </h2>
         <h5>The starter media crew</h5>
         <div class="row" style="text-align: center;">
-          <div class="col-lg-6 boze ">
+          <div class="col-lg-6 boze pad123">
             <img src="{{asset('/')}}images/p3.png" class=" next" />
+            <div class="col-lg-12 hghgh">
+            <h1 class="winner text-serif "> Canon EOS 6D MARK 2 + 24-70mm F/2.8 L USM II</h1>
+            </div>
+
             <div class="absoluter shadow">
-              <h1 class="winner text-serif">Win</h1>
+              <h1 class=" text-serif">Win</h1>
           </div>
           </div>
           <div class="col-lg-6" style="text-align:left !important;">
@@ -486,13 +513,22 @@ Enter the Challenge
       <div class="modal-body">
       <h3>The Rules</h3>
       <ul>
-      <li> <p>Invite 50.000 Media crew members </p> </li>
-      <li> <p>Get 500 reviews on your profile </p></li>
-      <li> <p>Get 500 ratings on your profile </p></li>
-      <li> <p>Share on social media 70 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
+      <li> <p>Invite 15.000 Media crew members </p> </li>
+      <li> <p>Get 500 Connections on your WMC profile </p></li>
+      <li> <p>Get 500 Crew Members on your WMC profile </p></li>
+      <li> <p>Get 200 reviews on your WMC profile </p></li>
+      <li> <p>Get 200 ratings on your WMC profile </p></li>
+      <li> <p>Share on social media 80 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname </p></li>
       <li> <p>And make a huge chance to win a Canon EOS 6D MARK 2 + 24-70mm F/2.8 L USM II</p></li>
-      <li> <p>You need at least 10.000 social media followers </p></li>
-      <li> <p>You need at least 500 Connections on World media Crew Members</p></li>
+      <li> <p>You need at least 18.000 social media followers </p></li>
+
+      <br>
+        <h3> Deadlines</h3>
+        <br>
+        <li><p>Starting August 1st, Saturday 00:00 o'clock </p></li>
+        <li><p>Ending October 31st, Saturday 23:59 o'clock half final </p></li>
+        <li><p>On 22 Nov 17:30 Live Stream on WMC Youtube Channel, <br>Winner will be announced on our WMC Live Stream </p></li>
+        <li><p>December 1st, 19:00 o'clock </p></li>
       </ul>
       </div>
       <div class="modal-footer">
@@ -545,13 +581,22 @@ Enter the Challenge
       <div class="modal-body">
       <h3>The Rules</h3>
       <ul>
-         <li> <p>Invite 100.000 Media crew members </p> </li>
-         <li> <p>Get 1000 reviews on your profile </p></li>
-         <li> <p>Get 1000 ratings on your profile </p></li>
-         <li> <p>Share on social media 200 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
-         <li> <p>And make a huge chance to win a Apple familiy Ipad Pro, IMac 27, Macbook Pro 13, iPhone 11, Iwatch, Airpods</p></li>
-         <li> <p>You need at least 25.000 social media followers </p></li>
-         <li> <p>You need at least 1000 Connections on World media Crew Members </p></li>
+      <li> <p>Invite 50.000 Media crew members </p> </li>
+      <li> <p>Get 1000 Connections on your WMC profile </p></li>
+      <li> <p>Get 1000 Crew Members on your WMC profile </p></li>
+      <li> <p>Get 500 reviews on your WMC profile </p></li>
+      <li> <p>Get 500 ratings on your WMC profile </p></li>
+      <li> <p>Share on social media 150 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname </p></li>
+      <li> <p>And make a huge chance to win a Canon EOS 6D MARK 2 + 24-70mm F/2.8 L USM II</p></li>
+      <li> <p>You need at least 70.000 social media followers </p></li>
+
+      <br>
+        <h3> Deadlines</h3>
+        <br>
+        <li><p>Starting August 1st, Saturday 00:00 o'clock </p></li>
+        <li><p>Ending October 31st, Saturday 23:59 o'clock half final </p></li>
+        <li><p>On 22 Nov 18:30 Live Stream on WMC Youtube Channel, <br>Winner will be announced on our WMC Live Stream </p></li>
+        <li><p>December 1st, 20:00 o'clock </p></li>
       </ul>
       </div>
       <div class="modal-footer">
@@ -568,8 +613,11 @@ Enter the Challenge
 
           <div class="col-lg-6 boze">
             <img src="{{asset('/')}}images/p4.png" class=" next1" />
+            <div class="col-lg-12 hghgh">
+            <h1 class="winner text-serif ">Apple familiy Ipad Pro, IMac 27, Macbook Pro 13, iPhone 11, Iwatch, Airpods</h1>
+            </div>
             <div class="absoluter shadow">
-              <h1 class="winner text-serif">Win</h1>
+              <h1 class=" text-serif">Win</h1>
           </div>
           </div> 
         </div>
@@ -578,30 +626,29 @@ Enter the Challenge
 </section>
 
 
-<section class="mb-5">
+<section class="mb-5" >
     <div class="py-5 sta pb-5">
-      <div class="container" style="text-align:center;">
+      <div class="container tacno67" style="text-align:center; background-image:url({{asset('/')}}images/p5.png);     background-size: cover;">
         <h2 class="novica">Challenge 5 </h2>
-        <h5>The starter media crew</h5>
-        <div class="row" style="text-align: center;">
-         
-          <div class="col-lg-6 boze">
-            <img src="{{asset('/')}}images/p5.png" class=" next2" />
-            <div class="absoluter shadow">
-              <h1 class="winner text-serif">Win</h1>
-          </div>
-          </div> 
-          <div class="col-lg-6" style="text-align:left !important;">
+        <h5>The Master Media Crew Members</h5>
+        <div class="col-lg-12" style=" height: 630px;">
+
+        <div class="absoluter shadow">
+          <h1 class=" text-serif">Win</h1>
+        </div>
+          <div class="col-lg-12" style="text-align:center !important;">
             <ul class="ula">
-            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
+            <li class="pada"><h3 class="new12">Only 100 Masters</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
-                <p>How does it work?<br>
-              Winner becomes known with the name Lottery<br>
-            Which name is taken out would win on the livestream<br>
-          To enter the competition, all you need is to register, to fill in your profile<br>
-        And we will pick a random winner!</p> <Br>
+               <div class="col-lg-6 text-right dobri3">
+               <p>AS MASTER PHOTOGRAPHER</p>
+               </div>
+               <div class="col-lg-6 text-left dobri4">
+               <p>AS MASTER FILM MAKER</p>
+               </div>
+                <Br>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong5">
@@ -613,7 +660,7 @@ Enter the Challenge
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="    position: relative;  margin-top: 50%;  background-color: white;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #4</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Challenge #5</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -621,11 +668,24 @@ Enter the Challenge
       <div class="modal-body">
       <h3>The Rules</h3>
       <ul>
-       <li><p> Invite 500.000 Media crew members </p></li>
-       <li><p>Get 5000 reviews on your profile </p></li>
-       <li> <p>Get 5000 ratings on your profile </p></li>
-       <li><p>Share on social media 500 times, with hashtags #worldmediacrew & #wmcchallenge </p></li>
-       <li><p>And make a huge chance to win a Apple familiy Ipad Pro, IMac 27, Macbook Pro 13, iPhone 11, Iwatch, Airpods + $25.000 Dollars CASH!</p></li>
+      <li> <p>Invite 150.000 Media crew members </p> </li>
+      <li> <p>Get 5000 Connections on your WMC profile </p></li>
+      <li> <p>Get 5000 Crew Members on your WMC profile </p></li>
+      <li> <p>Get 1500 reviews on your WMC profile </p></li>
+      <li> <p>Get 1500 ratings on your WMC profile </p></li>
+      <li> <p>Share on social media 80 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname </p></li>
+      <li><p>And make a huge chance to win a photographer Hasselblad H6D-50c + Lens HC 50-110mm F3.5-4.5 IMac Pro</p></li>
+      <li> <p>You need at least 180.000 social media followers </p></li>
+
+      <br>
+        <h3> Deadlines</h3>
+        <br>
+        <li><p>Starting August 1st, Saturday 00:00 o'clock </p></li>
+        <li><p>Ending October 31st, Saturday 23:59 o'clock half final </p></li>
+        <li><p>On 22 Nov 19:30 Live Stream on WMC Youtube Channel, <br>Winner will be announced on our WMC Live Stream </p></li>
+        <li><p>December 1st, 21:00 o'clock </p></li>
+       
+       
       </ul>
       </div>
       <div class="modal-footer">
@@ -636,8 +696,20 @@ Enter the Challenge
   </div>
 </div>     
 
-   <h3 class="mt-5 text-serif"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
-            </ul>
+<div class="col-lg-12" style="   top: 242px;   position: relative; color: black;">
+<div class="col-lg-6">
+<h1 class="winner text-left text-black dobri"> Photographer Hasselblad H6D-50c + Lens HC 50-110mm F3.5-4.5 IMac Pro</h1>
+
+</div>
+
+<div class="col-lg-6">
+<h1 class="winner text-right text-black dobri1"> RED DSMC2 BRAIN w/ GEMINI 5K S35 + Xeen cinema lenses 24mm 50mm, + IMac Pro 27</h1>
+
+</div>
+
+   <h3 class="mt-5 text-serif perf"><i class="fa fa-trophy fa-2x text-orange"></i> &nbsp; Starts on November 1</h3>
+   </div>
+            
           </div>
           
         </div>
@@ -662,25 +734,108 @@ Enter the Challenge
 
 
     <style>
-    @media screen and (max-width:520px)
-        {
-          .boze{
-            height: 320px;
-           
-          }
+
+@media screen and (max-width:768px){
+  .dobri4{
+    padding-left: 0px; position: relative;   top: 123px;
+    text-align:center !important;
+
+    }
+    .dobri3{
+      padding-right: 0px;  position: relative;   top: 123px;
+      text-align:center !important;
+    }
+    .ula{
+      margin-top:140px !important;
+      padding: 0;
+    }
+    .dobri4{
+      
+    }
+
+.dobri{
+  font-family: inherit;  
+    text-align: center !important;
+     font-size: 12px;    
+      font-weight: 700;   
+      position: relative;   
+       top: 20px;
+       
+}
+
+.dobri1{
+font-family: inherit; 
+  text-align: center !important; 
+   font-size: 12px;     
+   font-weight: 700;   
+   position: relative;    
+   top: 20px;
+}
+}
+
+@media screen and (min-width:768px){
+  .dobri4{
+    padding-left: 26px; position: relative;   top: 123px;
+    }
+    .dobri3{
+      padding-right: 72px;  position: relative;   top: 123px;
+    }
+
+    .dobri4{
+      
+    }
+
+.dobri{
+  font-family: inherit;  
+    text-align: center !important;
+     font-size: 12px;    
+      font-weight: 700;   
+      position: relative;   
+       top: 20px;
+}
+
+.dobri1{
+font-family: inherit; 
+  text-align: center !important; 
+   font-size: 12px;     
+   font-weight: 700;   
+   position: relative;    
+   top: 20px;
+}
+}
+    
+
+
+
+.pad123{
+  padding: 18px;
+}
+.perf{
+  position: relative;
+}
+    @media screen and (max-width:720px) {
+      .tacno67{
+          background-size:contain !important;
+          background-repeat:no-repeat;
+        }
 
           .mt{
             margin-top:0px !important;
           }
+         
+        
         }
+
         .boze{
           height:520px;
           width:100%;
           background: rgb(63,94,251);
           background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%);
           clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-            
+          position:relative;
+          z-index:-100;
         }
+        
 
         .btn-warning{
           background:deepskyblue !important;
@@ -693,11 +848,15 @@ Enter the Challenge
           margin-top: 120px;
 
         }
+        
+
+
         .next{
           position: relative;
-    height: 100%;
-    margin-left: -88px;
-        }
+          height: 100%;
+          margin-left: -88px;
+          margin-top: -55px;
+          }
         .next1{
           height: 100%;
     margin-left: -120px;
@@ -708,6 +867,31 @@ Enter the Challenge
     margin-top: 34px;
     margin-left: -10px;
         }
+
+        @media screen and (max-width:468px){
+          .next{
+            width: 100% !important;
+            margin-left:0px;
+            margin-top:-8px;
+
+          }
+          
+          .next1{
+            width: 100% !important;
+            margin-left:0px;
+
+          }
+
+          .next2{
+            height: 41% !important;
+            margin-top:130px;
+            margin-left:0px;
+
+          }
+        }
+       
+
+
         .new12{
           font-weight: 800;
     padding-bottom: 0px;
@@ -738,21 +922,56 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%)
         .novica{
           font-weight: 900;
                 }
+    @media screen and (max-width:768px){
+  .absoluter{
+    position: absolute;
+    right: 126px;
+    background: orange;
+    height: 120px;
+    z-index: 1000;
+    width: 120px;
+    top: 400px;
+    z-index: 10000;
+    border-radius: 100%;
+    color: white;}
+    
+    
+    .hghgh{
+      position: absolute;
+    top: 220px;
+    text-align: center;
+    }
+}
 
-                .absoluter{
-                position: absolute;
-                right: 111px;
-                background: orange;
-                height: 120px;
-                z-index: 1000;
-                width: 120px;
-                top: 328px;
-                border-radius: 100%;
-                color: white;
-                }
+@media screen and (min-width:768px){
+  .absoluter{
+    position: absolute;
+    right: 248px;
+    background: orange;
+    height: 80px;
+    z-index: 1000;
+    width: 80px;
+    top: 427px;
+    z-index: 10000;
+    border-radius: 100%;
+    color: white;
+  }
+
+    .hghgh{
+      position: relative;
+    top: -157px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+}
+                
 
                 .winner{
-                  padding-top: 20px;
+                  color:black;
+                  font-size: 14px;
+                font-family: inherit;
+                font-weight: 700;
+                margin-top: 32px;
                 }
                 .mt{
                   margin-top: -120px;
@@ -4788,6 +5007,8 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,191,255,1) 98%)
 .nemaga{
 display:none !important;
 }
+
+      
 }
 
       </style>

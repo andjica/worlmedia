@@ -35,7 +35,7 @@
 
 
       
-      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block radi"  style="position: fixed;
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target bg-black d-none pl-0 d-lg-block radi"  style="position: fixed;
     width: 100%; ">
 
       <div class="container">
@@ -60,7 +60,7 @@
                 
 
                 <li>
-                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px; background:deepskyblue; border-radius: 20px;">Crew Members</a>
                 </li>
                 <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>

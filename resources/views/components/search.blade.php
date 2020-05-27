@@ -1,8 +1,8 @@
 
 <form action="{{route('freelancers')}}" method="get" id="form-search"> 
 	<div class="container sickness deskic nekaproba">
-	<h1 style="margin-bottom: 40px; color:white" class="hah">FIND CREWMEMBERS</h1>
-	<h4 style="margin-bottom: 40px; color:white" class="hah">Find your crewmembers worldwide with the perfect skills and professional equipment.</h4>
+	<h1 class="hah">FIND CREWMEMBERS</h1>
+	<h4 class="hah nemega">Find your crewmembers worldwide with the perfect skills and professional equipment.</h4>
 
 	  <div class="row no-gutters new-res">
 	
@@ -52,12 +52,19 @@
   
 <style>
 .nekaproba{
-	
-    background-color: #95b9ec42;
-	padding-top: 76px;
-	padding:76px;
-	border-radius: 22px;
-	margin-top: 60px;
-	text-align:center;
+	text-align: center;
+	padding-top: 70px;
+	color:white;
+}
+
+@media screen and (min-width:968px){
+	.nekaproba{
+		background-color: #95b9ec42;
+    padding-top: 76px;
+    padding: 76px;
+    border-radius: 22px;
+    margin-top: 60px;
+    text-align: center;
+	}
 }
 </style>

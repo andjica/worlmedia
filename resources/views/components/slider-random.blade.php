@@ -28,8 +28,10 @@
     @foreach($usersfirstrandom as $user)
   <div class="col-md-3" style="float:left">
         <div class="service-39381">
+        <a href="{{asset('/freelancer/'.$user->id)}}">
             <div class="rounded-circle mx-auto image-background4" style="background-image: url({{asset('/image-users/'.$user->url)}});">
             </div>
+            </a>
             <div class="p-4 mx-auto">
                 <p><span class="icon-room mr-1 text-primary"></span>{{$user->category->name}} from
                  {{$user->city->name}}, {{$user->city->country->name_country}}</p>

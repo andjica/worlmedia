@@ -36,16 +36,16 @@
 
 
       
-      <div class="site-navbar py-2 js-sticky-header bg-black site-navbar-target d-none pl-0 d-lg-block radi"  style="position: fixed;
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target bg-black d-none pl-0 d-lg-block radi"  style="position: fixed;
     width: 100%; ">
 
       <div class="container">
         <div class="d-flex align-items-center">
           
-          <div class="mx-auto">
+          <div class="mx-right" style="width:100%;">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-              <li>
+              <ul class="site-menu main-menu js-clone-nav mr-right d-none pl-0 d-lg-block">
+              <li class="samolevo">
 
          <a href="{{asset('/')}}">
                 <img src="{{asset('/')}}images/logo3.png" rel="canonical" alt="Image" title="Logo world media crew"class="img-fluid new-rep druga-clasa img-logo">
@@ -61,7 +61,7 @@
                 
 
                 <li>
-                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style="background: deepskyblue;  padding: 10px;  border-radius: 20px;">Crew Members</a>
+                    <a href="{{ asset('/allmembers')}}" rel="canonical" class="nav-link text-left" title="Members from world media crew" style=" padding: 10px; background:deepskyblue; border-radius: 20px;">Crew Members</a>
                 </li>
                 <!--<li>
                   <a href="{{ asset('/aboutus')}}" class="nav-link text-left">About Us</a>
@@ -96,6 +96,14 @@
     </div>
     
     </div>
+  
+  <style>
+@media screen and (min-width:768px){
+  .samolevo{
+    float: left;
+  }
+}
+  </style>
     <div class="section" style="margin-top:120px;">
     <div class="container">
         <div class="row">
@@ -264,13 +272,13 @@ changes, you automatically agree to be bound by those changes.</p>
 
 <div class="section">
     <div class="container">
-        <div class="row">
-            <h1>                       Article 10 - Data retention
+        <div class="row" style="    display: block;">
+            <h1>    Article 10 - Data retention</h1>
+<br>
+            <p style="text-align:left;">
+        
+           
 
-
-</h1>
-            <p>
- 
  The collected data are used and retained for the duration determined by law.
  
 

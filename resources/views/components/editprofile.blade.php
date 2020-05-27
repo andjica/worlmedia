@@ -43,6 +43,7 @@
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#images" role="tab">
                      Portfolio images
                     </a>
+                    
                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">
                       Contact Support
                     </a>
@@ -84,12 +85,12 @@
                                         <input type="text" class="form-control" value="{{$user->name}}" id="inputUsername" placeholder="Username" name="username">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputUsername">Biography</label>
+                                    <label for="inputUsername">Carreer History</label>
                                     <textarea rows="2" class="form-control" id="inputBio" name="desc1" placeholder="Tell something about yourself">{{$user->desc_one}}</textarea>
                                     @if ($errors->has('desc1'))  <p style="color:red;">{{$errors->first('desc1')}}</p> @endif
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputUsername">More about Biography</label>
+                                    <label for="inputUsername">Biography</label>
                                     <textarea rows="2" class="form-control" id="bio2" name="desc2" placeholder="Tell something about yourself">{{$user->desc_two}}</textarea>
                                     @if ($errors->has('desc2'))  <p style="color:red;">{{$errors->first('desc2')}}</p> @endif
                                 </div>
@@ -145,7 +146,7 @@
                                     </select>
                                     @else
                                     <select class="form-control" name="categoryid">
-                                       <option value="">My current Category: {{$user->category->name}}</option>
+                                       <option value="{{$user->category_id}}">My current Category: {{$user->category->name}}</option>
 										@foreach($categories as $category)
 											<option value="{{$category->id}}">{{$category->name}}</option>
                                          @endforeach
@@ -162,7 +163,7 @@
                                     </select>
                                     @else
                                     <select class="form-control" name="cityid">
-                                       <option value="">My current City: {{$user->city->name}}</option>
+                                       <option value="{{$user->city_id}}">My current City: {{$user->city->name}}</option>
 										@foreach($cities as $city)
 											<option value="{{$city->id}}">{{$city->name}}</option>
                                          @endforeach
@@ -276,6 +277,13 @@ body{
     width: 18rem;    
     position: fixed;
     right: 0;
+    z-index: 1000;
+}
+
+@media screen and (max-width:468px){
+    .card-fixed{
+        display:none;
+    }
 }
 
 

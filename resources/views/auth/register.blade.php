@@ -68,6 +68,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
+                       <center style="width: 100%;
+    text-align: center;"> <p>By Registering, you agree our Terms & Privacy Policy</p> </center>
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}

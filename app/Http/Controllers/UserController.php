@@ -116,16 +116,16 @@ class UserController extends Controller
 
     public function storeinfo()
     {
-        request()->validate([
+        /*request()->validate([
             'link' => 'url'
         ],
         [
             'url.link' => 'must be a link'
-        ]);
+        ]);*/
 
         $userId = auth()->user()->id;
 
-        $user = User::where('id', $userId)->first();
+        $user = User::find($userId);
 
         
         $user->category_id = request()->categoryid;
@@ -146,6 +146,8 @@ class UserController extends Controller
         
     }
 
+    
+
     /**
      * Display the specified resource.
      *
@@ -154,7 +156,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $userId = auth()->user()->id;
+        $user = User::find($userId);
+
+
     }
 
     /**

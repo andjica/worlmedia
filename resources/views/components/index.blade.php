@@ -174,11 +174,19 @@ person or job with only one click on our website or app.</p>
 }
 
 .hah{
-  color: white;
+  color: white !important;
     font-size: 12px;
     margin-top: -42px;
     margin-bottom:10px !important;
+    
 }
+h1{
+  text-align: center;
+    font-size: 20px;
+}
+.nemega{
+		display:none !important;
+	}
 }
   .rondje{
     border-radius:100%;
@@ -186,8 +194,6 @@ person or job with only one click on our website or app.</p>
   .card{
     border:none !important;
   }
-
- 
 
 
 </style>

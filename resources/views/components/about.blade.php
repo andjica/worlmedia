@@ -191,6 +191,66 @@ according to your needs.
         </div>
       </div>
     </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-12 text-center">
+          <h2 class="heading-92913 text-black text-center">Vision</h2>
+<p>
+Our vision is to connect all media professionals around the world and create an ecosystem
+of a strong and safe network where WMC members can learn, develop, and create jobs.
+Helping media professionals around the world to excel in their talents and create or help
+others create amazing media. By supporting talent development and solving issues that
+might be an obstacle to achieve greatness, we believe we can make the world a better
+place.</p>
+<Br>
+<h2 class="heading-92913 text-black text-center">Mission</h2>
+<br>
+<p>
+Our mission is to create a stable and user-friendly platform both as a website and a
+stand-alone app where our WMC members can subscribe, create jobs and solve all their
+media-related issues on the spot, simply by using the World Media Crew platform.
+</p>            
+          
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-12 text-center">
+          <h2 class="heading-92913 text-black text-center">Who Are we?</h2>
+          <div class="col-lg-3">
+          <h3>Taron Mosesian </h3>
+          <p>Founder, Chairman and Chief Executive Officer </p>
+          </div>        
+
+          <div class="col-lg-3">
+          <h3>Tatevique Minasian </h3>
+          <p>Chief Marketing Officer and Chief Communications Officer  </p>
+          </div>  
+
+          <div class="col-lg-3">
+          <h3>Andjela Milosevic </h3>
+          <p>Lead back-end developer </p>
+          </div>  
+
+          <div class="col-lg-3">
+          <h3>Danny Milosevic </h3>
+          <p>Lead Front-end developer </p>
+          </div>  
+          
+          </div>
+          
+        </div>
+      </div>
+    </div>
     
 
   

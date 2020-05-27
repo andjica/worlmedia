@@ -14,7 +14,7 @@ $(document).ready(function(){
 
       let errors = [];
 
-      if(!regexmobile .test(mobile)) 
+     /* if(!regexmobile .test(mobile)) 
       {
           e.preventDefault();
           $('#mobile').css('border-color','red');
@@ -26,7 +26,7 @@ $(document).ready(function(){
         $('#mobile').css('border-color','blue');
         sumobile.innerHTML = 'Mobile ok';
       }
-
+*/
       if(!regexurl.test(link)) 
       {
           e.preventDefault();

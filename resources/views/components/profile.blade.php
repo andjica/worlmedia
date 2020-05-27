@@ -8,11 +8,7 @@
 
 <div class="row mx-auto">
       <div class="col-lg-12">
-          @if(session('success'))
-                <div class="alert alert-success mt-5">
-                    {{session('success')}}
-                </div>
-                @endif
+
                 @if(session('error'))
                 <div class="alert alert-danger mt-5">
                     {{session('error')}}
@@ -22,9 +18,10 @@
 </div>
   
             <div class="row profile-padding-top">
-                <div class="col-lg-4 xvs ">
-                    <hr/>
-                  @if(auth()->user())
+               <div class="col-lg-12 pufna" style="    text-align: center;
+    position: relative;
+    top: 231px; z-index: 10000;">
+            @if(auth()->user())
                     @if(auth()->user()->id == $user->id)
                     @elseif($matched)
                        @if($matched->matched_status == 0)
@@ -42,8 +39,10 @@
                     <a href="{{route('login')}}" class="btn btn-primary">
                       Give a match
                   </a>
-                          @endif                
-                        </div>
+                          @endif   
+                          </div>       
+                       
+                        
                         
                             <div class="col-lg-4 ggg mx-auto pb-5 text-center" style="color: white;">
                             <div class="col-lg-12 daodah">
@@ -76,22 +75,22 @@
                                                     </a>
                                                   @endforeach
                                                   <small class="d-block text-right mt-3">
-                                                    <a href="#">All updates</a>
                                                   </small>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                              <button type="button" class="btn btn-primary">Save changes</button>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
                                     @endisset
                                     </div>
+                                  
                                       <div class="col-lg-6 ">
                                         @isset($countfollowing)
                                           <button type="button" class="btn btn-primary daf levo molibci" data-toggle="modal" data-target="#following"> Crew Members ({{$countfollowing}})</button>
+                                          
                                            <!-- Modal Following -->
                                           <div class="modal fadeInUp" id="following" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -118,13 +117,11 @@
                                                     </a>
                                                     @endforeach
                                                     <small class="d-block text-right mt-3">
-                                                      <a href="#">All updates</a>
-                                                    </small>
+                                                      </small>
                                                   </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                  <button type="button" class="btn btn-primary">Save changes</button>
                                                 </div>
                                               </div>
                                             </div>
@@ -168,8 +165,7 @@
                                 <Br>
                               
                         </div>
-                    <div class="col-lg-4 xvb">
-                <hr/>
+                    
                 @if($countrate == null)
                 @else
                 <div class="card float-right shadow nova125">
@@ -189,7 +185,7 @@
                 <p class="count-text text-center text-primary">({{$countrate}}) Rates</p>
                 @endisset
                 </div>
-            </div>
+            
             @endif
 </div>
 </div>
@@ -201,6 +197,19 @@
       <div class="container">
          
           <div class="row mt-5 p-2 ">
+          
+          <div class="col-lg-4">
+          <div class="card bg-light shadow prosche">
+          <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
+            <div class="card-body border-top mt-2">
+              <h1 class="text-dark  text-center">Carreer</h1>
+              <p class="card-text text-dark">
+                {{$user->desc_one}}
+              </p>
+            </div>
+          </div>
+          
+          </div>
           <div class="col-lg-4 prva">
           <div class="card bg-light shadow">
           <i class="fa fa-user-circle fa-2x text-orange text-center mt-3"></i>
@@ -212,6 +221,7 @@
                 From: &nbsp;{{$user->city->country->name_country}}, {{$user->city->name}}<br>
                 Email: &nbsp; {{$user->email}}<br>
                 Mobile: &nbsp; {{$user->mobile}}<br>
+                Category:&nbsp;   {{$user->category->name}}
                 <a href="{{$user->link}}">{{$user->link}}</a>
               </p>
               
@@ -224,18 +234,6 @@
               
             </div>
           </div>
-          </div>
-          <div class="col-lg-4">
-          <div class="card bg-light shadow">
-          <i class="fa fa-cogs text-orange mt-3 fa-2x text-center"></i>
-            <div class="card-body border-top mt-2">
-              <h1 class="text-dark  text-center">Carreer</h1>
-              <p class="card-text text-dark">
-                {{$user->desc_one}}
-              </p>
-            </div>
-          </div>
-          
           </div>
           <div class="col-lg-4">
           <div class="card bg-light shadow">
@@ -281,7 +279,6 @@
     </div>
       @endif
     </section>
-    <hr class="style-six">
     <button type="button" class="btn btn-default mt-5"  onclick="goBack()"><i class="fa fa-arrow-left text-info"></i> &nbsp;I've heard enough about {{$user->name}}</button>
     @include('components.rate')
     @endisset
@@ -388,6 +385,9 @@
 </body>
 
 <style>
+  .modal{
+    z-index: 10000;
+  }
   .zoom:-webkit-any-link {
     color: red;
   }
@@ -418,7 +418,7 @@
 }
 @media screen and (max-width:768px){
   .skills{
-    margin-top:1000px;
+    margin-top: 1200px;
   }
   .prva{
     margin-top: 272px;
@@ -427,11 +427,50 @@
   font-size: 12px;
 
 }
+.nova125{
+  height: 100px;
+    width: 94px;
+    font-size: x-small;}
+
+.card-title{
+  font-size: x-small;
+}
+.fa-trophy{
+  position: relative;
+    top: -14px;
+}
+.stable{
+  position: absolute;
+    left: 41px;
+    top: -4px;
+    text-align: center;
+    float: left;
+    font-size: 10px;
+}
+.count-text{
+  font-size: 10px;
+    position: relative;
+    top: -28px;
+}
+.levo{
+  font-size: 10px;
+}
+.desno{
+  font-size:10px;
+}
+.prosche{
+  margin-top: 198px;
+    margin-bottom: -245px;
+}
 
   }
   .faca{
     position:relative; z-index:1000;
   }
+}
+
+.nova125{
+  top: 50%;
 }
 </style>
 

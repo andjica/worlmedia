@@ -1,7 +1,7 @@
 @include('components.head')
 @include('components.nav')
 
-<div class="s01 tt ">
+<div class="s01 tt znacinemam">
   
 @include('components.search')
 
@@ -72,6 +72,12 @@
 </div>
 </section>
 
+<section class="sponsor">
+<div class="container">
+<img src="./images/sponsor.jpeg" style="    width: 100%;" />
+</div>
+</section>
+
 <style>
     .tw34{
         font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
@@ -98,6 +104,23 @@
 
     .succes{
       background:#ffbd39 !important;
+    }
+
+    @media screen and (max-width:768px){
+    .znacinemam{
+      position: relative;
+    z-index: 100000000;
+    }
+    .select2-container--open .select2-dropdown--below{
+      position: relative;
+    z-index: 100000000;
+    }
+    }
+
+    @media screen and (min-width:768px){
+      .znacinemam{
+        margin-top:70px !important;
+      }
     }
 </style>
 @include('components.footer')
