@@ -9,8 +9,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>The best database platform for Media crew members</title>
-  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logo1.png">
+    <title>Find Media Crew Members World Wide - World Media Crew Members</title>
+  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logoo.jpeg">
   <meta name="description" content="World Media Crew is new database platform. You can contact people from all the 46 countries all around the world.">
   <meta name="keywords" content="World Media Crew platform, users, all around world">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

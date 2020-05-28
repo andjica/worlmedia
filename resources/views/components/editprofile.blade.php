@@ -110,7 +110,7 @@
                                         </div>
                                         @endif
                                         <div class="mt-2">
-                                         <input type="file" class="form-controll" name="image">
+                                         <input type="file" class="form-controll text-white" name="image">
                                          @if ($errors->has('image'))  <p style="color:red;">{{$errors->first('image')}}</p> @endif
                                         </div>
                                             <small>For best results, use an image at least 128px by 128px in .jpg format</small>
@@ -218,7 +218,7 @@
                 <div class="card">
                         <div class="card-header">
                            
-                            <h5 class="card-title mb-0">Your information</h5>
+                            <h5 class="card-title mb-0">Fill in here all your software skills</h5>
                         </div>
                         <div class="card-body">
                             @include('components.create-skills')

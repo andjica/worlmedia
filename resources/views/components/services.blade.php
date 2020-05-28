@@ -379,11 +379,11 @@ Enter the Challenge
 <section class="mb-5">
       <div class="container sta pb-5" style="text-align:center;">
         <h2 class="novica">Challenge 2 </h2>
-        <h5>The Pro media crew members</h5>
+        <h5>The semi-pro Media Crew</h5>
         <div class="row" style="text-align: center;">
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
+            <li class="pada"><h3 class="new12">Only 100 Semi-Pro members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -471,7 +471,7 @@ Enter the Challenge
     <div class="py-5 sta pb-5">
       <div class="container " style="text-align:center;">
         <h2 class="novica">Challenge 3 </h2>
-        <h5>The starter media crew</h5>
+        <h5>The pro media crew</h5>
         <div class="row" style="text-align: center;">
           <div class="col-lg-6 boze pad123">
             <img src="{{asset('/')}}images/p3.png" class=" next" />
@@ -485,7 +485,7 @@ Enter the Challenge
           </div>
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">
-            <li class="pada"><h3 class="new12">Only 1000 crew members</h3></li>
+            <li class="pada"><h3 class="new12">Only 100 pro's members</h3></li>
                 <li class="pada"><h3 class="new12">Only 10 go to half final</h3> </li>
                 <li class="pada1"><h3 class="new12">Only 1 Media crew member wins!</h3> </li>
 
@@ -549,7 +549,7 @@ Enter the Challenge
     <div class="py-5 sta pb-5">
       <div class="container" style="text-align:center;">
         <h2 class="novica">Challenge 4 </h2>
-        <h5>The starter media crew</h5>
+        <h5>The Apple Family</h5>
         <div class="row" style="text-align: center;">
           <div class="col-lg-6" style="text-align:left !important;">
             <ul class="ula">

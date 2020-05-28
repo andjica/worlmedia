@@ -6,16 +6,7 @@
 <section class="db12">
 <div class="container">
 
-<div class="row mx-auto">
-      <div class="col-lg-12">
 
-                @if(session('error'))
-                <div class="alert alert-danger mt-5">
-                    {{session('error')}}
-                </div>
-                @endif
-          </div>
-</div>
   
             <div class="row profile-padding-top">
                <div class="col-lg-12 pufna" style="    text-align: center;
@@ -190,7 +181,20 @@
 </div>
 </div>
     </section>
-   
+    <div class="row mx-auto">
+      <div class="col-lg-12">
+      @if(session('success'))
+                <div class="alert alert-success bingp">
+                    {{session('success')}} <i class="fa fa-check"></i>
+                </div>
+                @endif
+                @if(session('error'))
+                <div class="alert alert-danger mt-5">
+                    {{session('error')}}
+                </div>
+                @endif
+          </div>
+</div>
  
               
     <section class="about-user">
@@ -471,6 +475,26 @@
 
 .nova125{
   top: 50%;
+}
+
+@media screen and (min-width:968px){
+  .bingp{
+    position: relative;
+    top: -305px;
+    width: 13%;
+    border-radius: 10px;
+    right: -1182px;
+  }
+}
+
+@media screen and (max-width:528px){
+.bingp{
+  position: relative;
+    top: -98px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
 }
 </style>
 

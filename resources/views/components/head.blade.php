@@ -1,8 +1,8 @@
 <html lang="en">
 
 <head>
-  <title>The best database platform for Media crew members </title>
-  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logo1.png">
+  <title>Find Media Crew Members World Wide - World Media Crew Members</title>
+  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logoo.jpeg">
   <meta name="description" content="World Media Crew is new a database platform. You can contact people from all the 46 countries all around the world.">
   <meta name="keywords" content="World Media Crew platform, users, all around the world, media jobs, crew members jobs, database platform media, database platform jobs, platform, database, jobs">
   <meta charset="utf-8">

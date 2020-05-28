@@ -8,6 +8,8 @@
            @if($skill->skill_one == null || $skill->percent_one == null)
 
            @else
+
+
           <div class="col-md-6 animate-box">
             <div class="progress-wrap ftco-animate fadeInUp ftco-animated">
             <h4 class="text-dark">{{$skill->skill_one}}</h4>

@@ -1,8 +1,8 @@
 <html lang="en">
 
 <head>
-  <title>Word media crew the number one platform for media crew members</title>
-  <link rel="icon" type="image/png" href="./images/logo1.png">
+<title>Find Media Crew Members World Wide - World Media Crew Members</title>
+  <link rel="icon" type="image/png" href="{{asset('/')}}/images/logoo.jpeg">
   <meta name="description" content="Wij ontwikkelen alles op het gebied van internet tech, uw gewenste website, webshop of applicatie ontwikkelen wij volledig naar wens.">
   <meta name="keywords" content="Digital agency, webdesign rotterdam, internetbureau rotterdam, website laten maken, webshop laten maken, applicatie laten maken, professionele it services">
   <meta charset="utf-8">

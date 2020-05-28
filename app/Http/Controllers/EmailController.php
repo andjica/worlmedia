@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactEmail;
 use App\Mail\MatchEmail;
 use App\Review;
+use App\User;
 
 class EmailController extends Controller
 {
@@ -22,15 +23,12 @@ class EmailController extends Controller
 
         $emailto = request()->email;
     
-        try{
+       
             Mail::cc($emailto, 'developersforanymarket@gmail.com')->send(new ContactEmail($data));
                 
             return back()->with('success', 'Thank you for sending email to Us');
-        }
-        catch(\Throwable $e)
-        {
-            return abort(500);
-        }
+       
+       
     }
 
     public function match()
@@ -41,9 +39,9 @@ class EmailController extends Controller
             'message' => request()->message
         ]);
 
-        $emailto = request()->useremail;
+            $emailto = request()->useremail;
     
-        
+            try{
             Mail::cc($emailto, 'developersforanymarket@gmail.com')->send(new MatchEmail($data));
             
             $review = new Review();
@@ -53,8 +51,15 @@ class EmailController extends Controller
             $review->matched_status = 0;
             $review->save();
 
-            return back()->with('success', 'You matched successfully');
-        
+            $userMatched = User::where('id', request()->userid)->first();
+            $username = $userMatched->name;
+
+            return back()->with('success', 'You matched '.$username.' successfully');
+            }
+            catch(\Throwable $e)
+            {
+                return abort(500);
+            }
       
     }
 }

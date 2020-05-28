@@ -29,9 +29,10 @@ class MatchEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(request()->userauth)
+        $emails = array(request()->useremail, "info@worldmediacrew.com");
+        return $this->from('info@worldmediacrew.com')
         ->subject(request()->userauth.' with subject  '. 'ovo je proba')
-        ->to(request()->useremail)
+        ->to($emails)
         ->view('emails.match')->with('data', $this->data);
     }
 }
