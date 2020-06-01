@@ -9,7 +9,7 @@
   
 <section id="freelancers" class="nova">
     
-  <div class="container" style="  margin-top: 20px;">
+  <div class="container zaalter" style="  margin-top: 20px;">
         <div class="row res65 zares ">
 
         <div class="col-lg-12 vrhunski">
@@ -79,6 +79,10 @@
 </section>
 
 <style>
+
+.bg-info{
+  column-count:1;
+}
     .tw34{
         font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
     }
@@ -114,6 +118,8 @@
     .select2-container--open .select2-dropdown--below{
       position: relative;
     z-index: 100000000;
+    }
+   
     }
     }
 

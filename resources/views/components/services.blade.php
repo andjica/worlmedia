@@ -109,7 +109,7 @@
      <div class="wrap nemaga">
       <div class="container p-5">
       <center>
-          <h1 class="projka">Win Your Dream Equipment!</h1>
+          <h1 class="projka">Win Your Equipment here!</h1>
           </center>
         
  
@@ -674,7 +674,8 @@ Enter the Challenge
       <li> <p>Get 1500 reviews on your WMC profile </p></li>
       <li> <p>Get 1500 ratings on your WMC profile </p></li>
       <li> <p>Share on social media 80 times, with hashtags #worldmediacrew & #wmcchallenge & #wmcyourname </p></li>
-      <li><p>And make a huge chance to win a photographer Hasselblad H6D-50c + Lens HC 50-110mm F3.5-4.5 IMac Pro</p></li>
+      <li><p>And make a huge chance to win a photographer Hasselblad H6D-50c + Lens HC 50-110mm F3.5-4.5 IMac Pro Or For Film makers - RED DSMC2 BRAIN w/ GEMINI 5K S35 + Xeen cinema lenses 24mm 50mm, + IMac Pro 27
+</p></li>
       <li> <p>You need at least 180.000 social media followers </p></li>
 
       <br>

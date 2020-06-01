@@ -220,7 +220,7 @@ media-related issues on the spot, simply by using the World Media Crew platform.
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section zatelefon">
       <div class="container">
         <div class="row">
           
@@ -254,3 +254,12 @@ media-related issues on the spot, simply by using the World Media Crew platform.
     
 
   
+  <style>
+  @media screen and (min-width:968px){
+
+  
+  .zatelefon{
+    margin-top: -85px; 
+   }
+  }
+  </style>

@@ -9,7 +9,7 @@
 
   
             <div class="row profile-padding-top">
-               <div class="col-lg-12 pufna" style="    text-align: center;
+               <div class="col-lg-12 pufna" style="        text-align: left;
     position: relative;
     top: 231px; z-index: 10000;">
             @if(auth()->user())
@@ -52,7 +52,6 @@
                                             </div>
                                             <div class="modal-body text-dark">
                                                 <div class="my-3 p-3 bg-light rounded shadow-sm text-left">
-                                                  <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
                                                   @foreach($followers as $fl)
                                                   <a href="{{asset('/freelancer/'.$fl->user->id)}}">
                                                   <div class="media text-muted pt-3">
@@ -87,14 +86,12 @@
                                             <div class="modal-dialog" role="document">
                                               <div class="modal-content bg-light " style=" margin-top: 120px;">
                                                 <div class="modal-header">
-                                                  <h5 class="modal-title text-dark" id="exampleModalLabel">Modal title</h5>
                                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                   </button>
                                                 </div>
                                                 <div class="modal-body text-dark">
                                                   <div class="my-3 p-3 bg-light rounded shadow-sm text-left">
-                                                    <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
                                                     @foreach($following as $fg)
                                                     <a href="{{asset('/freelancer/'.$fg->id)}}">
                                                     <div class="media text-muted pt-3">

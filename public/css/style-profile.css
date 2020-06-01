@@ -9347,7 +9347,7 @@ hr.style-six {
     top: -2.1em;
     font-size: 1.5em;
     padding: 19px 1.75em;
-    background: #fff url("http://worldmediacrew.com/images/logo1.png") no-repeat scroll center;
+    background: url("http://worldmediacrew.com/images/logo1.png") no-repeat scroll center;
     background-size: contain;
     height: 83px;
     width: 220px;

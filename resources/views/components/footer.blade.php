@@ -14,7 +14,6 @@
                 <li><a href="{{asset('/services')}}" title="Challenger from world media crew">Challenges</a></li>
                 <li><a href="{{asset('/freelancers')}}" title="Members from world media crew">Crew-Members</a></li>
                 {{-- <li><a href="{{asset('/blog')}}" title="Blog Page for World Media Crew platform">Blog</a></li> --}}
-                <li><a href="{{asset('/contact-us')}}" title="Contact Us">Contact</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -22,7 +21,7 @@
               <ul class="list-unstyled">
                   <li><a href="{{asset('/register')}}" title="Register in World Media Crew platform">Make an account</a></li>
                   <li><a href="{{asset('/login')}}" title="Login page">Login with account</a></li>
-                  <li><a href="{{asset('/services')}}" title="Challengers page">Challengers</a></li>
+                  <li><a href="{{asset('/services')}}" title="Challengers page">Challenges</a></li>
                   <li><a href="{{asset('/about')}}" title="About World Media Crew platform">About us</a></li>
 
               </ul>
@@ -30,7 +29,7 @@
           <div class="col-lg-3">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="{{asset('/contact-us')}}" title="Contact Us">Contact</a></li>
+                  <li><a href="{{asset('/contact-us')}}" title="Contact Us">Support</a></li>
                   <li><a href="{{asset('/privacy')}}" title="Contact Us">Privacy & terms</a></li>
                   <li><a href="{{asset('/terms')}}" title="Contact Us">Terms and Conditions</a></li>
               </ul>

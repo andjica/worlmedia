@@ -33,9 +33,9 @@
             </div>
             </a>
             <div class="p-4 mx-auto">
-                <p><span class="icon-room mr-1 text-primary"></span>{{$user->category->name}} from
+                <p><span class=" mr-1 text-primary"></span>{{$user->category->name}} from
                  {{$user->city->name}}, {{$user->city->country->name_country}}</p>
-                <p><span class="icon-room mr-1 text-primary"></span> {{$user->email}}</p>
+                <p><span class=" mr-1 text-primary"></span> {{$user->email}}</p>
                 <small class="mr-1">Posted by: 26-04-2020</small><br>
                 <div class="d-flex">
                   <div class="ml-auto price mx-auto">
@@ -57,9 +57,9 @@
             <div class="rounded-circle mx-auto image-background4" style="background-image: url({{asset('/image-users/'.$usertwo->url)}});">
             </div>
             <div class="p-4 mx-auto">
-                <p><span class="icon-room mr-1 text-primary"></span>{{$usertwo->category->name}} from
+                <p><span class=" mr-1 text-primary"></span>{{$usertwo->category->name}} from
                  {{$usertwo->city->name}}, {{$usertwo->city->country->name_country}}</p>
-                <p><span class="icon-room mr-1 text-primary"></span> {{$usertwo->email}}</p>
+                <p><span class=" mr-1 text-primary"></span> {{$usertwo->email}}</p>
                 <small class="mr-1">Posted by: 26-04-2020</small><br>
                 <div class="d-flex">
                   <div class="ml-auto price mx-auto">

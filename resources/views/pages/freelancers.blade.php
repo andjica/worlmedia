@@ -5,7 +5,7 @@
     </div>
   
 <section id="freelancers">
-  <div class="container" style="  margin-top: 20px;">
+  <div class="container zaalter" style="  margin-top: 20px;">
         <div class="row" style="display:flex; margin-top:60px;">
 
         <div class="col-lg-9">
@@ -67,6 +67,12 @@
 </section>
 
 <style>
+
+@media screen and (min-width:120px){
+  .zaalter{
+    margin-top: 520px !important;
+  }
+}
     .tw34{
         font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
     }
