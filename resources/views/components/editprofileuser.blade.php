@@ -48,7 +48,34 @@
    
   </div>
 </div>
-</div></div>
+
+<div class="site-section" style="margin-top:150px;">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-6">
+          <h2 class="heading-92913 text-black">Our promise to you</h2>
+<p>We promise to ensure quality in every aspect on our platform so we can serve you with
+creating the possibility of connecting you with people from around the world with a decent
+level of knowledge and skills necessary in the world of media. Therefore we charge our
+users a small amount of money of 5,99- dollars per month to ensure the quality of this
+platform and to make sure we can keep developing this platform in a valuable way for you
+according to your needs.
+</p>            
+          
+            <p><a href="{{asset ('/allmembers')}}" class="btn btn-primary py-3 px-4">Explore oppertunities</a></p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/20474.jpg" alt="Image" class="img-fluid" style="border-top-left-radius: 120px;
+    border-bottom-right-radius: 120px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</div>
 
 <style>
 

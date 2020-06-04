@@ -58,7 +58,7 @@
                                 @endif
                             </div>
                         </div>
-
+                       
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -69,7 +69,10 @@
 
                         <div class="form-group row mb-0">
                        <center style="width: 100%;
-    text-align: center;"> <p>By Registering, you agree our Terms & Privacy Policy</p> </center>
+    text-align: center;">  <div class="form-check ">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label " for="exampleCheck1">By Registering you agree with the terms and privacy</label>
+                        </div> </center>
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}

@@ -6,7 +6,7 @@
     <div class="col-md-6 hghgh">
     <h3>What we offer at WMC </h3>
     <div class="col-lg-12 jbg155" style="    padding-top: 26px;" >
-    <iframe width="520px" height="304px" src="https://www.youtube.com/embed/sVpsheJ-D9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="304px" src="https://www.youtube.com/embed/sVpsheJ-D9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
         <div class="col-md-6 brisi hghgh1">
