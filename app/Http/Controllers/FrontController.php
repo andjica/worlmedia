@@ -17,7 +17,7 @@ class FrontController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
         $this->data['categories'] = Category::orderBy('name', 'desc')->get();
         $this->data['cities'] =  City::orderBy('name', 'asc')->get();
         

@@ -17,7 +17,7 @@ Route::get('/about', 'FrontController@about');
 Route::get('/privacy', 'FrontController@privacy');
 Route::get('/blog', 'FrontController@blog');
 Route::get('/freelancers', 'FrontController@freelancers')->name('freelancers');
-Route::get('/allmembers', 'FrontController@all')->name('allmembers');
+Route::get('/allmembers', 'FrontController@all')->name('allmembers')->middleware('auth');
 Route::get('/freelancer/{id}', 'FrontController@profile')->name('freelancer/{id}');
 Route::get('/terms', 'HomeController@terms');
 
